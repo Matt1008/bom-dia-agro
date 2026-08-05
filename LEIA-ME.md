@@ -70,6 +70,69 @@ alguém pode fechar negócio em cima dele, é pior do que não ter app nenhum.
 
 ---
 
+## 📈 Como o histórico é construído e guardado
+
+O app monta o **seu próprio histórico**, a partir de 04/08/2026, e guarda para sempre.
+
+### O ritmo do robô
+
+O CEPEA publica **um valor por dia útil** — não muda de hora em hora (isso foi medido).
+O que muda o dia todo é o dólar e o euro, e esses o app busca ao vivo, direto no
+celular, toda vez que você abre.
+
+Como o CEPEA não avisa a hora exata da publicação, o robô fica de olho:
+
+| Horário (Brasília) | O que faz |
+|---|---|
+| 06:00 | Rodada completa: preços + notícias |
+| 14:00 às 19:00, de hora em hora | Só preços — para pegar a publicação assim que sair |
+| 19:00 | Rodada completa e fechamento do dia |
+
+Só de segunda a sexta. Sem pregão, sem preço novo.
+
+**Se nada mudou, nada é gravado.** O robô compara os números antes de escrever: se o
+CEPEA ainda não publicou, ele não mexe em arquivo nenhum e o site não é republicado.
+Por isso rodar 8 vezes por dia não faz bagunça.
+
+### Fechamento do dia
+
+Cada cotação fica **aberta** enquanto é a mais recente daquela série — se o CEPEA
+corrigir o número durante o dia, o app corrige junto. Quando chega a cotação do dia
+seguinte, a anterior vira **fechada**: valor definitivo, não muda mais.
+
+### Duas cópias, de propósito
+
+| Onde | Papel |
+|---|---|
+| `dados/*.json` no GitHub | O que o **site lê**. Rápido, funciona com internet ruim de fazenda, e o Git guarda todas as versões. |
+| Tabela `precos_historico` no Supabase | A cópia **durável**. Se o repositório sumir ou alguém apagar um arquivo sem querer, o histórico continua lá. |
+
+Se um dia precisar reconstruir tudo a partir do banco:
+
+```bash
+node scripts/restaurar-do-banco.mjs
+```
+
+(precisa das chaves — o próprio script explica quando você roda sem elas)
+
+### Consultar o histórico direto no banco
+
+No Supabase → **SQL Editor**:
+
+```sql
+-- a variação diária, já calculada
+select * from variacao_diaria
+ where produto = 'boi-gordo' and regiao = 'mt'
+ order by data desc limit 30;
+```
+
+```sql
+-- o preço mais recente de tudo
+select * from precos_hoje;
+```
+
+---
+
 # PASSO A PASSO
 
 ## Passo 1 — Testar no seu computador (2 minutos)
@@ -137,6 +200,16 @@ Cobre, na ordem: **Supabase** (login) → **GitHub** (onde mora + robô) → **N
 | Trocar os sites de notícia | `scripts/atualizar-precos.mjs` → lista `FEEDS` |
 | Mudar o horário da atualização | `.github/workflows/atualizar.yml` → linhas `cron` |
 | Mudar os ícones | `js/icones.js` |
+| Mexer na tabela do banco | `dados/banco.sql` |
+
+### Os scripts
+
+| Comando | O que faz |
+|---|---|
+| `node scripts/servidor.mjs` | Sobe o site no seu computador (localhost:3000) |
+| `node scripts/atualizar-precos.mjs` | Busca preços, moedas e notícias; grava e manda para a nuvem |
+| `node scripts/restaurar-do-banco.mjs` | Reconstrói os arquivos a partir do Supabase |
+| `node scripts/semear-historico.mjs` | Recomeça o histórico do zero (tem trava de segurança) |
 
 ### Acrescentar um produto novo
 

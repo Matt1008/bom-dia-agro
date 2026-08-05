@@ -26,9 +26,15 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import * as Nuvem from './nuvem.mjs';
 
 const AQUI = dirname(fileURLToPath(import.meta.url));
 const DADOS = join(AQUI, '..', 'dados');
+
+/* Nas rodadas de hora em hora só buscamos preço. As notícias ficam
+   para as rodadas da manhã e da tarde — assim o site não é
+   republicado oito vezes por dia à toa. */
+const APENAS_PRECOS = process.env.APENAS_PRECOS === '1';
 
 const AGENTE = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36';
 const relatorio = { ok: [], falhas: [] };
@@ -330,15 +336,30 @@ function guardarNoHistorico(serie, data, valor) {
 /* ============================================================
    JUNTA TUDO E GRAVA
    ============================================================ */
+/** Retrato do que importa num arquivo, para saber se mudou de verdade.
+    Ignora o carimbo de hora: senão todo arquivo "mudaria" toda rodada
+    e o site seria republicado à toa de hora em hora. */
+function retrato(precos, historico) {
+  return JSON.stringify({ p: precos.produtos, h: historico.series });
+}
+
 async function principal() {
   const agora = new Date();
-  console.log(`\n=== Bom Dia Agro — atualização de ${agora.toLocaleString('pt-BR')} ===\n`);
+  console.log(`\n=== Bom Dia Agro — atualização de ${agora.toLocaleString('pt-BR')} ===`);
+  console.log(APENAS_PRECOS ? '(rodada rápida: só preços)\n' : '(rodada completa)\n');
 
   const precos = lerJSON('precos.json', { produtos: {}, moedas: {} });
   const historico = lerJSON('historico.json', { series: {} });
   historico.series ??= {};
 
-  gravarJSON('noticias.json', await buscarNoticias(), true);
+  const antes = retrato(precos, historico);
+
+  if (!APENAS_PRECOS) {
+    gravarJSON('noticias.json', await buscarNoticias(), true);
+  } else {
+    relatorio.ok.push('Notícias: puladas nesta rodada');
+  }
+
   precos.moedas = await buscarMoedas(precos.moedas);
 
   const { encontrados, indicadoresOk } = await buscarPrecos();
@@ -368,10 +389,54 @@ async function principal() {
   precos.origem = cotacoes > 0 ? 'real' : 'vazio';
   precos.fontes = cotacoes > 0 ? ['CEPEA/ESALQ-USP'] : [];
   precos.contagem = { total: cotacoes, reais: cotacoes, exemplo: 0 };
-  precos.atualizado_em = agora.toISOString();
 
-  gravarJSON('precos.json', precos, true);
-  gravarJSON('historico.json', historico, true);
+  /* --- só grava se algum número mudou de verdade --- */
+  const mudou = retrato(precos, historico) !== antes;
+
+  if (mudou) {
+    precos.atualizado_em = agora.toISOString();
+    gravarJSON('precos.json', precos, true);
+    gravarJSON('historico.json', historico, true);
+  }
+
+  /* ============================================================
+     CÓPIA NA NUVEM (Supabase)
+     Roda sempre que as chaves existirem, mesmo quando nada mudou:
+     é barato e garante que o banco nunca fique para trás.
+     ============================================================ */
+  let nuvem = 'desligada (sem SUPABASE_URL / SUPABASE_SERVICE_KEY)';
+
+  if (Nuvem.ligado()) {
+    try {
+      const linhas = [];
+      for (const [produto, porRegiao] of Object.entries(historico.series)) {
+        for (const [regiao, s] of Object.entries(porRegiao)) {
+          const info = precos.produtos?.[produto]?.[regiao] || {};
+          for (let i = 0; i < s.d.length; i++) {
+            linhas.push({
+              produto, regiao,
+              data: s.d[i],
+              preco: s.v[i],
+              praca: info.praca || null,
+              escopo: info.escopo || null,
+              fonte: info.fonte || 'CEPEA/ESALQ-USP',
+              // o último ponto da série ainda pode mudar hoje; os anteriores, não
+              fechado: i < s.d.length - 1
+            });
+          }
+        }
+      }
+
+      const { gravadas } = await Nuvem.guardar(linhas);
+      const fechadas = await Nuvem.fecharDia();
+      const total = await Nuvem.contar();
+
+      nuvem = `${gravadas} linha(s) enviadas · ${fechadas} fechamento(s) · ${total ?? '?'} linhas guardadas no total`;
+    } catch (e) {
+      nuvem = `FALHOU — ${e.message}`;
+      relatorio.falhas.push(`Nuvem: ${e.message}`);
+    }
+  }
 
   /* --- relatório --- */
   console.log('SUCESSOS:');
@@ -383,6 +448,8 @@ async function principal() {
 
   console.log(`\nIndicadores CEPEA obtidos: ${indicadoresOk}/${FONTES.length}`);
   console.log(`Histórico: ${novos} ponto(s) novo(s), ${atualizados} corrigido(s)`);
+  console.log(`Arquivos: ${mudou ? 'GRAVADOS (algo mudou)' : 'inalterados (nada mudou — site não será republicado)'}`);
+  console.log(`Nuvem: ${nuvem}`);
   console.log(`Cotações no app: ${cotacoes} (todas reais)\n`);
 
   console.log('Tamanho das séries:');

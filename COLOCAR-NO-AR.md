@@ -82,6 +82,42 @@ login: {
 > Ele segura quem recebeu o link sem querer. Quem entende de navegador consegue ler o
 > código no site. A segurança de verdade é o e-mail e a senha.
 
+## 1.5 — Criar a tabela do histórico de preços
+
+É aqui que o seu histórico vai morar para sempre.
+
+1. No Supabase, menu da esquerda → **SQL Editor**.
+2. Clique em **New query**.
+3. Abra o arquivo `dados/banco.sql` no Bloco de Notas, **copie tudo** e cole ali.
+4. Clique em **Run** (ou Ctrl + Enter).
+
+Deve aparecer *Success. No rows returned*. Está certo — a tabela nasce vazia.
+
+Para conferir, rode:
+
+```sql
+select count(*) from precos_historico;
+```
+
+Dá `0` agora. Depois que o robô rodar, esse número só cresce.
+
+## 1.6 — Pegar a chave-mestra (service_role)
+
+Essa é diferente da outra. Ela serve para o **robô escrever** no banco.
+
+1. **Project Settings** → **API Keys**.
+2. Procure **service_role** (pode estar escondida atrás de um botão *Reveal*).
+3. Copie e guarde. Você vai usar no passo 2.5.
+
+> 🚨 **A service_role é a chave-mestra do seu banco.** Quem tiver ela apaga tudo.
+>
+> - **NUNCA** coloque no `js/config.js`
+> - **NUNCA** deixe num arquivo que vá para o GitHub
+> - Ela vai **só** nos *Secrets* do GitHub (passo 2.5), que ficam escondidos até de
+>   quem olhar o seu repositório
+>
+> A outra chave (anon/publishable) pode ficar no site à vontade. Essa aqui, não.
+
 ---
 
 # PARTE 2 — GitHub (onde o projeto mora)
@@ -133,12 +169,47 @@ Vai abrir uma janela pedindo login do GitHub. Faça o login e pronto.
 **Sem esse passo o robô roda, busca os preços e não consegue salvar.** É o erro mais
 comum.
 
-## 2.4 — Testar o robô agora
+## 2.4 — Guardar as chaves do banco no GitHub
+
+Sem isso o robô funciona, mas não guarda o histórico na nuvem.
+
+1. No seu repositório → **Settings**.
+2. Menu da esquerda → **Secrets and variables** → **Actions**.
+3. Botão **New repository secret**. Crie **dois**:
+
+| Name | Secret |
+|---|---|
+| `SUPABASE_URL` | `https://xxxxxxxx.supabase.co` (a mesma URL do passo 1.2) |
+| `SUPABASE_SERVICE_KEY` | a chave **service_role** do passo 1.6 |
+
+Escreva os nomes **exatamente assim**, em maiúsculas e com os underlines.
+
+Secrets ficam guardados de um jeito que nem você consegue ler depois — só o robô usa.
+Se errar, apague e crie de novo.
+
+## 2.5 — Testar o robô agora
 
 1. Aba **Actions** (no menu de cima do repositório).
 2. Clique em **Atualizar preços e notícias** na lista da esquerda.
 3. Botão **Run workflow** → **Run workflow**.
 4. Espere uns 40 segundos e recarregue. Se ficar com ✅ verde, está funcionando.
+
+Clique na rodada e abra o passo *Buscar preços...*. No fim do relatório aparece:
+
+```
+Nuvem: 24 linha(s) enviadas · 0 fechamento(s) · 24 linhas guardadas no total
+```
+
+Se aparecer `Nuvem: desligada`, faltou o passo 2.4.
+
+Confirme no Supabase (**SQL Editor**):
+
+```sql
+select produto, regiao, data, preco, fechado
+  from precos_historico
+ order by data desc, produto
+ limit 20;
+```
 
 ---
 

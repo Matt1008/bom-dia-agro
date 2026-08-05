@@ -1,23 +1,39 @@
 # ============================================================
 # ATUALIZAÇÃO AUTOMÁTICA — Bom Dia Agro
 #
-# Todo dia de manhã o GitHub roda este arquivo sozinho, de graça.
-# Ele busca as notícias e as cotações e salva de volta no projeto.
-# Aí o site já amanhece atualizado, sem você fazer nada.
+# O CEPEA publica UM valor por dia útil, e não avisa a hora certa.
+# Por isso o robô fica de olho de hora em hora na janela em que a
+# publicação costuma sair, em vez de checar uma vez só e correr o
+# risco de pegar o número velho o dia inteiro.
+#
+# Todos os horários do GitHub são em UTC. Brasília = UTC - 3.
 # ============================================================
 
 name: Atualizar preços e notícias
 
 on:
   schedule:
-    # 09:10 UTC = 06:10 no horário de Brasília — antes do café
-    - cron: '10 09 * * 1-5'
-    # 20:10 UTC = 17:10 de Brasília — fechamento do dia
-    - cron: '10 20 * * 1-5'
-  workflow_dispatch:        # permite rodar na mão pelo botão do GitHub
+    # 09:00 UTC = 06:00 Brasília — rodada completa da manhã
+    # (preços + notícias, para o app amanhecer pronto)
+    - cron: '0 9 * * 1-5'
+
+    # 17:00 às 22:00 UTC = 14:00 às 19:00 Brasília — de hora em hora.
+    # É a janela em que o CEPEA solta o indicador do dia.
+    - cron: '0 17,18,19,20,21 * * 1-5'
+
+    # 22:00 UTC = 19:00 Brasília — rodada completa e fechamento do dia
+    - cron: '0 22 * * 1-5'
+
+  workflow_dispatch:        # botão para rodar na mão quando quiser
 
 permissions:
   contents: write           # deixa o robô salvar os arquivos atualizados
+
+# Se uma rodada ainda estiver em andamento, a próxima espera.
+# Evita duas rodadas gravando o mesmo arquivo ao mesmo tempo.
+concurrency:
+  group: atualizar-dados
+  cancel-in-progress: false
 
 jobs:
   atualizar:
@@ -32,7 +48,27 @@ jobs:
         with:
           node-version: '20'
 
+      # Nas rodadas de hora em hora, busca só preço (notícia não muda
+      # tão rápido e republicar o site oito vezes por dia é desperdício).
+      - name: Decidir o tipo de rodada
+        id: tipo
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 17,18,19,20,21 * * 1-5" ]; then
+            echo "apenas_precos=1" >> $GITHUB_OUTPUT
+            echo "Rodada rápida: só preços."
+          else
+            echo "apenas_precos=0" >> $GITHUB_OUTPUT
+            echo "Rodada completa: preços e notícias."
+          fi
+
       - name: Buscar preços, moedas e notícias
+        env:
+          APENAS_PRECOS: ${{ steps.tipo.outputs.apenas_precos }}
+          # Cópia durável do histórico. Cadastre em:
+          #   Settings > Secrets and variables > Actions > New repository secret
+          # Sem esses dois segredos o robô funciona igual, só não guarda no banco.
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: node scripts/atualizar-precos.mjs
 
       # Se o CEPEA estiver fora do ar, os arquivos ficam como estavam.
@@ -52,8 +88,9 @@ jobs:
           git config user.email "actions@github.com"
           git add dados/
           if git diff --staged --quiet; then
-            echo "Nada mudou hoje."
+            echo "Nada mudou nesta rodada. Site não será republicado."
           else
-            git commit -m "Atualização automática — $(date -u '+%d/%m/%Y %H:%M UTC')"
+            git commit -m "Preços de $(TZ=America/Sao_Paulo date '+%d/%m/%Y %H:%M')"
             git push
+            echo "Dados atualizados e enviados."
           fi
