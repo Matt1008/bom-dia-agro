@@ -1,0 +1,48 @@
+# ============================================================
+# Configuração do Netlify — Bom Dia Agro
+#
+# O site é feito de arquivos prontos (HTML, CSS, JS): não precisa
+# "compilar" nada. Por isso não há comando de build.
+# ============================================================
+
+[build]
+  publish = "."
+  command = ""
+
+# ------------------------------------------------------------
+# Os arquivos de dados NUNCA podem ficar guardados em cache.
+# Se ficarem, o produtor abriria o app e veria o preço de ontem
+# mesmo depois de o robô ter atualizado.
+# ------------------------------------------------------------
+[[headers]]
+  for = "/dados/*"
+  [headers.values]
+    Cache-Control = "no-store, must-revalidate"
+
+# A página principal também não: senão uma atualização do app
+# demoraria dias para chegar em quem já abriu o site antes.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# Código e estilos podem ficar guardados por pouco tempo.
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+# ------------------------------------------------------------
+# Proteções básicas do navegador
+# ------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

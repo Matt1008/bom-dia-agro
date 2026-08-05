@@ -1,0 +1,48 @@
+# ============================================================
+# ATUALIZAÇÃO AUTOMÁTICA — Bom Dia Agro
+#
+# Todo dia de manhã o GitHub roda este arquivo sozinho, de graça.
+# Ele busca as notícias e as cotações e salva de volta no projeto.
+# Aí o site já amanhece atualizado, sem você fazer nada.
+# ============================================================
+
+name: Atualizar preços e notícias
+
+on:
+  schedule:
+    # 09:10 UTC = 06:10 no horário de Brasília — antes do café
+    - cron: '10 09 * * 1-5'
+    # 20:10 UTC = 17:10 de Brasília — fechamento do dia
+    - cron: '10 20 * * 1-5'
+  workflow_dispatch:        # permite rodar na mão pelo botão do GitHub
+
+permissions:
+  contents: write           # deixa o robô salvar os arquivos atualizados
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o projeto
+        uses: actions/checkout@v4
+
+      - name: Preparar o Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Buscar preços, moedas e notícias
+        run: node scripts/atualizar-precos.mjs
+
+      - name: Salvar o que mudou
+        run: |
+          git config user.name  "Robo Bom Dia Agro"
+          git config user.email "actions@github.com"
+          git add dados/
+          if git diff --staged --quiet; then
+            echo "Nada mudou hoje."
+          else
+            git commit -m "Atualização automática — $(date -u '+%d/%m/%Y %H:%M UTC')"
+            git push
+          fi
