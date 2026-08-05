@@ -1,18 +1,24 @@
 /* ============================================================
-   ATUALIZAÇÃO DIÁRIA — Bom Dia Agro
+   ATUALIZAÇÃO DIÁRIA — Bom Dia Agro  (Mato Grosso e Pará)
 
-   Roda sozinho todo dia de manhã (pelo GitHub Actions) e busca:
+   Roda sozinho todo dia (GitHub Actions) e busca:
+     1. Preços no widget público do CEPEA/ESALQ-USP
+     2. Dólar e Euro (AwesomeAPI)
+     3. Notícias do agro (RSS)
 
-     1. Preços reais no widget público do CEPEA/ESALQ-USP
-     2. Cotação do Dólar e do Euro (AwesomeAPI)
-     3. Notícias do agro (feeds RSS dos sites)
+   DUAS REGRAS QUE NÃO SE QUEBRAM:
 
-   REGRA DE OURO: se alguma busca falhar, o script NÃO inventa
-   número. Ele mantém o valor anterior, deixa a marca "exemplo"
-   naquele preço e avisa no relatório.
+   1) Nada é inventado. Se uma busca falhar, o valor anterior fica
+      como está e o problema aparece no relatório. O app nunca
+      mostra número simulado.
 
-   Fonte dos preços: CEPEA/ESALQ-USP — dado público, uso livre
-   com citação da fonte. O app cita em todas as telas e no PDF.
+   2) O preço é gravado na DATA DA COTAÇÃO, não na data em que o
+      robô rodou. Parece detalhe, mas era um bug feio: gravar a
+      cotação de segunda com etiqueta de terça faz a comparação
+      "hoje x ontem" nunca fechar.
+
+   Fonte: CEPEA/ESALQ-USP — citada em todas as telas, no PDF e nas
+   imagens exportadas, como a instituição pede.
 
    Rodar na sua máquina:   node scripts/atualizar-precos.mjs
    ============================================================ */
@@ -30,72 +36,63 @@ const relatorio = { ok: [], falhas: [] };
 /* ============================================================
    AS FONTES DE PREÇO
 
-   'indicador' = código do indicador no widget do CEPEA
-                 (todos conferidos e funcionando).
-   'regioes'   = em quais regiões do app aquele preço aparece.
-   'nacional'  = true quando o CEPEA publica um indicador único
-                 para o Brasil inteiro. Nesse caso o app mostra o
-                 mesmo número em todas as regiões e escreve
-                 "indicador nacional" na praça, para ninguém
-                 achar que é um preço local.
-   'converte'  = ajuste de unidade, quando o CEPEA publica numa
-                 unidade diferente da que o app mostra.
+   'indicador' — código do indicador no widget do CEPEA (conferidos
+                 um por um; os que não existem foram descartados).
+   'regioes'   — em que estados do app o preço aparece.
+   'escopo'    — o QUE aquele número realmente é. O app escreve isso
+                 na tela para ninguém confundir indicador nacional
+                 com preço da porteira:
+                   'nacional' → indicador único para o Brasil
+                   'porto'    → preço no porto de exportação
+                   'vizinho'  → cotado no estado vizinho publicado
+   'converte'  — ajuste quando o CEPEA publica em outra unidade.
+
+   >>> O CEPEA NÃO PUBLICA indicador de soja/milho específico de MT
+   >>> ou PA. Não existe fonte pública gratuita para isso. Por isso
+   >>> usamos o indicador nacional e o preço de porto, sempre com o
+   >>> escopo escrito na tela. Ver o LEIA-ME.
    ============================================================ */
 const ARROBA_EM_LIBRAS = 33.0693;   // 15 kg em libras-peso
 
-const FONTES_CEPEA = [
-  { produto: 'boi-gordo',    indicador: 2,   praca: 'Indicador CEPEA/B3 — nacional',       nacional: true,
-    regioes: ['centro-oeste', 'sudeste', 'sul', 'norte', 'nordeste'] },
+const FONTES = [
+  { produto: 'boi-gordo',    indicador: 2,   regioes: ['mt', 'pa'],
+    praca: 'Indicador CEPEA/B3 — Brasil', escopo: 'nacional' },
 
-  { produto: 'bezerro',      indicador: 3,   praca: 'São Paulo (CEPEA)',                    regioes: ['sudeste'] },
-  { produto: 'bezerro',      indicador: 8,   praca: 'Mato Grosso do Sul (CEPEA)',           regioes: ['centro-oeste'] },
+  { produto: 'soja',         indicador: 92,  regioes: ['mt', 'pa'],
+    praca: 'Soja Paranaguá (porto) — CEPEA', escopo: 'porto' },
 
-  { produto: 'soja',         indicador: 12,  praca: 'Paraná (CEPEA/ESALQ)',                 regioes: ['sul'] },
+  { produto: 'milho',        indicador: 77,  regioes: ['mt', 'pa'],
+    praca: 'Indicador CEPEA/B3 — Campinas/SP', escopo: 'nacional' },
 
-  { produto: 'milho',        indicador: 77,  praca: 'Indicador CEPEA/B3 — Campinas/SP',     nacional: true,
-    regioes: ['centro-oeste', 'sudeste', 'sul', 'nordeste', 'norte'] },
-
-  { produto: 'cafe-arabica', indicador: 23,  praca: 'Indicador CEPEA/ESALQ — nacional',     nacional: true,
-    regioes: ['sudeste', 'sul'] },
-  { produto: 'cafe-conilon', indicador: 24,  praca: 'Robusta — Indicador CEPEA/ESALQ',      nacional: true,
-    regioes: ['sudeste', 'norte'] },
-
-  { produto: 'algodao',      indicador: 54,  praca: 'Indicador CEPEA/ESALQ — nacional',     nacional: true,
-    regioes: ['centro-oeste', 'nordeste', 'sudeste'],
+  { produto: 'algodao',      indicador: 54,  regioes: ['mt'],
+    praca: 'Indicador CEPEA/ESALQ — Brasil', escopo: 'nacional',
     // CEPEA publica em centavos de real por libra-peso; o app mostra R$ por arroba
     converte: v => (v / 100) * ARROBA_EM_LIBRAS },
 
-  { produto: 'trigo',        indicador: 178, praca: 'Paraná (CEPEA/ESALQ)',                 regioes: ['sul'],
-    // CEPEA publica em R$ por tonelada; o app mostra R$ por saca de 60 kg
-    converte: v => v * 0.06 },
+  { produto: 'bezerro',      indicador: 8,   regioes: ['mt'],
+    praca: 'Mato Grosso do Sul — CEPEA', escopo: 'vizinho' },
 
-  { produto: 'arroz',        indicador: 126, praca: 'Média CEPEA/IRGA — Rio Grande do Sul', regioes: ['sul'] },
+  { produto: 'suino',        indicador: 124, regioes: ['mt'],
+    praca: 'Carcaça especial — CEPEA', escopo: 'nacional' },
 
-  { produto: 'suino',        indicador: 124, praca: 'Carcaça especial — CEPEA',             nacional: true,
-    regioes: ['sul', 'sudeste', 'centro-oeste'] },
+  { produto: 'frango',       indicador: 130, regioes: ['mt', 'pa'],
+    praca: 'Frango resfriado — CEPEA', escopo: 'nacional' },
 
-  { produto: 'frango',       indicador: 130, praca: 'Frango resfriado — CEPEA',             nacional: true,
-    regioes: ['sul', 'sudeste', 'centro-oeste', 'nordeste'] },
-
-  { produto: 'acucar',       indicador: 53,  praca: 'São Paulo (CEPEA)',                    regioes: ['sudeste'] },
-  { produto: 'acucar',       indicador: 35,  praca: 'Pernambuco (CEPEA)',                   regioes: ['nordeste'] },
-
-  { produto: 'mandioca',     indicador: 72,  praca: 'Paraná (CEPEA)',                       regioes: ['sul'] },
-
-  { produto: 'laranja',      indicador: 162, praca: 'Citros — São Paulo (CEPEA)',           regioes: ['sudeste'] }
+  { produto: 'cafe-conilon', indicador: 24,  regioes: ['pa'],
+    praca: 'Robusta — Indicador CEPEA/ESALQ', escopo: 'nacional' }
 ];
 
-/* Feeds de notícias do agro (todos testados e respondendo) */
+/* Feeds de notícias (todos testados e respondendo) */
 const FEEDS = [
   { fonte: 'Canal Rural',  url: 'https://www.canalrural.com.br/feed/' },
   { fonte: 'Agrolink',     url: 'https://www.agrolink.com.br/rss/noticias.xml' },
   { fonte: 'Compre Rural', url: 'https://www.comprerural.com/feed/' },
-  { fonte: 'G1 Agro',      url: 'https://g1.globo.com/rss/g1/economia/agronegocios/' },
-  { fonte: 'Summit Agro',  url: 'https://summitagro.estadao.com.br/feed/' }
+  { fonte: 'G1 Agro',      url: 'https://g1.globo.com/rss/g1/economia/agronegocios/' }
 ];
 
 const MAX_NOTICIAS = 60;
-const MAX_POR_FONTE = 14;
+const MAX_POR_FONTE = 15;
+const MAX_PONTOS = 520;      // ~2 anos de pregões por série
 
 /* ------------------------------------------------------------
    Ferramentas
@@ -119,8 +116,6 @@ function gravarJSON(arquivo, dados, bonito = false) {
   writeFileSync(join(DADOS, arquivo), JSON.stringify(dados, null, bonito ? 1 : 0), 'utf8');
 }
 
-const hoje = () => new Date().toISOString().slice(0, 10);
-const ehFimDeSemana = () => [0, 6].includes(new Date().getDay());
 const dormir = ms => new Promise(r => setTimeout(r, ms));
 
 function limpar(txt) {
@@ -148,10 +143,18 @@ function numeroBR(texto) {
   return Number.isFinite(n) ? n : null;
 }
 
-/* "04/08/2026" -> "2026-08-04"  (o CEPEA às vezes manda só "07/2026") */
+/* "04/08/2026" -> "2026-08-04". O CEPEA às vezes manda só "07/2026"
+   (indicador mensal) — nesse caso usamos o último dia daquele mês. */
 function dataBR(texto) {
-  const m = (texto || '').match(/(\d{2})\/(\d{2})\/(\d{4})/);
-  return m ? `${m[3]}-${m[2]}-${m[1]}` : null;
+  const completa = (texto || '').match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  if (completa) return `${completa[3]}-${completa[2]}-${completa[1]}`;
+
+  const mensal = (texto || '').match(/^(\d{2})\/(\d{4})$/);
+  if (mensal) {
+    const ultimo = new Date(Number(mensal[2]), Number(mensal[1]), 0).getDate();
+    return `${mensal[2]}-${mensal[1]}-${String(ultimo).padStart(2, '0')}`;
+  }
+  return null;
 }
 
 /* ============================================================
@@ -170,16 +173,18 @@ async function umIndicador(id) {
   if (celulas.length < 3) return null;   // "Sem resultados" vem com 1 célula
 
   const valor = numeroBR(celulas[2]);
+  const data = dataBR(celulas[0]);
   if (valor == null || valor <= 0) return null;
+  if (!data) { relatorio.falhas.push(`Indicador ${id}: veio sem data legível ("${celulas[0]}") — descartado`); return null; }
 
-  return { valor, data: dataBR(celulas[0]), descricao: celulas[1] };
+  return { valor, data, descricao: celulas[1] };
 }
 
 async function buscarPrecos() {
-  const encontrados = {};   // { produto: { regiao: { preco, praca, origem, fonte, data } } }
-  let quantos = 0;
+  const encontrados = {};
+  let indicadoresOk = 0;
 
-  for (const f of FONTES_CEPEA) {
+  for (const f of FONTES) {
     try {
       const r = await umIndicador(f.indicador);
       if (!r) {
@@ -193,23 +198,22 @@ async function buscarPrecos() {
         encontrados[f.produto] ??= {};
         encontrados[f.produto][regiao] = {
           preco: valor,
+          data: r.data,
           praca: f.praca,
-          origem: 'real',
-          fonte: 'CEPEA/ESALQ-USP',
-          nacional: !!f.nacional,
-          data: r.data
+          escopo: f.escopo,
+          fonte: 'CEPEA/ESALQ-USP'
         };
       }
 
-      quantos++;
-      relatorio.ok.push(`Preço · ${f.produto}: ${valor} (${r.descricao}, ${r.data || 's/ data'})`);
+      indicadoresOk++;
+      relatorio.ok.push(`Preço · ${f.produto}: ${valor} (${r.descricao}, cotação de ${r.data})`);
     } catch (e) {
       relatorio.falhas.push(`Preço · ${f.produto} (indicador ${f.indicador}): ${e.message}`);
     }
-    await dormir(700);   // educação com o servidor do CEPEA (e evita bloqueio por excesso)
+    await dormir(700);   // educação com o servidor do CEPEA
   }
 
-  return { encontrados, quantos };
+  return { encontrados, indicadoresOk };
 }
 
 /* ============================================================
@@ -226,7 +230,7 @@ async function buscarMoedas(anteriores) {
     return saida;
   } catch (e) {
     relatorio.falhas.push(`Moedas: ${e.message}`);
-    return anteriores;
+    return anteriores || {};
   }
 }
 
@@ -289,117 +293,103 @@ async function buscarNoticias() {
 }
 
 /* ============================================================
+   HISTÓRICO
+
+   Cada série guarda suas PRÓPRIAS datas:
+     { d: ["2026-08-04", "2026-08-05"], v: [350.20, 348.55] }
+
+   Assim cada produto segue o calendário da sua cotação. Boi tem
+   pregão todo dia útil; açúcar de Pernambuco é mensal. Uma régua
+   de datas só, compartilhada, obrigaria a inventar valor para
+   preencher buraco — e valor inventado é exatamente o que este
+   app não faz.
+   ============================================================ */
+function guardarNoHistorico(serie, data, valor) {
+  serie.d ??= []; serie.v ??= [];
+
+  const ultima = serie.d[serie.d.length - 1];
+
+  if (ultima === data) {           // mesma cotação: corrige o valor
+    serie.v[serie.v.length - 1] = valor;
+    return 'atualizado';
+  }
+  if (ultima && data < ultima) {   // cotação mais velha: já passou, ignora
+    return 'ignorado';
+  }
+
+  serie.d.push(data);              // cotação nova
+  serie.v.push(valor);
+
+  if (serie.d.length > MAX_PONTOS) {
+    serie.d = serie.d.slice(-MAX_PONTOS);
+    serie.v = serie.v.slice(-MAX_PONTOS);
+  }
+  return 'novo';
+}
+
+/* ============================================================
    JUNTA TUDO E GRAVA
    ============================================================ */
 async function principal() {
-  console.log(`\n=== Bom Dia Agro — atualização de ${hoje()} ===\n`);
+  const agora = new Date();
+  console.log(`\n=== Bom Dia Agro — atualização de ${agora.toLocaleString('pt-BR')} ===\n`);
 
-  const precos = lerJSON('precos.json', null);
-  const historico = lerJSON('historico.json', null);
-  if (!precos || !historico) {
-    console.error('Faltam os arquivos de dados. Rode antes:  node scripts/gerar-dados-exemplo.mjs');
-    process.exit(1);
-  }
+  const precos = lerJSON('precos.json', { produtos: {}, moedas: {} });
+  const historico = lerJSON('historico.json', { series: {} });
+  historico.series ??= {};
 
   gravarJSON('noticias.json', await buscarNoticias(), true);
   precos.moedas = await buscarMoedas(precos.moedas);
 
-  const { encontrados, quantos } = await buscarPrecos();
+  const { encontrados, indicadoresOk } = await buscarPrecos();
 
-  /* --- aplica os preços reais por cima --- */
-  let cotacoesReais = 0;
+  /* --- grava preço de hoje + ponto no histórico --- */
+  precos.produtos ??= {};
+  let novos = 0, atualizados = 0;
+
   for (const [produto, porRegiao] of Object.entries(encontrados)) {
+    precos.produtos[produto] ??= {};
+    historico.series[produto] ??= {};
+
     for (const [regiao, novo] of Object.entries(porRegiao)) {
-      precos.produtos[produto] ??= {};
-      precos.produtos[produto][regiao] = { ...(precos.produtos[produto][regiao] || {}), ...novo };
-      cotacoesReais++;
+      precos.produtos[produto][regiao] = novo;
+
+      historico.series[produto][regiao] ??= { d: [], v: [] };
+      const r = guardarNoHistorico(historico.series[produto][regiao], novo.data, novo.preco);
+      if (r === 'novo') novos++;
+      if (r === 'atualizado') atualizados++;
     }
   }
 
-  /* --- conta quantas cotações da tela já são reais --- */
-  let total = 0, reais = 0;
-  for (const porRegiao of Object.values(precos.produtos))
-    for (const info of Object.values(porRegiao)) {
-      total++;
-      if (info.origem === 'real') reais++;
-    }
+  /* --- resumo do que está no ar --- */
+  let cotacoes = 0;
+  for (const porRegiao of Object.values(precos.produtos)) cotacoes += Object.keys(porRegiao).length;
 
-  /* ------------------------------------------------------------
-     ENCAIXE DO HISTÓRICO
-
-     Problema: o histórico de exemplo termina num nível diferente
-     do preço real. Se a gente simplesmente colasse o valor real
-     no fim, o app mostraria uma variação diária falsa e enorme
-     (tipo "boi subiu 8,7% hoje"), o que seria uma mentira.
-
-     Solução: no PRIMEIRO dia em que um produto passa a ter
-     cotação real, o histórico simulado inteiro é reescalado para
-     encaixar no nível real. O formato da curva continua sendo
-     estimativa (e o app avisa isso), mas a variação do dia passa
-     a ser honesta: 0% na virada, e real dali para frente.
-     ------------------------------------------------------------ */
-  historico.real_desde ??= {};
-  for (const [produto, porRegiao] of Object.entries(encontrados)) {
-    historico.real_desde[produto] ??= {};
-    for (const [regiao, novo] of Object.entries(porRegiao)) {
-      if (historico.real_desde[produto][regiao]) continue;   // já encaixado antes
-
-      const serie = historico.series?.[produto]?.[regiao];
-      const ultimo = serie?.[serie.length - 1];
-      if (serie?.length && ultimo > 0) {
-        const fator = novo.preco / ultimo;
-        historico.series[produto][regiao] = serie.map(v => Number((v * fator).toFixed(4)));
-        relatorio.ok.push(`Histórico encaixado · ${produto}/${regiao} (x${fator.toFixed(3)})`);
-      }
-      historico.real_desde[produto][regiao] = hoje();
-    }
-  }
-
-  /* --- guarda o fechamento de hoje no histórico (só dia útil) --- */
-  if (!ehFimDeSemana()) {
-    const jaTemHoje = historico.datas[historico.datas.length - 1] === hoje();
-    if (!jaTemHoje) historico.datas.push(hoje());
-
-    for (const [produto, porRegiao] of Object.entries(precos.produtos)) {
-      for (const [regiao, info] of Object.entries(porRegiao)) {
-        historico.series[produto] ??= {};
-        const serie = (historico.series[produto][regiao] ??= []);
-        if (jaTemHoje) serie[serie.length - 1] = info.preco;
-        else serie.push(info.preco);
-      }
-    }
-
-    /* mantém no máximo 2 anos, para o arquivo não engordar */
-    const LIMITE = 520;
-    if (historico.datas.length > LIMITE) {
-      const corte = historico.datas.length - LIMITE;
-      historico.datas = historico.datas.slice(corte);
-      for (const produto of Object.values(historico.series))
-        for (const regiao of Object.keys(produto))
-          produto[regiao] = produto[regiao].slice(corte);
-    }
-  }
-
-  /* --- resumo honesto do que está no ar --- */
-  precos.origem = reais > 0 ? (reais === total ? 'real' : 'misto') : 'exemplo';
-  precos.fontes = reais > 0 ? ['CEPEA/ESALQ-USP'] : [];
-  precos.contagem = { total, reais, exemplo: total - reais };
-  precos.atualizado_em = new Date().toISOString();
-  if (reais === total) delete precos.aviso;
-  else precos.aviso = `${total - reais} de ${total} cotações ainda são simuladas (sem fonte pública configurada).`;
+  precos.origem = cotacoes > 0 ? 'real' : 'vazio';
+  precos.fontes = cotacoes > 0 ? ['CEPEA/ESALQ-USP'] : [];
+  precos.contagem = { total: cotacoes, reais: cotacoes, exemplo: 0 };
+  precos.atualizado_em = agora.toISOString();
 
   gravarJSON('precos.json', precos, true);
-  gravarJSON('historico.json', historico);
+  gravarJSON('historico.json', historico, true);
 
+  /* --- relatório --- */
   console.log('SUCESSOS:');
   relatorio.ok.forEach(l => console.log('  + ' + l));
   if (relatorio.falhas.length) {
     console.log('\nAVISOS:');
     relatorio.falhas.forEach(l => console.log('  ! ' + l));
   }
-  console.log(`\nIndicadores CEPEA obtidos: ${quantos}/${FONTES_CEPEA.length}`);
-  console.log(`Cotações na tela: ${reais} reais + ${total - reais} de exemplo = ${total}`);
-  console.log(`Origem geral: ${precos.origem.toUpperCase()}\n`);
+
+  console.log(`\nIndicadores CEPEA obtidos: ${indicadoresOk}/${FONTES.length}`);
+  console.log(`Histórico: ${novos} ponto(s) novo(s), ${atualizados} corrigido(s)`);
+  console.log(`Cotações no app: ${cotacoes} (todas reais)\n`);
+
+  console.log('Tamanho das séries:');
+  for (const [produto, porRegiao] of Object.entries(historico.series))
+    for (const [regiao, s] of Object.entries(porRegiao))
+      console.log(`  ${produto}/${regiao}: ${s.d.length} pontos (${s.d[0]} a ${s.d[s.d.length - 1]})`);
+  console.log('');
 }
 
 principal().catch(e => { console.error('Erro geral:', e); process.exit(1); });

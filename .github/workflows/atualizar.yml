@@ -35,6 +35,17 @@ jobs:
       - name: Buscar preços, moedas e notícias
         run: node scripts/atualizar-precos.mjs
 
+      # Se o CEPEA estiver fora do ar, os arquivos ficam como estavam.
+      # Nada é inventado para tapar buraco.
+      - name: Conferir se os dados continuam válidos
+        run: |
+          node -e "
+            const d = require('./dados/precos.json');
+            const n = Object.values(d.produtos||{}).reduce((s,r)=>s+Object.keys(r).length,0);
+            if (!n) { console.error('Nenhuma cotação no arquivo!'); process.exit(1); }
+            console.log(n + ' cotações no ar, atualizadas em ' + d.atualizado_em);
+          "
+
       - name: Salvar o que mudou
         run: |
           git config user.name  "Robo Bom Dia Agro"

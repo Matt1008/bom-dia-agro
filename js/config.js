@@ -46,14 +46,14 @@ export const CONFIG = {
 };
 
 /* ============================================================
-   REGIÕES DO BRASIL
+   REGIÕES ATENDIDAS
+   Hoje o app cobre Mato Grosso e Pará.
+   Para incluir outro estado: acrescente aqui e ligue os
+   indicadores em scripts/atualizar-precos.mjs.
    ============================================================ */
 export const REGIOES = [
-  { id: 'centro-oeste', nome: 'Centro-Oeste', curto: 'C-Oeste', estados: 'MT · MS · GO · DF' },
-  { id: 'sul',          nome: 'Sul',          curto: 'Sul',     estados: 'PR · SC · RS' },
-  { id: 'sudeste',      nome: 'Sudeste',      curto: 'Sudeste', estados: 'SP · MG · ES · RJ' },
-  { id: 'nordeste',     nome: 'Nordeste',     curto: 'Nordeste',estados: 'BA · MA · PI · PE' },
-  { id: 'norte',        nome: 'Norte',        curto: 'Norte',   estados: 'PA · TO · RO · AM' }
+  { id: 'mt', nome: 'Mato Grosso', curto: 'MT', estados: 'Sorriso · Rondonópolis · Cuiabá · Primavera' },
+  { id: 'pa', nome: 'Pará',        curto: 'PA', estados: 'Paragominas · Marabá · Santarém · Redenção' }
 ];
 
 /* ============================================================
@@ -63,34 +63,25 @@ export const CATEGORIAS = [
   { id: 'todos',    nome: 'Todos' },
   { id: 'graos',    nome: 'Grãos' },
   { id: 'pecuaria', nome: 'Pecuária' },
-  { id: 'cafe',     nome: 'Café' },
   { id: 'outros',   nome: 'Outros' }
 ];
 
 /* ============================================================
    CULTURAS / PRODUTOS
-   'regioes' = onde aquele produto costuma ter praça de negócio
+
+   'regioes' = em quais estados aquele produto aparece.
+   Só entram produtos que têm cotação REAL de fonte pública.
+   Nada aqui é simulado.
    ============================================================ */
 export const PRODUTOS = [
-  { id: 'boi-gordo',    nome: 'Boi Gordo',     unidade: 'arroba',      unidadeCurta: '@',        categoria: 'pecuaria', icone: 'boi',     regioes: ['centro-oeste','sudeste','sul','norte','nordeste'] },
-  { id: 'soja',         nome: 'Soja',          unidade: 'saca 60kg',   unidadeCurta: 'sc',       categoria: 'graos',    icone: 'soja',    regioes: ['centro-oeste','sul','sudeste','nordeste','norte'] },
-  { id: 'milho',        nome: 'Milho',         unidade: 'saca 60kg',   unidadeCurta: 'sc',       categoria: 'graos',    icone: 'milho',   regioes: ['centro-oeste','sul','sudeste','nordeste','norte'] },
-  { id: 'cafe-arabica', nome: 'Café Arábica',  unidade: 'saca 60kg',   unidadeCurta: 'sc',       categoria: 'cafe',     icone: 'cafe',    regioes: ['sudeste','sul'] },
-  { id: 'cafe-conilon', nome: 'Café Conilon',  unidade: 'saca 60kg',   unidadeCurta: 'sc',       categoria: 'cafe',     icone: 'cafe',    regioes: ['sudeste','norte'] },
-  { id: 'algodao',      nome: 'Algodão',       unidade: 'arroba',      unidadeCurta: '@',        categoria: 'outros',   icone: 'algodao', regioes: ['centro-oeste','nordeste','sudeste'] },
-  { id: 'trigo',        nome: 'Trigo',         unidade: 'saca 60kg',   unidadeCurta: 'sc',       categoria: 'graos',    icone: 'trigo',   regioes: ['sul','sudeste','centro-oeste'] },
-  { id: 'arroz',        nome: 'Arroz',         unidade: 'saca 50kg',   unidadeCurta: 'sc',       categoria: 'graos',    icone: 'arroz',   regioes: ['sul','centro-oeste','norte'] },
-  { id: 'feijao',       nome: 'Feijão Carioca',unidade: 'saca 60kg',   unidadeCurta: 'sc',       categoria: 'graos',    icone: 'feijao',  regioes: ['sudeste','centro-oeste','sul','nordeste'] },
-  { id: 'sorgo',        nome: 'Sorgo',         unidade: 'saca 60kg',   unidadeCurta: 'sc',       categoria: 'graos',    icone: 'sorgo',   regioes: ['centro-oeste','sudeste','nordeste'] },
-  { id: 'bezerro',      nome: 'Bezerro',       unidade: 'cabeça',      unidadeCurta: 'cab',      categoria: 'pecuaria', icone: 'bezerro', regioes: ['centro-oeste','sudeste','sul','norte'] },
-  { id: 'vaca-gorda',   nome: 'Vaca Gorda',    unidade: 'arroba',      unidadeCurta: '@',        categoria: 'pecuaria', icone: 'vaca',    regioes: ['centro-oeste','sudeste','sul','norte'] },
-  { id: 'suino',        nome: 'Suíno Vivo',    unidade: 'quilo',       unidadeCurta: 'kg',       categoria: 'pecuaria', icone: 'suino',   regioes: ['sul','sudeste','centro-oeste'] },
-  { id: 'frango',       nome: 'Frango Vivo',   unidade: 'quilo',       unidadeCurta: 'kg',       categoria: 'pecuaria', icone: 'frango',  regioes: ['sul','sudeste','centro-oeste','nordeste'] },
-  { id: 'ovos',         nome: 'Ovos',          unidade: 'caixa 30dz',  unidadeCurta: 'cx',       categoria: 'pecuaria', icone: 'ovo',     regioes: ['sudeste','sul','centro-oeste','nordeste'] },
-  { id: 'leite',        nome: 'Leite',         unidade: 'litro',       unidadeCurta: 'L',        categoria: 'pecuaria', icone: 'leite',   regioes: ['sudeste','sul','centro-oeste','nordeste'] },
-  { id: 'acucar',       nome: 'Açúcar Cristal',unidade: 'saca 50kg',   unidadeCurta: 'sc',       categoria: 'outros',   icone: 'cana',    regioes: ['sudeste','nordeste','centro-oeste'] },
-  { id: 'mandioca',     nome: 'Mandioca',      unidade: 'tonelada',    unidadeCurta: 't',        categoria: 'outros',   icone: 'feijao',  regioes: ['sul','sudeste','nordeste'] },
-  { id: 'laranja',      nome: 'Laranja',       unidade: 'caixa 40,8kg',unidadeCurta: 'cx',       categoria: 'outros',   icone: 'laranja', regioes: ['sudeste','sul'] }
+  { id: 'boi-gordo',    nome: 'Boi Gordo',    unidade: 'arroba',    unidadeCurta: '@',  categoria: 'pecuaria', icone: 'boi',     regioes: ['mt', 'pa'] },
+  { id: 'soja',         nome: 'Soja',         unidade: 'saca 60kg', unidadeCurta: 'sc', categoria: 'graos',    icone: 'soja',    regioes: ['mt', 'pa'] },
+  { id: 'milho',        nome: 'Milho',        unidade: 'saca 60kg', unidadeCurta: 'sc', categoria: 'graos',    icone: 'milho',   regioes: ['mt', 'pa'] },
+  { id: 'algodao',      nome: 'Algodão',      unidade: 'arroba',    unidadeCurta: '@',  categoria: 'outros',   icone: 'algodao', regioes: ['mt'] },
+  { id: 'bezerro',      nome: 'Bezerro',      unidade: 'cabeça',    unidadeCurta: 'cab',categoria: 'pecuaria', icone: 'bezerro', regioes: ['mt'] },
+  { id: 'suino',        nome: 'Suíno',        unidade: 'quilo',     unidadeCurta: 'kg', categoria: 'pecuaria', icone: 'suino',   regioes: ['mt'] },
+  { id: 'frango',       nome: 'Frango',       unidade: 'quilo',     unidadeCurta: 'kg', categoria: 'pecuaria', icone: 'frango',  regioes: ['mt', 'pa'] },
+  { id: 'cafe-conilon', nome: 'Café Conilon', unidade: 'saca 60kg', unidadeCurta: 'sc', categoria: 'outros',   icone: 'cafe',    regioes: ['pa'] }
 ];
 
 /* Busca rápida por id */

@@ -3,47 +3,42 @@
    ============================================================ */
 
 import { REGIAO_POR_ID, PRODUTO_POR_ID } from './config.js';
-import { BANCO, dinheiro, porcento, casasDe } from './dados.js';
+import { BANCO, dinheiro, porcento, casasDe, ESCOPOS } from './dados.js';
 
 const AVISO_CURTO = 'Valores de referência. Confirme com seu comprador antes de negociar.';
 
-/* Monta a lista pronta para exportar */
 function montarLinhas(itens) {
   return itens.map(it => {
     const p = PRODUTO_POR_ID[it.produtoId];
-    const casas = casasDe(it.produtoId);
     return {
       nome: p.nome,
       unidade: p.unidadeCurta,
       praca: it.praca,
+      escopo: it.escopo,
       preco: it.preco,
-      real: !!it.real,
-      precoTexto: dinheiro(it.preco, casas),
-      pct: it.real ? (it.variacao?.pct ?? null) : null,
-      // sem cotação real não há variação real para informar
-      pctTexto: (it.real && it.variacao) ? porcento(it.variacao.pct) : '—',
-      direcao: (it.real && it.variacao) ? it.variacao.direcao : 'igual'
+      precoTexto: dinheiro(it.preco, casasDe(it.produtoId)),
+      pctTexto: it.variacao ? porcento(it.variacao.pct) : '—',
+      direcao: it.variacao?.direcao || null
     };
   });
 }
 
-/* Quantos itens da lista são simulados */
-function contarExemplos(linhas) {
-  return linhas.filter(l => !l.real).length;
+function hojeTexto() {
+  return new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
 }
 
-function rodapeFonte(linhas) {
-  const simulados = contarExemplos(linhas);
-  const fontes = BANCO.precos?.fontes?.length ? BANCO.precos.fontes.join(', ') : null;
+/* Nota de rodapé explicando os escopos que aparecem na lista */
+function notaEscopos(linhas) {
+  const usados = [...new Set(linhas.map(l => l.escopo).filter(Boolean))];
   const partes = [];
-  if (fontes) partes.push(`Cotações reais: ${fontes}.`);
-  if (simulados) partes.push(`${simulados} item(ns) marcado(s) com (simulado) não têm fonte real — são demonstração e não servem para negociar.`);
-  partes.push(AVISO_CURTO);
+  if (usados.includes('nacional')) partes.push('Indicador nacional = referência do Brasil; na porteira varia com frete e prazo.');
+  if (usados.includes('porto'))    partes.push('Preço de porto = valor em Paranaguá; desconte o frete até lá.');
+  if (usados.includes('vizinho'))  partes.push('Estado vizinho = não há cotação pública no estado; usamos o mercado publicado mais próximo.');
   return partes.join(' ');
 }
 
-function hojeTexto() {
-  return new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+function fonteTexto() {
+  return BANCO.precos?.fontes?.length ? BANCO.precos.fontes.join(', ') : null;
 }
 
 /* ============================================================
@@ -53,31 +48,29 @@ export function textoWhatsApp(itens, regiaoId) {
   const regiao = REGIAO_POR_ID[regiaoId];
   const linhas = montarLinhas(itens);
 
-  // o "⚠️" marca item simulado. Não dá para usar "*" aqui:
-  // no WhatsApp o asterisco é o código do negrito e embaralharia o texto.
-  const seta = l => !l.real ? '⚠️' : l.direcao === 'sobe' ? '🟢' : l.direcao === 'desce' ? '🔴' : '⚪';
+  const bolinha = d => d === 'sobe' ? '🟢' : d === 'desce' ? '🔴' : d === 'igual' ? '⚪' : '▫️';
 
   let t = `*☀️ BOM DIA AGRO*\n`;
   t += `_${regiao?.nome || 'Brasil'} · ${hojeTexto()}_\n`;
   t += `─────────────────\n`;
 
   linhas.forEach(l => {
-    t += `${seta(l)} *${l.nome}*\n`;
+    t += `${bolinha(l.direcao)} *${l.nome}*\n`;
     t += `    ${l.precoTexto} /${l.unidade}   (${l.pctTexto})\n`;
   });
 
-  const simulados = contarExemplos(linhas);
   t += `─────────────────\n`;
-  if (simulados) t += `⚠️ = valor SIMULADO (demonstração), sem fonte real. Não use para negociar.\n`;
-  if (BANCO.precos?.fontes?.length) t += `Fonte: ${BANCO.precos.fontes.join(', ')}\n`;
+  const fonte = fonteTexto();
+  if (fonte) t += `Fonte: ${fonte}\n`;
+  const nota = notaEscopos(linhas);
+  if (nota) t += `${nota}\n`;
   t += `${AVISO_CURTO}\n`;
   t += `\n_Bom Dia Agro — o preço do seu dia, antes do café._`;
   return t;
 }
 
 export function abrirWhatsApp(itens, regiaoId) {
-  const texto = textoWhatsApp(itens, regiaoId);
-  window.open('https://wa.me/?text=' + encodeURIComponent(texto), '_blank', 'noopener');
+  window.open('https://wa.me/?text=' + encodeURIComponent(textoWhatsApp(itens, regiaoId)), '_blank', 'noopener');
 }
 
 export async function copiarTexto(itens, regiaoId) {
@@ -103,6 +96,7 @@ export function gerarPDF(itens, regiaoId) {
   const regiao = REGIAO_POR_ID[regiaoId];
   const linhas = montarLinhas(itens);
   const folha = document.getElementById('folha-pdf');
+  const fonte = fonteTexto();
 
   folha.innerHTML = `
     <div class="pdf-cab">
@@ -111,21 +105,23 @@ export function gerarPDF(itens, regiaoId) {
     </div>
     <table class="pdf-tabela">
       <thead><tr>
-        <th>Produto</th><th>Praça</th><th class="n">Unidade</th>
-        <th class="n">Preço</th><th class="n">Variação (dia)</th>
+        <th>Produto</th><th>Cotação de referência</th><th class="n">Unidade</th>
+        <th class="n">Preço</th><th class="n">Variação</th>
       </tr></thead>
       <tbody>
         ${linhas.map(l => `<tr>
-          <td><b>${l.nome}</b>${l.real ? '' : ' <i>(simulado)</i>'}</td>
+          <td><b>${l.nome}</b></td>
           <td>${l.praca || '—'}</td>
           <td class="n">${l.unidade}</td>
           <td class="n"><b>${l.precoTexto}</b></td>
-          <td class="n ${l.direcao}">${l.pctTexto}</td>
+          <td class="n ${l.direcao || ''}">${l.pctTexto}</td>
         </tr>`).join('')}
       </tbody>
     </table>
     <div class="pdf-rodape">
-      ${rodapeFonte(linhas)}<br>
+      ${fonte ? `<b>Fonte: ${fonte}.</b><br>` : ''}
+      ${notaEscopos(linhas)}<br>
+      ${AVISO_CURTO}<br>
       Gerado pelo Bom Dia Agro em ${new Date().toLocaleString('pt-BR')}.
     </div>`;
 
@@ -143,13 +139,13 @@ export function gerarPDF(itens, regiaoId) {
 export async function gerarImagem(itens, regiaoId, temaEscuro = false) {
   const regiao = REGIAO_POR_ID[regiaoId];
   const linhas = montarLinhas(itens);
+  const fonte = fonteTexto();
 
   const E = 2;                      // escala (deixa a imagem nítida)
   const LARG = 620;
   const alturaLinha = 62;
   const topo = 148;
-  const simulados = contarExemplos(linhas);
-  const rodape = simulados ? 92 : 68;
+  const rodape = 78;
   const ALT = topo + linhas.length * alturaLinha + rodape;
 
   const c = document.createElement('canvas');
@@ -158,8 +154,8 @@ export async function gerarImagem(itens, regiaoId, temaEscuro = false) {
   x.scale(E, E);
 
   const cores = temaEscuro
-    ? { fundo: '#0F1613', cartao: '#18211D', tinta: '#ECEFEB', tinta2: '#A3AFA8', tinta3: '#74807A', linha: '#2A3630', verde: '#4FB477', ambar: '#E0A055', alta: '#4FB477', baixa: '#E4695B' }
-    : { fundo: '#F7F6F1', cartao: '#FFFFFF', tinta: '#1C2320', tinta2: '#5A6660', tinta3: '#8B968F', linha: '#E1DFD4', verde: '#17743C', ambar: '#C6802E', alta: '#17743C', baixa: '#C0392B' };
+    ? { fundo: '#0F1613', cartao: '#18211D', tinta: '#ECEFEB', tinta3: '#74807A', linha: '#2A3630', verde: '#4FB477', ambar: '#E0A055', alta: '#4FB477', baixa: '#E4695B' }
+    : { fundo: '#F7F6F1', cartao: '#FFFFFF', tinta: '#1C2320', tinta3: '#8B968F', linha: '#E1DFD4', verde: '#17743C', ambar: '#C6802E', alta: '#17743C', baixa: '#C0392B' };
 
   const F = (peso, tam) => `${peso} ${tam}px "Segoe UI", system-ui, Arial, sans-serif`;
 
@@ -206,12 +202,6 @@ export async function gerarImagem(itens, regiaoId, temaEscuro = false) {
     x.font = F(700, 17);
     x.fillStyle = cores.tinta;
     x.fillText(l.nome, 34, y);
-    if (!l.real) {
-      const largura = x.measureText(l.nome).width;
-      x.font = F(700, 11);
-      x.fillStyle = cores.ambar;
-      x.fillText('  simulado', 34 + largura, y);
-    }
 
     x.font = F(400, 12.5);
     x.fillStyle = cores.tinta3;
@@ -223,25 +213,18 @@ export async function gerarImagem(itens, regiaoId, temaEscuro = false) {
     x.fillText(l.precoTexto, LARG - 34, y + 2);
 
     const cor = l.direcao === 'sobe' ? cores.alta : l.direcao === 'desce' ? cores.baixa : cores.tinta3;
-    const flecha = l.direcao === 'sobe' ? '▲' : l.direcao === 'desce' ? '▼' : '—';
+    const flecha = l.direcao === 'sobe' ? '▲' : l.direcao === 'desce' ? '▼' : '';
     x.font = F(700, 13.5);
     x.fillStyle = cor;
-    x.fillText(`${flecha} ${l.pctTexto}`, LARG - 34, y + 21);
+    x.fillText(`${flecha} ${l.pctTexto}`.trim(), LARG - 34, y + 21);
     x.textAlign = 'left';
   });
 
   /* rodapé */
-  let yR = topo + linhas.length * alturaLinha + 14;
-  if (simulados) {
-    x.font = F(700, 12);
-    x.fillStyle = cores.baixa;
-    x.fillText('Itens marcados "simulado" são demonstração, sem fonte real — não use para negociar.', 30, yR);
-    yR += 20;
-  }
+  const yR = topo + linhas.length * alturaLinha + 14;
   x.font = F(400, 11.5);
   x.fillStyle = cores.tinta3;
-  const fonte = BANCO.precos?.fontes?.length ? `Fonte: ${BANCO.precos.fontes.join(', ')}. ` : '';
-  x.fillText(fonte + AVISO_CURTO, 30, yR);
+  x.fillText((fonte ? `Fonte: ${fonte}. ` : '') + AVISO_CURTO, 30, yR);
   x.fillText('Bom Dia Agro — o preço do seu dia, antes do café.', 30, yR + 17);
 
   /* --- vira arquivo --- */

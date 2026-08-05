@@ -1,488 +1,126 @@
 {
- "atualizado_em": "2026-08-05T00:43:30.636Z",
- "origem": "misto",
- "aviso": "35 de 66 cotações ainda são simuladas (sem fonte pública configurada).",
+ "atualizado_em": "2026-08-05T23:02:11.856Z",
+ "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP"
  ],
+ "contagem": {
+  "total": 12,
+  "reais": 12,
+  "exemplo": 0
+ },
  "moedas": {
   "USD": {
    "nome": "Dólar",
-   "valor": 5.1272,
-   "variacao": 0.742724
+   "valor": 5.1216,
+   "variacao": -0.040989
   },
   "EUR": {
    "nome": "Euro",
-   "valor": 5.91366,
-   "variacao": 0.981697
+   "valor": 5.91716,
+   "variacao": 0.076953
   }
  },
  "produtos": {
   "boi-gordo": {
-   "centro-oeste": {
-    "preco": 350.2,
-    "praca": "Indicador CEPEA/B3 — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
+   "mt": {
+    "preco": 348.55,
+    "data": "2026-08-05",
+    "praca": "Indicador CEPEA/B3 — Brasil",
+    "escopo": "nacional",
+    "fonte": "CEPEA/ESALQ-USP"
    },
-   "sudeste": {
-    "preco": 350.2,
-    "praca": "Indicador CEPEA/B3 — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "sul": {
-    "preco": 350.2,
-    "praca": "Indicador CEPEA/B3 — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "norte": {
-    "preco": 350.2,
-    "praca": "Indicador CEPEA/B3 — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "nordeste": {
-    "preco": 350.2,
-    "praca": "Indicador CEPEA/B3 — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
+   "pa": {
+    "preco": 348.55,
+    "data": "2026-08-05",
+    "praca": "Indicador CEPEA/B3 — Brasil",
+    "escopo": "nacional",
+    "fonte": "CEPEA/ESALQ-USP"
    }
   },
   "soja": {
-   "centro-oeste": {
-    "preco": 131.24,
-    "praca": "Sorriso/MT",
-    "origem": "exemplo"
+   "mt": {
+    "preco": 144.91,
+    "data": "2026-08-05",
+    "praca": "Soja Paranaguá (porto) — CEPEA",
+    "escopo": "porto",
+    "fonte": "CEPEA/ESALQ-USP"
    },
-   "sul": {
-    "preco": 136.03,
-    "praca": "Paraná (CEPEA/ESALQ)",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": false,
-    "data": "2026-08-04"
-   },
-   "sudeste": {
-    "preco": 130.41,
-    "praca": "Uberlândia/MG",
-    "origem": "exemplo"
-   },
-   "nordeste": {
-    "preco": 145.34,
-    "praca": "L. E. Magalhães/BA",
-    "origem": "exemplo"
-   },
-   "norte": {
-    "preco": 127.76,
-    "praca": "Santarém/PA",
-    "origem": "exemplo"
+   "pa": {
+    "preco": 144.91,
+    "data": "2026-08-05",
+    "praca": "Soja Paranaguá (porto) — CEPEA",
+    "escopo": "porto",
+    "fonte": "CEPEA/ESALQ-USP"
    }
   },
   "milho": {
-   "centro-oeste": {
-    "preco": 65.17,
+   "mt": {
+    "preco": 64.86,
+    "data": "2026-08-05",
     "praca": "Indicador CEPEA/B3 — Campinas/SP",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
+    "escopo": "nacional",
+    "fonte": "CEPEA/ESALQ-USP"
    },
-   "sul": {
-    "preco": 65.17,
+   "pa": {
+    "preco": 64.86,
+    "data": "2026-08-05",
     "praca": "Indicador CEPEA/B3 — Campinas/SP",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "sudeste": {
-    "preco": 65.17,
-    "praca": "Indicador CEPEA/B3 — Campinas/SP",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "nordeste": {
-    "preco": 65.17,
-    "praca": "Indicador CEPEA/B3 — Campinas/SP",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "norte": {
-    "preco": 65.17,
-    "praca": "Indicador CEPEA/B3 — Campinas/SP",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   }
-  },
-  "cafe-arabica": {
-   "sudeste": {
-    "preco": 1729.84,
-    "praca": "Indicador CEPEA/ESALQ — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "sul": {
-    "preco": 1729.84,
-    "praca": "Indicador CEPEA/ESALQ — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   }
-  },
-  "cafe-conilon": {
-   "sudeste": {
-    "preco": 1095.15,
-    "praca": "Robusta — Indicador CEPEA/ESALQ",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "norte": {
-    "preco": 1095.15,
-    "praca": "Robusta — Indicador CEPEA/ESALQ",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
+    "escopo": "nacional",
+    "fonte": "CEPEA/ESALQ-USP"
    }
   },
   "algodao": {
-   "centro-oeste": {
-    "preco": 138.8448,
-    "praca": "Indicador CEPEA/ESALQ — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "nordeste": {
-    "preco": 138.8448,
-    "praca": "Indicador CEPEA/ESALQ — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "sudeste": {
-    "preco": 138.8448,
-    "praca": "Indicador CEPEA/ESALQ — nacional",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   }
-  },
-  "trigo": {
-   "sul": {
-    "preco": 84.7926,
-    "praca": "Paraná (CEPEA/ESALQ)",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": false,
-    "data": "2026-08-04"
-   },
-   "sudeste": {
-    "preco": 92.27,
-    "praca": "Itapeva/SP",
-    "origem": "exemplo"
-   },
-   "centro-oeste": {
-    "preco": 79.1,
-    "praca": "Cristalina/GO",
-    "origem": "exemplo"
-   }
-  },
-  "arroz": {
-   "sul": {
-    "preco": 71.67,
-    "praca": "Média CEPEA/IRGA — Rio Grande do Sul",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": false,
-    "data": "2026-08-04"
-   },
-   "centro-oeste": {
-    "preco": 115.66,
-    "praca": "Formoso/TO",
-    "origem": "exemplo"
-   },
-   "norte": {
-    "preco": 124.18,
-    "praca": "Santarém/PA",
-    "origem": "exemplo"
-   }
-  },
-  "feijao": {
-   "sudeste": {
-    "preco": 233.05,
-    "praca": "Irecê/MG",
-    "origem": "exemplo"
-   },
-   "centro-oeste": {
-    "preco": 284.45,
-    "praca": "Cristalina/GO",
-    "origem": "exemplo"
-   },
-   "sul": {
-    "preco": 303.48,
-    "praca": "Ponta Grossa/PR",
-    "origem": "exemplo"
-   },
-   "nordeste": {
-    "preco": 278.24,
-    "praca": "Irecê/BA",
-    "origem": "exemplo"
-   }
-  },
-  "sorgo": {
-   "centro-oeste": {
-    "preco": 64.26,
-    "praca": "Rio Verde/GO",
-    "origem": "exemplo"
-   },
-   "sudeste": {
-    "preco": 63.69,
-    "praca": "Uberaba/MG",
-    "origem": "exemplo"
-   },
-   "nordeste": {
-    "preco": 61.69,
-    "praca": "Barreiras/BA",
-    "origem": "exemplo"
+   "mt": {
+    "preco": 139.8038,
+    "data": "2026-08-05",
+    "praca": "Indicador CEPEA/ESALQ — Brasil",
+    "escopo": "nacional",
+    "fonte": "CEPEA/ESALQ-USP"
    }
   },
   "bezerro": {
-   "centro-oeste": {
-    "preco": 3369.17,
-    "praca": "Mato Grosso do Sul (CEPEA)",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": false,
-    "data": "2026-08-04"
-   },
-   "sudeste": {
-    "preco": 3151.95,
-    "praca": "São Paulo (CEPEA)",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": false,
-    "data": "2026-08-04"
-   },
-   "sul": {
-    "preco": 2590,
-    "praca": "Guarapuava/PR",
-    "origem": "exemplo"
-   },
-   "norte": {
-    "preco": 2392,
-    "praca": "Redenção/PA",
-    "origem": "exemplo"
-   }
-  },
-  "vaca-gorda": {
-   "centro-oeste": {
-    "preco": 299.74,
-    "praca": "Cuiabá/MT",
-    "origem": "exemplo"
-   },
-   "sudeste": {
-    "preco": 335.52,
-    "praca": "Araçatuba/SP",
-    "origem": "exemplo"
-   },
-   "sul": {
-    "preco": 342.16,
-    "praca": "Cascavel/PR",
-    "origem": "exemplo"
-   },
-   "norte": {
-    "preco": 287.83,
-    "praca": "Marabá/PA",
-    "origem": "exemplo"
+   "mt": {
+    "preco": 3364.48,
+    "data": "2026-08-05",
+    "praca": "Mato Grosso do Sul — CEPEA",
+    "escopo": "vizinho",
+    "fonte": "CEPEA/ESALQ-USP"
    }
   },
   "suino": {
-   "sul": {
+   "mt": {
     "preco": 7.53,
+    "data": "2026-08-05",
     "praca": "Carcaça especial — CEPEA",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "sudeste": {
-    "preco": 7.53,
-    "praca": "Carcaça especial — CEPEA",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "centro-oeste": {
-    "preco": 7.53,
-    "praca": "Carcaça especial — CEPEA",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
+    "escopo": "nacional",
+    "fonte": "CEPEA/ESALQ-USP"
    }
   },
   "frango": {
-   "sul": {
-    "preco": 6.9,
+   "mt": {
+    "preco": 7.15,
+    "data": "2026-08-05",
     "praca": "Frango resfriado — CEPEA",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
+    "escopo": "nacional",
+    "fonte": "CEPEA/ESALQ-USP"
    },
-   "sudeste": {
-    "preco": 6.9,
+   "pa": {
+    "preco": 7.15,
+    "data": "2026-08-05",
     "praca": "Frango resfriado — CEPEA",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "centro-oeste": {
-    "preco": 6.9,
-    "praca": "Frango resfriado — CEPEA",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
-   },
-   "nordeste": {
-    "preco": 6.9,
-    "praca": "Frango resfriado — CEPEA",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": true,
-    "data": "2026-08-04"
+    "escopo": "nacional",
+    "fonte": "CEPEA/ESALQ-USP"
    }
   },
-  "ovos": {
-   "sudeste": {
-    "preco": 233.61,
-    "praca": "Bastos/SP",
-    "origem": "exemplo"
-   },
-   "sul": {
-    "preco": 184.26,
-    "praca": "Cascavel/PR",
-    "origem": "exemplo"
-   },
-   "centro-oeste": {
-    "preco": 192.96,
-    "praca": "Itumbiara/GO",
-    "origem": "exemplo"
-   },
-   "nordeste": {
-    "preco": 192.94,
-    "praca": "Recife/PE",
-    "origem": "exemplo"
-   }
-  },
-  "leite": {
-   "sudeste": {
-    "preco": 2.9844,
-    "praca": "Média MG",
-    "origem": "exemplo"
-   },
-   "sul": {
-    "preco": 2.6259,
-    "praca": "Média PR",
-    "origem": "exemplo"
-   },
-   "centro-oeste": {
-    "preco": 2.2752,
-    "praca": "Média GO",
-    "origem": "exemplo"
-   },
-   "nordeste": {
-    "preco": 2.664,
-    "praca": "Média BA",
-    "origem": "exemplo"
-   }
-  },
-  "acucar": {
-   "sudeste": {
-    "preco": 91.89,
-    "praca": "São Paulo (CEPEA)",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": false,
-    "data": "2026-08-04"
-   },
-   "nordeste": {
-    "preco": 125.77,
-    "praca": "Pernambuco (CEPEA)",
-    "origem": "real",
-    "fonte": "CEPEA/ESALQ-USP",
-    "nacional": false,
-    "data": null
-   },
-   "centro-oeste": {
-    "preco": 78.49,
-    "praca": "Goianésia/GO",
-    "origem": "exemplo"
-   }
-  },
-  "mandioca": {
-   "sul": {
-    "preco": 521.22,
-    "praca": "Paranavaí/PR",
-    "origem": "exemplo"
-   },
-   "sudeste": {
-    "preco": 480.28,
-    "praca": "Presidente Prudente/SP",
-    "origem": "exemplo"
-   },
-   "nordeste": {
-    "preco": 516.93,
-    "praca": "Cruz das Almas/BA",
-    "origem": "exemplo"
-   }
-  },
-  "laranja": {
-   "sudeste": {
-    "preco": 34.42,
-    "praca": "Bebedouro/SP",
-    "origem": "exemplo"
-   },
-   "sul": {
-    "preco": 40.74,
-    "praca": "Paranavaí/PR",
-    "origem": "exemplo"
+  "cafe-conilon": {
+   "pa": {
+    "preco": 1111.86,
+    "data": "2026-08-05",
+    "praca": "Robusta — Indicador CEPEA/ESALQ",
+    "escopo": "nacional",
+    "fonte": "CEPEA/ESALQ-USP"
    }
   }
- },
- "contagem": {
-  "total": 66,
-  "reais": 31,
-  "exemplo": 35
  }
 }
