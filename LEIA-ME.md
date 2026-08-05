@@ -84,121 +84,20 @@ Depois é só ligar o servidor de novo e recarregar a página.
 
 ---
 
-## Passo 3 — Colocar no ar de graça (GitHub Pages)
+## Passo 3 — Colocar no ar para os amigos
 
-Assim seus amigos acessam por um link, do celular deles.
+Está tudo num guia separado, passo a passo: **[COLOCAR-NO-AR.md](COLOCAR-NO-AR.md)**
 
-### 3.1 — Criar a conta e o repositório
+Ele cobre, na ordem:
 
-1. Crie uma conta em **https://github.com** (grátis).
-2. Clique no **+** no canto superior direito → **New repository**.
-3. Em *Repository name*, escreva: `bom-dia-agro`
-4. Deixe marcado **Public**.
-5. Clique em **Create repository**.
+1. **Supabase** — o login de verdade, para a pessoa se cadastrar no celular e
+   conseguir entrar também no computador.
+2. **GitHub** — onde o projeto mora e de onde o robô atualiza os preços sozinho.
+3. **Netlify** — o site no ar, com um link para mandar no grupo.
 
-### 3.2 — Enviar os arquivos
-
-Na janela preta, dentro da pasta do projeto, digite um comando por vez:
-
-```
-git init
-```
-```
-git add .
-```
-```
-git commit -m "Primeira versao do Bom Dia Agro"
-```
-```
-git branch -M main
-```
-
-Agora troque `SEU-USUARIO` pelo seu nome de usuário do GitHub:
-
-```
-git remote add origin https://github.com/SEU-USUARIO/bom-dia-agro.git
-```
-```
-git push -u origin main
-```
-
-Vai pedir login do GitHub na primeira vez.
-
-### 3.3 — Ligar o site
-
-1. No GitHub, abra seu repositório.
-2. Clique em **Settings** (engrenagem, no menu de cima).
-3. No menu da esquerda, clique em **Pages**.
-4. Em *Source*, escolha **Deploy from a branch**.
-5. Em *Branch*, escolha **main** e a pasta **/ (root)**. Clique em **Save**.
-6. Espere 1 ou 2 minutos e recarregue a página.
-
-Seu site vai estar em:
-
-```
-https://SEU-USUARIO.github.io/bom-dia-agro/
-```
-
-**Esse é o link para mandar para os amigos.** No celular, dá para "Adicionar à tela
-de início" pelo menu do navegador — vira um ícone igual a um aplicativo.
-
----
-
-## Passo 4 — Deixar atualizando sozinho todo dia
-
-Isso já está pronto no arquivo `.github/workflows/atualizar.yml`. Só falta autorizar:
-
-1. No GitHub, abra seu repositório → **Settings**.
-2. Menu da esquerda → **Actions** → **General**.
-3. Role até **Workflow permissions**.
-4. Marque **Read and write permissions** e clique em **Save**.
-
-Pronto. A partir de agora o site se atualiza sozinho **às 6h10 e às 17h10**
-(horário de Brasília), de segunda a sexta.
-
-**Para testar agora sem esperar:** aba **Actions** → clique em
-*"Atualizar preços e notícias"* → botão **Run workflow**.
-
----
-
-## Passo 5 (opcional) — Login de verdade, na nuvem
-
-Hoje o cadastro fica **guardado só no aparelho de quem usa**. Serve bem para um grupo
-de amigos, mas tem duas limitações honestas:
-
-- quem se cadastrar no celular precisa se cadastrar de novo no computador;
-- **não é segurança de verdade** — quem entende de navegador consegue ver os dados.
-  Por isso: **nunca use uma senha importante aí.**
-
-Para ter login de verdade (grátis até 50 mil usuários), use o Supabase:
-
-1. Crie uma conta em **https://supabase.com** → **New project**.
-2. Quando terminar de criar, vá em **Project Settings** → **API**.
-3. Copie a **Project URL** e a chave **anon public**.
-4. Abra o arquivo `js/config.js` no Bloco de Notas e preencha:
-
-```js
-login: {
-  modo: 'supabase',
-  supabaseUrl: 'https://xxxxx.supabase.co',
-  supabaseChave: 'eyJhbGci...'
-},
-```
-
-5. Salve, e envie a mudança:
-
-```
-git add .
-```
-```
-git commit -m "Login na nuvem"
-```
-```
-git push
-```
-
-> A chave *anon public* pode ficar visível no site — ela foi feita para isso.
-> **Nunca** use a chave `service_role` aqui.
+> **Atenção:** aqui **não dá** para arrastar a pasta no Netlify como você fez no
+> M+A Cine. Os arquivos de preço mudam todo dia — se arrastar, os preços congelam.
+> O guia explica o caminho certo (Netlify ligado no GitHub).
 
 ---
 
@@ -253,8 +152,9 @@ converte: v => v * 0.06,   // exemplo: de R$/tonelada para R$/saca de 60kg
 |---|---|
 | Página em branco | Você abriu o `index.html` com dois cliques. Use o servidor (Passo 1). |
 | `node` não é reconhecido | Instale o Node.js: https://nodejs.org (botão LTS) e reabra a janela preta. |
-| Preços não atualizam no site | Confira o Passo 4 (permissão de escrita nas Actions). |
-| Aba Actions vermelha | Clique no erro e leia a última linha; quase sempre é a permissão do Passo 4. |
+| Preços não atualizam no site | Permissão de escrita nas Actions — veja o passo 2.3 do [COLOCAR-NO-AR.md](COLOCAR-NO-AR.md). |
+| Aba Actions vermelha | Clique no erro e leia a última linha; quase sempre é a permissão do passo 2.3. |
+| "Modo de teste" na tela de login | Falta preencher a URL e a chave do Supabase em `js/config.js` (passo 1.4). |
 | Notícias vazias | Rode `node scripts/atualizar-precos.mjs`. Se um site estiver fora do ar, os outros continuam. |
 
 ---
