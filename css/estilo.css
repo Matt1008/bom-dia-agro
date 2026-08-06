@@ -239,21 +239,43 @@ html[data-tema="escuro"] .aba.ativa { color: #0F1613; }
 .titulo-secao:first-child { margin-top: 4px; }
 .titulo-secao .linha { flex: 1; height: 1px; background: var(--linha); }
 
-/* ---------- 7. MOEDAS ---------- */
-.moedas { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+/* ---------- 7. MOEDAS ----------
+   minmax(210px): abaixo disso o cartão vira uma coluna só. Com
+   150px, dois cartões espremidos num celular quebravam o "ao vivo"
+   em três linhas e a porcentagem subia por cima do valor. */
+.moedas { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+
 .moeda {
   background: var(--papel-2); border: 1px solid var(--linha);
-  border-radius: var(--raio); padding: 14px 16px;
+  border-radius: var(--raio); padding: 13px 15px;
   display: flex; align-items: center; gap: 12px;
   box-shadow: var(--sombra);
 }
 .moeda .simb {
-  width: 38px; height: 38px; border-radius: 11px;
+  width: 38px; height: 38px; flex: 0 0 auto; border-radius: 11px;
   background: var(--verde-claro); color: var(--verde);
   display: grid; place-items: center;
 }
-.moeda .nome { font-size: 11px; color: var(--tinta-3); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
-.moeda .valor { font-size: 19px; font-weight: 800; letter-spacing: -.4px; font-variant-numeric: tabular-nums; }
+.moeda .corpo { flex: 1; min-width: 0; }
+
+.moeda .nome {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--tinta-3); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .5px;
+  white-space: nowrap;
+}
+/* bolinha piscando no lugar do texto "ao vivo", que não cabia */
+.moeda .pulso {
+  width: 6px; height: 6px; border-radius: 50%; flex: 0 0 auto;
+  background: var(--alta); animation: pulsa 2s ease-in-out infinite;
+}
+
+.moeda .linha { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.moeda .valor {
+  font-size: 19px; font-weight: 800; letter-spacing: -.4px;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.moeda .variacao { font-size: 12px; padding: 3px 8px 3px 5px; }
 
 /* ---------- 8. FILTROS (região / categoria) ---------- */
 .barra-filtros {
@@ -333,6 +355,24 @@ html[data-tema="escuro"] .pilula.ativa { color: #0F1613; }
   font-size: 13px; line-height: 1.5;
 }
 .aviso-dados b { font-weight: 800; }
+
+/* A faixa nasce aberta, encolhe sozinha depois de alguns segundos e
+   volta a abrir se o usuário tocar nela. O resumo (data + fonte)
+   nunca some: a citação do CEPEA precisa ficar sempre visível. */
+.aviso-dados { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.aviso-corpo { flex: 1; min-width: 0; }
+.aviso-detalhe {
+  margin-top: 4px;
+  max-height: 220px; opacity: 1; overflow: hidden;
+  transition: max-height 420ms cubic-bezier(.4,0,.2,1), opacity 260ms ease, margin-top 420ms;
+}
+.aviso-dados.compacto .aviso-detalhe { max-height: 0; opacity: 0; margin-top: 0; }
+
+.aviso-seta {
+  flex: 0 0 auto; align-self: center; opacity: .55;
+  transition: transform 420ms cubic-bezier(.4,0,.2,1);
+}
+.aviso-dados.compacto .aviso-seta { transform: rotate(180deg); }
 
 .aviso-ok {
   background: var(--verde-claro) !important;

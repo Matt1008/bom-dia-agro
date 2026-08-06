@@ -18,8 +18,8 @@ export const CONFIG = {
     modo: 'supabase',
 
     // Pegue em: Supabase > seu projeto > Settings > API
-    supabaseUrl: '',      // ex: https://abcdefgh.supabase.co
-    supabaseChave: '',    // a chave "anon public" / "publishable" (é pública mesmo)
+    supabaseUrl: 'https://euebbkeqzprysmzqffgf.supabase.co',      // ex: https://abcdefgh.supabase.co
+    supabaseChave: 'sb_publishable_7YNw9Eg0RNr68xyxk0AbSw_bZQU539H',    // a chave "anon public" / "publishable" (é pública mesmo)
 
     /* CÓDIGO DE CONVITE
        Quem for se cadastrar precisa digitar este código.

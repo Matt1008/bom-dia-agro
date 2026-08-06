@@ -289,6 +289,62 @@ git push
 
 ---
 
+# Acompanhar quem se cadastrou
+
+Todo cadastro feito no site cai no seu Supabase, automaticamente. Você não precisa
+fazer nada para "registrar" — só olhar.
+
+## Ver a lista
+
+Supabase → menu da esquerda → **Authentication** → **Users**.
+
+Aparece o e-mail de cada pessoa, quando se cadastrou e quando entrou pela última vez.
+
+## Ver com o nome junto (mais útil)
+
+A lista de cima não mostra o nome que a pessoa digitou. Para ver tudo junto,
+vá em **SQL Editor** e rode:
+
+```sql
+select
+  raw_user_meta_data ->> 'nome'                     as nome,
+  email,
+  to_char(created_at,      'DD/MM/YYYY HH24:MI')    as cadastrou_em,
+  to_char(last_sign_in_at, 'DD/MM/YYYY HH24:MI')    as ultimo_acesso
+from auth.users
+order by created_at desc;
+```
+
+Dá para exportar em CSV pelo botão de download do resultado.
+
+## Quantas pessoas usam o app
+
+```sql
+select
+  count(*)                                                          as total,
+  count(*) filter (where last_sign_in_at > now() - interval '7 days')  as ativos_semana,
+  count(*) filter (where created_at      > now() - interval '7 days')  as novos_semana
+from auth.users;
+```
+
+## Tirar o acesso de alguém
+
+**Authentication** → **Users** → os três pontinhos na linha da pessoa → **Delete user**.
+
+Ela perde o acesso na hora. Se quiser voltar, cadastra de novo (e precisa do código
+de convite).
+
+## Trocar o código de convite
+
+Quando o código vazar num grupo grande, é só trocar:
+
+1. Abra `js/config.js`, mude `codigoConvite: 'SAFRA2026'` para outro.
+2. Envie: `git add -A` → `git commit -m "novo codigo"` → `git push`.
+
+Quem já tem conta continua entrando normalmente — o código só vale para cadastro novo.
+
+---
+
 # Se der problema
 
 | Problema | Causa provável | Solução |

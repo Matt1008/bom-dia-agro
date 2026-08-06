@@ -241,12 +241,14 @@ function desenharMoedas() {
     const x = m[chave]; if (!x) return '';
     const d = x.variacao > 0.01 ? 'sobe' : x.variacao < -0.01 ? 'desce' : 'igual';
     return `<div class="moeda">
-      <div class="simb">${icone(ic, 21)}</div>
-      <div style="flex:1;min-width:0">
-        <div class="nome">${x.nome}${x.aoVivo ? ' · ao vivo' : ''}</div>
-        <div class="valor">${D.dinheiro(x.valor, 4)}</div>
-      </div>
-      <span class="variacao ${d}">${icone(d, 13)}${D.porcento(x.variacao)}</span>
+      <span class="simb">${icone(ic, 21)}</span>
+      <span class="corpo">
+        <span class="nome">${x.nome}${x.aoVivo ? '<span class="pulso" title="Cotação ao vivo"></span>' : ''}</span>
+        <span class="linha">
+          <span class="valor">${D.dinheiro(x.valor, 4)}</span>
+          <span class="variacao ${d}">${icone(d, 12)}${D.porcento(x.variacao)}</span>
+        </span>
+      </span>
     </div>`;
   };
   $('#moedas').innerHTML = cartao('USD', 'dolar') + cartao('EUR', 'euro');
@@ -314,16 +316,34 @@ function desenharAviso() {
     ? Math.round((Date.now() - new Date(inicio + 'T12:00:00').getTime()) / 86400000)
     : 0;
 
-  const recado = diasDeColeta < 30
-    ? `<br>A coleta começou em <b>${D.dataLonga(inicio)}</b>. Períodos maiores
+  const recado = diasDeColeta < 30 && inicio
+    ? ` A coleta começou em <b>${D.dataLonga(inicio)}</b>. Períodos maiores
        (mês, ano) aparecem como <b>—</b> até haver histórico suficiente — vão se
        preenchendo sozinhos, um dia por vez.`
     : '';
 
-  caixa.innerHTML = `${icone('relogio', 18)}<div>Atualizado em <b>${texto}</b>.
-    ${fs.length ? 'Fonte: <b>' + fs.join(', ') + '</b>.' : ''}
-    Valores de referência — confirme com seu comprador antes de negociar.${recado}</div>`;
+  /* Resumo fica sempre; o detalhe encolhe depois de alguns segundos. */
+  caixa.innerHTML = `${icone('relogio', 18)}
+    <div class="aviso-corpo">
+      <div class="aviso-resumo">Atualizado em <b>${texto}</b>${fs.length ? ' · Fonte: <b>' + fs.join(', ') + '</b>' : ''}</div>
+      <div class="aviso-detalhe">Valores de referência — confirme com seu comprador
+        antes de negociar.${recado}</div>
+    </div>
+    ${icone('desce', 16, 'aviso-seta')}`;
+
+  clearTimeout(encolherAviso);
+  caixa.classList.remove('compacto');
+
+  // encolhe sozinha depois de 7 segundos
+  encolherAviso = setTimeout(() => caixa.classList.add('compacto'), 8000);
+
+  caixa.onclick = () => {
+    clearTimeout(encolherAviso);
+    caixa.classList.toggle('compacto');
+  };
 }
+
+let encolherAviso;
 
 function desenharTudo() {
   desenharAviso();
