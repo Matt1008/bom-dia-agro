@@ -419,6 +419,53 @@ html[data-tema="escuro"] .pilula.ativa { color: #0F1613; }
 .noticia h3 { font-size: 16px; font-weight: 700; line-height: 1.35; letter-spacing: -.2px; }
 .noticia p { font-size: 13.5px; color: var(--tinta-2); margin-top: 7px; line-height: 1.55; }
 
+/* ---------- 11b. LISTA DE PRAÇAS (cidades) ---------- */
+.lista-pracas { display: grid; gap: 8px; }
+
+.linha-praca {
+  display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
+  padding: 13px 14px;
+  background: var(--papel); border: 1px solid var(--linha);
+  border-radius: var(--raio-p);
+  transition: transform var(--transicao), border-color var(--transicao), background var(--transicao);
+  animation: sobe .35s cubic-bezier(.2,.8,.25,1) both;
+}
+.linha-praca:hover {
+  border-color: color-mix(in srgb, var(--verde) 45%, var(--linha));
+  background: var(--verde-claro); transform: translateX(3px);
+}
+.linha-praca:active { transform: translateX(1px) scale(.995); }
+
+.linha-praca .pos {
+  width: 30px; height: 30px; flex: 0 0 auto; border-radius: 9px;
+  display: grid; place-items: center;
+  background: var(--papel-3); color: var(--tinta-2);
+  font-size: 11.5px; font-weight: 800;
+}
+.linha-praca:first-child .pos { background: var(--verde); color: #fff; }
+html[data-tema="escuro"] .linha-praca:first-child .pos { color: #0F1613; }
+
+.linha-praca .meio { flex: 1; min-width: 0; }
+.linha-praca .nome { display: block; font-size: 15px; font-weight: 700; letter-spacing: -.2px; }
+.linha-praca .dif  { display: block; font-size: 11.5px; color: var(--tinta-3); }
+
+.linha-praca .direita { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+.linha-praca .valor {
+  font-size: 16px; font-weight: 800; letter-spacing: -.3px;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.linha-praca .variacao { font-size: 11px; padding: 2px 7px 2px 4px; }
+
+/* etiqueta no cartão de preço avisando que dá para ver por cidade */
+.tem-praca {
+  display: inline-flex; align-items: center; gap: 3px;
+  margin-left: 6px; vertical-align: 1px;
+  font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .5px;
+  padding: 2px 6px; border-radius: 5px;
+  background: var(--verde-claro); color: var(--verde);
+  border: 1px solid color-mix(in srgb, var(--verde) 30%, transparent);
+}
+
 /* ---------- 12. GRÁFICOS ---------- */
 .painel {
   background: var(--papel-2); border: 1px solid var(--linha);

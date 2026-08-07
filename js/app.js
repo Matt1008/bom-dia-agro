@@ -25,10 +25,18 @@ const estado = {
     regiao: localStorage.getItem('bda_regiao') || 'mt',
     periodo: 'dia',
     base100: false
+  },
+  // tela de praças
+  p: {
+    produto: 'boi-gordo',
+    regiao: localStorage.getItem('bda_regiao') || 'mt',
+    cidade: localStorage.getItem('bda_cidade') || 'todas'
   }
 };
 
-if (!REGIAO_POR_ID[estado.regiao]) { estado.regiao = 'mt'; estado.g.regiao = 'mt'; }
+if (!REGIAO_POR_ID[estado.regiao]) {
+  estado.regiao = 'mt'; estado.g.regiao = 'mt'; estado.p.regiao = 'mt';
+}
 
 const $  = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
@@ -178,6 +186,7 @@ function irPara(pagina) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
   if (pagina === 'noticias') desenharNoticias();
+  if (pagina === 'pracas')   desenharPracas();
   if (pagina === 'graficos') desenharGraficos();
 }
 
@@ -197,6 +206,8 @@ function montarFiltros() {
     const b = e.target.closest('[data-regiao]'); if (!b) return;
     estado.regiao = b.dataset.regiao;
     estado.g.regiao = b.dataset.regiao;
+    estado.p.regiao = b.dataset.regiao;
+    estado.p.cidade = 'todas';
     localStorage.setItem('bda_regiao', estado.regiao);
     $$('#filtro-regiao .pilula').forEach(p => p.classList.toggle('ativa', p.dataset.regiao === estado.regiao));
     montarSeletoresGraficos();
@@ -281,7 +292,7 @@ function desenharPrecos() {
     return `<button class="cartao" data-produto="${p.id}" data-cat="${p.categoria}" style="animation-delay:${Math.min(i * 32, 400)}ms">
       <span class="figura">${icone(p.icone, 25)}</span>
       <span class="meio">
-        <span class="nome">${p.nome}</span>
+        <span class="nome">${p.nome}${D.temPracas(p.id, estado.regiao) ? '<span class="tem-praca">por cidade</span>' : ''}</span>
         <span class="praca">${info.praca || regiao.nome}</span>
         <span class="preco">${D.dinheiro(info.preco, casas)} <span class="un">/${p.unidadeCurta}</span></span>
       </span>
@@ -427,10 +438,26 @@ function abrirDetalhe(produtoId) {
       Os períodos com <b>—</b> ainda não têm histórico. Temos <b>${total} ${total === 1 ? 'cotação guardada' : 'cotações guardadas'}</b>,
       desde ${D.dataLonga(inicio)}. Cada dia de coleta preenche mais um pedaço.</div>` : ''}
 
-    <button class="botao" style="margin-top:20px" data-ver-grafico="${produtoId}">
-      ${icone('grafico', 19)} Ver gráfico completo
-    </button>
+    ${D.temPracas(produtoId, estado.regiao) ? `
+      <button class="botao" style="margin-top:20px" data-ver-pracas="${produtoId}">
+        ${icone('lupa', 19)} Ver preço nas ${D.cidadesDe(produtoId, estado.regiao).length} cidades
+      </button>
+      <button class="botao-2" data-ver-grafico="${produtoId}">
+        ${icone('grafico', 17)} Ver gráfico completo
+      </button>`
+    : `<button class="botao" style="margin-top:20px" data-ver-grafico="${produtoId}">
+        ${icone('grafico', 19)} Ver gráfico completo
+      </button>`}
   `, janela => {
+    const btnPracas = janela.querySelector('[data-ver-pracas]');
+    if (btnPracas) btnPracas.onclick = () => {
+      fecharJanela();
+      estado.p.produto = produtoId;
+      estado.p.regiao = estado.regiao;
+      estado.p.cidade = 'todas';
+      irPara('pracas');
+    };
+
     const svg = janela.querySelector('.grafico-linha');
     const dica = janela.querySelector('#dica-detalhe');
     if (svg && dica) {
@@ -499,7 +526,185 @@ function desenharNoticias() {
 }
 
 /* ============================================================
-   TELA 3 — GRÁFICOS E COMPARAÇÕES
+   TELA 3 — PREÇO POR PRAÇA (cidade)
+
+   Hoje só o boi do Mato Grosso tem cotação por cidade: o IMEA
+   publica 8 praças. Quando outra fonte de praça entrar, ela
+   aparece aqui sozinha.
+   ============================================================ */
+function montarSeletoresPracas() {
+  const comPraca = D.produtosComPraca(estado.p.regiao);
+
+  if (comPraca.length && !comPraca.includes(estado.p.produto)) estado.p.produto = comPraca[0];
+
+  $('#sel-praca-produto').innerHTML = comPraca.length
+    ? comPraca.map(id => `<option value="${id}" ${id === estado.p.produto ? 'selected' : ''}>${PRODUTO_POR_ID[id]?.nome || id}</option>`).join('')
+    : '<option value="">— sem praças neste estado —</option>';
+
+  $('#sel-praca-regiao').innerHTML = REGIOES.map(r =>
+    `<option value="${r.id}" ${r.id === estado.p.regiao ? 'selected' : ''}>${r.nome}</option>`).join('');
+
+  const cidades = D.cidadesDe(estado.p.produto, estado.p.regiao);
+  if (cidades.length && !cidades.some(c => c.id === estado.p.cidade)) estado.p.cidade = 'todas';
+
+  $('#sel-praca-cidade').innerHTML =
+    `<option value="todas" ${estado.p.cidade === 'todas' ? 'selected' : ''}>Todas as praças</option>` +
+    cidades.map(c => `<option value="${c.id}" ${c.id === estado.p.cidade ? 'selected' : ''}>${c.nome}</option>`).join('');
+}
+
+function desenharPracas() {
+  montarSeletoresPracas();
+
+  const { produto, regiao, cidade } = estado.p;
+  const p = PRODUTO_POR_ID[produto];
+  const cidades = D.cidadesDe(produto, regiao);
+  const area = $('#area-pracas');
+
+  if (!cidades.length) {
+    area.innerHTML = vazio('lupa',
+      `Sem cotação por cidade no ${REGIAO_POR_ID[regiao]?.nome || regiao}.`,
+      `Hoje só o <b>Boi Gordo no Mato Grosso</b> tem preço por praça, publicado pelo IMEA.
+       Para os outros produtos existe um preço por estado — veja na tela de Preços.`);
+    return;
+  }
+
+  const casas = D.casasDe(produto);
+  const info = D.precoDe(produto, regiao);
+
+  /* ---------- uma cidade escolhida ---------- */
+  if (cidade !== 'todas') {
+    const c = D.cidadeDe(produto, regiao, cidade);
+    const v = D.variacaoCidade(produto, regiao, cidade);
+    const serie = D.serieCidade(produto, regiao, cidade);
+    const media = info?.preco;
+    const difMedia = media ? ((c.preco - media) / media) * 100 : null;
+
+    area.innerHTML = `
+      <div class="painel">
+        <div class="painel-topo">
+          <span class="figura" style="width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--verde-claro);color:var(--verde)">${icone(p.icone, 24)}</span>
+          <div style="flex:1">
+            <h3>${c.nome}</h3>
+            <div class="sub">${p.nome} · por ${p.unidade} · cotação de ${D.dataLonga(c.data)}</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;margin-bottom:14px">
+          <span style="font-size:34px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums">${D.dinheiro(c.preco, casas)}</span>
+          ${v ? `<span class="variacao ${v.direcao}">${icone(v.direcao, 14)}${D.porcento(v.pct)}</span>` : ''}
+        </div>
+
+        <div class="resumo-numeros">
+          <div class="num"><div class="r">Média do estado</div><div class="v">${D.dinheiro(media, casas)}</div></div>
+          <div class="num"><div class="r">Esta praça vs média</div>
+            <div class="v" style="color:${difMedia >= 0 ? 'var(--alta)' : 'var(--baixa)'}">${D.porcento(difMedia)}</div></div>
+          <div class="num"><div class="r">Maior praça hoje</div><div class="v">${cidades[0].nome}</div></div>
+          <div class="num"><div class="r">Cotações guardadas</div><div class="v">${serie.length}</div></div>
+        </div>
+
+        ${serie.length >= 2 ? `
+          <div class="caixa-grafico" style="margin-top:16px">
+            ${graficoLinha({
+              series: [{ nome: c.nome, valores: serie.map(x => x.valor), cor: 'var(--verde)', casas }],
+              datas: serie.map(x => x.data), altura: 230
+            })}
+          </div>
+          <div id="leitura-praca" style="text-align:center;font-size:12.5px;color:var(--tinta-3);min-height:20px;margin-top:6px">
+            Passe o dedo no gráfico para ver cada dia
+          </div>`
+        : `<div style="font-size:12.5px;color:var(--tinta-3);text-align:center;padding:18px 10px;margin-top:10px;
+              background:var(--papel);border:1px solid var(--linha);border-radius:10px">
+             Começamos a guardar o preço desta praça em <b>${D.dataLonga(serie[0]?.data || c.data)}</b>.
+             O gráfico aparece a partir do segundo dia.
+           </div>`}
+      </div>
+
+      ${desenharComparativoPracas(produto, regiao, cidades, casas, cidade)}`;
+
+    const svg = $('#area-pracas .grafico-linha');
+    const leitura = $('#leitura-praca');
+    if (svg && leitura) {
+      ativarGrafico(svg, ponto => {
+        leitura.textContent = ponto
+          ? `${D.dataLonga(ponto.data)} — ${D.dinheiro(ponto.valores[0].valor, casas)}`
+          : 'Passe o dedo no gráfico para ver cada dia';
+      });
+    }
+
+    area.onclick = e => {
+      const b = e.target.closest('[data-cidade]'); if (!b) return;
+      estado.p.cidade = b.dataset.cidade;
+      localStorage.setItem('bda_cidade', estado.p.cidade);
+      desenharPracas();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    return;
+  }
+
+  /* ---------- todas as praças ---------- */
+  const media = info?.preco;
+  area.innerHTML = `
+    <div class="painel">
+      <div class="painel-topo"><div style="flex:1">
+        <h3>${p.nome} — ${cidades.length} praças de ${REGIAO_POR_ID[regiao].nome}</h3>
+        <div class="sub">Cotação de ${D.dataLonga(cidades[0].data)} · média R$ ${D.numero(media, casas)}/${p.unidadeCurta}</div>
+      </div></div>
+
+      <div class="lista-pracas">
+        ${cidades.map((c, i) => {
+          const v = D.variacaoCidade(produto, regiao, c.id);
+          const dif = media ? ((c.preco - media) / media) * 100 : 0;
+          return `<button class="linha-praca" data-cidade="${c.id}" style="animation-delay:${Math.min(i * 30, 320)}ms">
+            <span class="pos">${i + 1}º</span>
+            <span class="meio">
+              <span class="nome">${c.nome}</span>
+              <span class="dif">${dif >= 0 ? '+' : ''}${D.numero(dif, 2)}% em relação à média</span>
+            </span>
+            <span class="direita">
+              <span class="valor">${D.dinheiro(c.preco, casas)}</span>
+              ${v ? `<span class="variacao ${v.direcao}">${icone(v.direcao, 12)}${D.porcento(v.pct)}</span>` : ''}
+            </span>
+          </button>`;
+        }).join('')}
+      </div>
+
+      <p style="font-size:11.5px;color:var(--tinta-3);margin-top:12px;line-height:1.6">
+        Toque numa praça para ver o gráfico dela. Fonte: <b>${info?.fonte || '—'}</b>.
+      </p>
+    </div>`;
+
+  area.onclick = e => {
+    const b = e.target.closest('[data-cidade]'); if (!b) return;
+    estado.p.cidade = b.dataset.cidade;
+    desenharPracas();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+}
+
+/** Barras comparando todas as praças, com a escolhida destacada */
+function desenharComparativoPracas(produto, regiao, cidades, casas, escolhida) {
+  const info = D.precoDe(produto, regiao);
+  const media = info?.preco;
+  if (!media) return '';
+
+  const barras = cidades.map(c => ({
+    rotulo: c.nome.length > 11 ? c.nome.slice(0, 10) + '.' : c.nome,
+    valor: ((c.preco - media) / media) * 100,
+    rotuloValor: D.dinheiro(c.preco, 0)
+  }));
+
+  return `<div class="painel">
+    <div class="painel-topo"><div>
+      <h3>Todas as praças, comparadas</h3>
+      <div class="sub">Quanto cada cidade está acima ou abaixo da média do estado</div>
+    </div></div>
+    <div class="caixa-grafico">${graficoBarras(barras, 230)}</div>
+    <button class="botao-2" data-cidade="todas" style="margin-top:12px">Ver a lista completa</button>
+  </div>`;
+}
+
+/* ============================================================
+   TELA 4 — GRÁFICOS E COMPARAÇÕES
    ============================================================ */
 function montarSeletoresGraficos() {
   const comPreco = PRODUTOS.filter(p => D.precoDe(p.id, estado.g.regiao));
@@ -795,6 +1000,14 @@ function iniciar() {
     const b = e.target.closest('[data-periodo]'); if (!b) return;
     estado.g.periodo = b.dataset.periodo;
     desenharGraficos();
+  };
+
+  $('#sel-praca-produto').onchange = e => { estado.p.produto = e.target.value; estado.p.cidade = 'todas'; desenharPracas(); };
+  $('#sel-praca-regiao').onchange  = e => { estado.p.regiao  = e.target.value; estado.p.cidade = 'todas'; desenharPracas(); };
+  $('#sel-praca-cidade').onchange  = e => {
+    estado.p.cidade = e.target.value;
+    localStorage.setItem('bda_cidade', estado.p.cidade);
+    desenharPracas();
   };
 
   $('#sel-produto-a').onchange = e => { estado.g.produtoA = e.target.value; desenharGraficos(); };

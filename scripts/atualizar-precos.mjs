@@ -27,6 +27,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as Nuvem from './nuvem.mjs';
+import * as MatoGrosso from './fonte-noticias-agricolas.mjs';
 
 const AQUI = dirname(fileURLToPath(import.meta.url));
 const DADOS = join(AQUI, '..', 'dados');
@@ -61,7 +62,10 @@ const relatorio = { ok: [], falhas: [] };
 const ARROBA_EM_LIBRAS = 33.0693;   // 15 kg em libras-peso
 
 const FONTES = [
-  { produto: 'boi-gordo',    indicador: 2,   regioes: ['mt', 'pa'],
+  /* Boi no MT NÃO vem daqui — vem do IMEA, que é cotação de praça.
+     O indicador nacional continua valendo só para o Pará, onde não
+     existe fonte estadual pública. */
+  { produto: 'boi-gordo',    indicador: 2,   regioes: ['pa'],
     praca: 'Indicador CEPEA/B3 — Brasil', escopo: 'nacional' },
 
   { produto: 'soja',         indicador: 92,  regioes: ['mt', 'pa'],
@@ -223,6 +227,58 @@ async function buscarPrecos() {
 }
 
 /* ============================================================
+   1b) MATO GROSSO — boi por praça (IMEA) e novilha (Datagro)
+   ============================================================ */
+async function buscarMatoGrosso(encontrados) {
+  const cidades = {};   // { produto: { regiao: { cidadeId: {...} } } }
+
+  try {
+    const mt = await MatoGrosso.buscar();
+    mt.avisos.forEach(a => relatorio.falhas.push(`MT · ${a}`));
+
+    if (mt.boi) {
+      encontrados['boi-gordo'] ??= {};
+      encontrados['boi-gordo']['mt'] = {
+        preco: mt.boi.preco,
+        data: mt.boi.data,
+        praca: mt.boi.praca,
+        escopo: 'estado',
+        fonte: mt.boi.fonte,
+        variacao_fonte: mt.boi.variacao
+      };
+
+      cidades['boi-gordo'] = { mt: {} };
+      for (const c of mt.boi.cidades) {
+        cidades['boi-gordo'].mt[c.id] = {
+          nome: c.nome,
+          preco: c.preco,
+          data: mt.boi.data,
+          variacao_fonte: c.variacao
+        };
+      }
+      relatorio.ok.push(`Preço · boi-gordo/mt: ${mt.boi.preco} (média de ${mt.boi.cidades.length} praças IMEA, cotação de ${mt.boi.data})`);
+    }
+
+    if (mt.novilha) {
+      encontrados['novilha'] ??= {};
+      encontrados['novilha']['mt'] = {
+        preco: mt.novilha.preco,
+        data: mt.novilha.data,
+        praca: mt.novilha.praca,
+        escopo: 'estado',
+        fonte: mt.novilha.fonte,
+        variacao_fonte: mt.novilha.variacao
+      };
+      relatorio.ok.push(`Preço · novilha/mt: ${mt.novilha.preco} (Datagro, cotação de ${mt.novilha.data})`);
+    }
+  } catch (e) {
+    relatorio.falhas.push(`Mato Grosso (boi/novilha): ${e.message}`);
+  }
+
+  return cidades;
+}
+
+/* ============================================================
    2) MOEDAS
    ============================================================ */
 async function buscarMoedas(anteriores) {
@@ -310,6 +366,27 @@ async function buscarNoticias() {
    preencher buraco — e valor inventado é exatamente o que este
    app não faz.
    ============================================================ */
+/**
+ * Troca de fonte APAGA a série e recomeça.
+ *
+ * Isso não é exagero. Quando o boi do MT saiu do indicador nacional
+ * do CEPEA (R$ 348) para a cotação de praça do IMEA (R$ 321), juntar
+ * as duas na mesma linha faria o app anunciar uma queda de 7,6% que
+ * nunca aconteceu — foi só a régua que mudou. Alguém podia decidir
+ * uma venda em cima disso. Melhor perder o histórico antigo e
+ * recomeçar honesto.
+ */
+function conferirFonte(serie, fonte) {
+  if (!fonte) return false;
+  if (serie.fonte && serie.fonte !== fonte) {
+    serie.d = []; serie.v = [];
+    serie.fonte = fonte;
+    return true;    // avisa que zerou
+  }
+  serie.fonte = fonte;
+  return false;
+}
+
 function guardarNoHistorico(serie, data, valor) {
   serie.d ??= []; serie.v ??= [];
 
@@ -340,7 +417,10 @@ function guardarNoHistorico(serie, data, valor) {
     Ignora o carimbo de hora: senão todo arquivo "mudaria" toda rodada
     e o site seria republicado à toa de hora em hora. */
 function retrato(precos, historico) {
-  return JSON.stringify({ p: precos.produtos, h: historico.series });
+  return JSON.stringify({
+    p: precos.produtos, c: precos.cidades,
+    h: historico.series, hc: historico.cidades
+  });
 }
 
 async function principal() {
@@ -363,9 +443,12 @@ async function principal() {
   precos.moedas = await buscarMoedas(precos.moedas);
 
   const { encontrados, indicadoresOk } = await buscarPrecos();
+  const cidadesNovas = await buscarMatoGrosso(encontrados);
 
   /* --- grava preço de hoje + ponto no histórico --- */
   precos.produtos ??= {};
+  precos.cidades ??= {};
+  historico.cidades ??= {};
   let novos = 0, atualizados = 0;
 
   for (const [produto, porRegiao] of Object.entries(encontrados)) {
@@ -375,10 +458,33 @@ async function principal() {
     for (const [regiao, novo] of Object.entries(porRegiao)) {
       precos.produtos[produto][regiao] = novo;
 
-      historico.series[produto][regiao] ??= { d: [], v: [] };
-      const r = guardarNoHistorico(historico.series[produto][regiao], novo.data, novo.preco);
+      const serie = (historico.series[produto][regiao] ??= { d: [], v: [] });
+
+      if (conferirFonte(serie, novo.fonte)) {
+        relatorio.ok.push(`Série ${produto}/${regiao} ZERADA: a fonte mudou para "${novo.fonte}" (números antigos não eram comparáveis)`);
+      }
+
+      const r = guardarNoHistorico(serie, novo.data, novo.preco);
       if (r === 'novo') novos++;
       if (r === 'atualizado') atualizados++;
+    }
+  }
+
+  /* --- as praças (cidades) têm histórico próprio, uma série cada --- */
+  let cidadesGravadas = 0;
+  for (const [produto, porRegiao] of Object.entries(cidadesNovas)) {
+    precos.cidades[produto] ??= {};
+    historico.cidades[produto] ??= {};
+
+    for (const [regiao, lista] of Object.entries(porRegiao)) {
+      precos.cidades[produto][regiao] = lista;
+      historico.cidades[produto][regiao] ??= {};
+
+      for (const [cidadeId, info] of Object.entries(lista)) {
+        historico.cidades[produto][regiao][cidadeId] ??= { d: [], v: [] };
+        guardarNoHistorico(historico.cidades[produto][regiao][cidadeId], info.data, info.preco);
+        cidadesGravadas++;
+      }
     }
   }
 
@@ -386,8 +492,13 @@ async function principal() {
   let cotacoes = 0;
   for (const porRegiao of Object.values(precos.produtos)) cotacoes += Object.keys(porRegiao).length;
 
+  /* Fontes realmente usadas nesta rodada — o app cita todas na tela */
+  const fontes = [...new Set(
+    Object.values(precos.produtos).flatMap(r => Object.values(r)).map(i => i.fonte).filter(Boolean)
+  )].sort();
+
   precos.origem = cotacoes > 0 ? 'real' : 'vazio';
-  precos.fontes = cotacoes > 0 ? ['CEPEA/ESALQ-USP'] : [];
+  precos.fontes = fontes;
   precos.contagem = { total: cotacoes, reais: cotacoes, exemplo: 0 };
 
   /* --- só grava se algum número mudou de verdade --- */
@@ -447,6 +558,7 @@ async function principal() {
   }
 
   console.log(`\nIndicadores CEPEA obtidos: ${indicadoresOk}/${FONTES.length}`);
+  console.log(`Praças de MT gravadas: ${cidadesGravadas}`);
   console.log(`Histórico: ${novos} ponto(s) novo(s), ${atualizados} corrigido(s)`);
   console.log(`Arquivos: ${mudou ? 'GRAVADOS (algo mudou)' : 'inalterados (nada mudou — site não será republicado)'}`);
   console.log(`Nuvem: ${nuvem}`);

@@ -75,6 +75,7 @@ export const CATEGORIAS = [
    ============================================================ */
 export const PRODUTOS = [
   { id: 'boi-gordo',    nome: 'Boi Gordo',    unidade: 'arroba',    unidadeCurta: '@',  categoria: 'pecuaria', icone: 'boi',     regioes: ['mt', 'pa'] },
+  { id: 'novilha',      nome: 'Novilha Gorda',unidade: 'arroba',    unidadeCurta: '@',  categoria: 'pecuaria', icone: 'vaca',    regioes: ['mt'] },
   { id: 'soja',         nome: 'Soja',         unidade: 'saca 60kg', unidadeCurta: 'sc', categoria: 'graos',    icone: 'soja',    regioes: ['mt', 'pa'] },
   { id: 'milho',        nome: 'Milho',        unidade: 'saca 60kg', unidadeCurta: 'sc', categoria: 'graos',    icone: 'milho',   regioes: ['mt', 'pa'] },
   { id: 'algodao',      nome: 'Algodão',      unidade: 'arroba',    unidadeCurta: '@',  categoria: 'outros',   icone: 'algodao', regioes: ['mt'] },
@@ -83,6 +84,20 @@ export const PRODUTOS = [
   { id: 'frango',       nome: 'Frango',       unidade: 'quilo',     unidadeCurta: 'kg', categoria: 'pecuaria', icone: 'frango',  regioes: ['mt', 'pa'] },
   { id: 'cafe-conilon', nome: 'Café Conilon', unidade: 'saca 60kg', unidadeCurta: 'sc', categoria: 'outros',   icone: 'cafe',    regioes: ['pa'] }
 ];
+
+/* ============================================================
+   PRODUTOS QUE TÊM COTAÇÃO POR PRAÇA (cidade)
+
+   Hoje só o boi do Mato Grosso: o IMEA publica 8 praças. É o que
+   alimenta a tela "Praças". Os outros produtos têm um preço por
+   estado, e a tela avisa isso.
+   ============================================================ */
+export const PRODUTOS_COM_PRACA = [
+  { produto: 'boi-gordo', regiao: 'mt' }
+];
+
+export const temPraca = (produtoId, regiaoId) =>
+  PRODUTOS_COM_PRACA.some(x => x.produto === produtoId && x.regiao === regiaoId);
 
 /* Busca rápida por id */
 export const PRODUTO_POR_ID = Object.fromEntries(PRODUTOS.map(p => [p.id, p]));

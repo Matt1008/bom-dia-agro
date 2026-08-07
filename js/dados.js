@@ -135,6 +135,25 @@ function diasAtras(n) {
  * { atual, anterior, dif, pct, direcao, de, ate }
  */
 export function variacao(produtoId, regiaoId, periodo = 'dia') {
+  /* Para a variação do DIA, quando a própria fonte publica o número
+     (IMEA e Datagro publicam), usamos o deles. É a variação oficial
+     da praça — melhor do que a nossa conta em cima de dois retratos,
+     que erraria se o robô perdesse um dia. */
+  if (periodo === 'dia') {
+    const p = precoDe(produtoId, regiaoId);
+    if (p?.variacao_fonte != null) {
+      const pct = p.variacao_fonte;
+      return {
+        atual: p.preco,
+        anterior: pct === -100 ? null : p.preco / (1 + pct / 100),
+        pct, dif: null,
+        de: null, ate: p.data,
+        daFonte: true,
+        direcao: Math.abs(pct) < 0.005 ? 'igual' : (pct > 0 ? 'sobe' : 'desce')
+      };
+    }
+  }
+
   const { d, v } = serieDe(produtoId, regiaoId);
   if (d.length < 2) return null;
 
@@ -190,6 +209,60 @@ export function cobrePeriodo(produtoId, regiaoId, periodo) {
 /** Desde quando temos cotação guardada */
 export function inicioDaSerie(produtoId, regiaoId) {
   return serieDe(produtoId, regiaoId).d[0] || null;
+}
+
+/* ------------------------------------------------------------
+   PRAÇAS (cidades)
+   Hoje só o boi do MT tem: o IMEA publica 8 praças.
+   ------------------------------------------------------------ */
+
+/** [{ id, nome, preco, data, variacao_fonte }, ...] ordenado por preço */
+export function cidadesDe(produtoId, regiaoId) {
+  const mapa = BANCO.precos?.cidades?.[produtoId]?.[regiaoId];
+  if (!mapa) return [];
+  return Object.entries(mapa)
+    .map(([id, info]) => ({ id, ...info }))
+    .sort((a, b) => b.preco - a.preco);
+}
+
+export function temPracas(produtoId, regiaoId) {
+  return cidadesDe(produtoId, regiaoId).length > 0;
+}
+
+export function cidadeDe(produtoId, regiaoId, cidadeId) {
+  const info = BANCO.precos?.cidades?.[produtoId]?.[regiaoId]?.[cidadeId];
+  return info ? { id: cidadeId, ...info } : null;
+}
+
+/** Série histórica de uma praça: [{ data, valor }, ...] */
+export function serieCidade(produtoId, regiaoId, cidadeId, quantos = 9999) {
+  const s = BANCO.historico?.cidades?.[produtoId]?.[regiaoId]?.[cidadeId];
+  if (!s?.d?.length) return [];
+  const corte = Math.max(0, s.d.length - quantos);
+  return s.d.slice(corte).map((data, i) => ({ data, valor: s.v[corte + i] }));
+}
+
+/** Variação de uma praça (usa a publicada pela fonte, quando existe) */
+export function variacaoCidade(produtoId, regiaoId, cidadeId) {
+  const c = cidadeDe(produtoId, regiaoId, cidadeId);
+  if (c?.variacao_fonte != null) {
+    const pct = c.variacao_fonte;
+    return { pct, daFonte: true, direcao: Math.abs(pct) < 0.005 ? 'igual' : (pct > 0 ? 'sobe' : 'desce') };
+  }
+  const s = serieCidade(produtoId, regiaoId, cidadeId);
+  if (s.length < 2) return null;
+  const atual = s[s.length - 1].valor, ant = s[s.length - 2].valor;
+  if (!ant) return null;
+  const pct = ((atual - ant) / ant) * 100;
+  return { pct, daFonte: false, direcao: Math.abs(pct) < 0.005 ? 'igual' : (pct > 0 ? 'sobe' : 'desce') };
+}
+
+/** Quais produtos têm praças em cada estado */
+export function produtosComPraca(regiaoId) {
+  const saida = [];
+  for (const [produto, porRegiao] of Object.entries(BANCO.precos?.cidades || {}))
+    if (porRegiao[regiaoId] && Object.keys(porRegiao[regiaoId]).length) saida.push(produto);
+  return saida;
 }
 
 /* ------------------------------------------------------------
