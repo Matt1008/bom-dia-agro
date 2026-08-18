@@ -1,75 +1,82 @@
 {
- "atualizado_em": "2026-08-17T22:12:19.177Z",
+ "atualizado_em": "2026-08-18T09:21:59.165Z",
  "noticias": [
+  {
+   "titulo": "Atividade mais fraca abre espaço para corte da Selic: ouça o Diário Econômico",
+   "link": "https://www.canalrural.com.br/economia/atividade-mais-fraca-abre-espaco-para-corte-da-selic-ouca-o-diario-economico/",
+   "fonte": "Canal Rural",
+   "resumo": "Parceria do PicPay com o Canal Rural, o podcast Diário Econômico traz tudo o que você precisa saber sobre economia para começar bem o dia O post Atividade mais fraca abre espaço para corte da Selic: ouça o Diário Econômico apareceu primeiro em Canal Rural .",
+   "data": "2026-08-18T08:45:00.000Z"
+  },
+  {
+   "titulo": "Quanto vale ser campeão em Barretos? Veja a premiação do rodeio em 2026",
+   "link": "https://www.canalrural.com.br/feiras-e-eventos/quanto-vale-ser-campeao-em-barretos-veja-a-premiacao-do-rodeio-em-2026/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: André Monteiro/Divulgação Barretos. Competição reúne disputas em diferentes modalidades e também garante vagas para torneio realizado nos Estados Unidos O post Quanto vale ser campeão em Barretos? Veja a premiação do rodeio em 2026 apareceu primeiro em C",
+   "data": "2026-08-18T08:01:00.000Z"
+  },
+  {
+   "titulo": "Limões 'alienígenas' intrigam produtora; entenda o que causa a deformação",
+   "link": "https://g1.globo.com/economia/agronegocios/globo-rural/noticia/2026/08/18/limoes-alienigenas-intrigam-produtora-entenda-o-que-causa-a-deformacao.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Limão nasce deformado, parecendo 'alienígena'; entenda o que causa Os limões da produtora Viviane Marques chamaram a atenção pelo formato incomum: alguns nasceram deformados, parecendo até \"alienígenas\". Intrigada, ela procurou o Globo Rural para descobrir o q",
+   "data": "2026-08-18T06:00:18.000Z"
+  },
+  {
+   "titulo": "Ministério da Fazenda estabelece limites para renegociação de dívidas rurais",
+   "link": "https://www.canalrural.com.br/videos/ministerio-da-fazenda-estabelece-limites-para-renegociacao-de-dividas-rurais/",
+   "fonte": "Canal Rural",
+   "resumo": "Portaria do Ministério da Fazenda autoriza pagamento de equalização de juros, mas valor é considerado insuficiente pelo setor rural O post Ministério da Fazenda estabelece limites para renegociação de dívidas rurais apareceu primeiro em Canal Rural .",
+   "data": "2026-08-18T00:05:50.000Z"
+  },
+  {
+   "titulo": "Mercado de bezerros em alta exige planejamento na reprodução",
+   "link": "https://www.canalrural.com.br/videos/mercado-de-bezerros-em-alta-exige-planejamento-na-reproducao/",
+   "fonte": "Canal Rural",
+   "resumo": "O mercado de bezerros está em alta e requer planejamento estratégico para maximizar a produção e a lucratividade na pecuária. O post Mercado de bezerros em alta exige planejamento na reprodução apareceu primeiro em Canal Rural .",
+   "data": "2026-08-18T00:05:38.000Z"
+  },
+  {
+   "titulo": "Calor intenso e chuvas fortes marcam a previsão do tempo no Brasil",
+   "link": "https://www.canalrural.com.br/videos/calor-intenso-e-chuvas-fortes-marcam-a-previsao-do-tempo-no-brasil/",
+   "fonte": "Canal Rural",
+   "resumo": "Previsão do tempo indica calor extremo no Centro-Oeste e chuvas intensas no Sul do Brasil. Confira os detalhes. O post Calor intenso e chuvas fortes marcam a previsão do tempo no Brasil apareceu primeiro em Canal Rural .",
+   "data": "2026-08-18T00:05:28.000Z"
+  },
+  {
+   "titulo": "Carne bovina de Mato Grosso é exportada para 88 países em 2026",
+   "link": "https://www.canalrural.com.br/videos/carne-bovina-de-mato-grosso-e-exportada-para-88-paises-em-2026/",
+   "fonte": "Canal Rural",
+   "resumo": "Exportações de carne bovina de Mato Grosso geram US$ 2,4 bilhões em receita no primeiro semestre de 2026, com destaque para a China e EUA O post Carne bovina de Mato Grosso é exportada para 88 países em 2026 apareceu primeiro em Canal Rural .",
+   "data": "2026-08-18T00:05:16.000Z"
+  },
+  {
+   "titulo": "Estação de monta: veterinário lista cuidados para preparar o gado; confira",
+   "link": "https://www.canalrural.com.br/pecuaria/estacao-de-monta-veterinario-lista-cuidados-para-preparar-o-gado/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Divulgação. Planejamento estratégico para a estação chuvosa exige atenção à saúde e escore corporal do rebanho, segundo especialistas O post Estação de monta: veterinário lista cuidados para preparar o gado; confira apareceu primeiro em Canal Rural .",
+   "data": "2026-08-17T23:03:00.000Z"
+  },
+  {
+   "titulo": "Arroba do boi gordo inaugura semana em baixa; veja cotações",
+   "link": "https://www.canalrural.com.br/pecuaria/arroba-do-boi-gordo-inaugura-semana-em-baixa-veja-cotacoes/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto gerada por IA Frigoríficos de maior porte desfrutam de uma posição mais confortável em suas escalas de abate O post Arroba do boi gordo inaugura semana em baixa; veja cotações apareceu primeiro em Canal Rural .",
+   "data": "2026-08-17T22:29:08.000Z"
+  },
+  {
+   "titulo": "Soja avança com alta de mais de 2% em Chicago e preços sobem nos portos",
+   "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/soja-avanca-com-alta-de-mais-de-2-em-chicago-e-precos-sobem-nos-portos/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Pixabay Alta da Bolsa de Chicago compensou a queda do dólar e dos prêmios, enquanto preços nos portos permaneceram acima de R$ 150 por saca O post Soja avança com alta de mais de 2% em Chicago e preços sobem nos portos apareceu primeiro em Canal Rural .",
+   "data": "2026-08-17T22:00:08.000Z"
+  },
   {
    "titulo": "Primeiro biofungicida brasileiro 100% à base de metabólitos é registrado para soja",
    "link": "https://www.canalrural.com.br/agricultura/primeiro-biofungicida-brasileiro-100-a-base-de-metabolitos-e-registrado-para-soja/",
    "fonte": "Canal Rural",
    "resumo": "Foto: Carina Gomes/Embrapa Categoria era dominada por soluções estrangeiras e chega para auxiliar no manejo da antracnose e da mancha-alvo O post Primeiro biofungicida brasileiro 100% à base de metabólitos é registrado para soja apareceu primeiro em Canal Rura",
    "data": "2026-08-17T21:43:47.000Z"
-  },
-  {
-   "titulo": "Juros futuros fecham em queda, mas alta do petróleo reduz perdas no fim do pregão",
-   "link": "https://www.canalrural.com.br/economia/juros-futuros-fecham-em-queda-mas-alta-do-petroleo-reduz-perdas-no-fim-do-pregao/",
-   "fonte": "Canal Rural",
-   "resumo": "Dados mais fracos de atividade pressionaram os DI para baixo, enquanto o avanço do Brent acima de US$ 90 por barril limitou o recuo das taxas. O post Juros futuros fecham em queda, mas alta do petróleo reduz perdas no fim do pregão apareceu primeiro em Canal R",
-   "data": "2026-08-17T21:17:23.000Z"
-  },
-  {
-   "titulo": "Hematoma ou abscesso? Veterinário explica como identificar a lesão em bovinos",
-   "link": "https://www.canalrural.com.br/pecuaria/hematoma-ou-abscesso-veterinario-explica-como-identificar-a-lesao-em-bovinos/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Reprodução/Giro do Boi. Manejo sanitário e diagnóstico precoce de lesões corporais são essenciais para o bem-estar animal e a qualidade da carne na indústria frigorífica O post Hematoma ou abscesso? Veterinário explica como identificar a lesão em bovinos",
-   "data": "2026-08-17T21:01:00.000Z"
-  },
-  {
-   "titulo": "Anvisa determina recolhimento de lombo suíno por excesso de conservantes",
-   "link": "https://www.canalrural.com.br/diversos/anvisa-determina-recolhimento-de-lombo-suino-por-excesso-de-conservantes/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Prefeitura de Capão Bonito Segundo a fabricante, Suinco Cooperativa de Suinocultores Ltda., o lote apresentou níveis de nitritos e nitratos acima dos limites permitidos O post Anvisa determina recolhimento de lombo suíno por excesso de conservantes apare",
-   "data": "2026-08-17T20:40:44.000Z"
-  },
-  {
-   "titulo": "André de Paula cumpre agenda com setor produtivo em Alagoas nesta quinta-feira",
-   "link": "https://www.canalrural.com.br/politica/andre-de-paula-cumpre-agenda-com-setor-produtivo-em-alagoas-nesta-quinta-feira/",
-   "fonte": "Canal Rural",
-   "resumo": "Programação prevê encontros com agroindústria, produtores de cana-de-açúcar, exportadores e cooperativa de ovos em Maceió e municípios da região metropolitana. O post André de Paula cumpre agenda com setor produtivo em Alagoas nesta quinta-feira apareceu prime",
-   "data": "2026-08-17T20:30:33.000Z"
-  },
-  {
-   "titulo": "Milho: oferta elevada limita preços, mas demanda e exportações dão suporte",
-   "link": "https://www.canalrural.com.br/agricultura/milho/milho-oferta-elevada-limita-precos-mas-demanda-e-exportacoes-dao-suporte/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: divulgação/Secretaria da Agricultura e do Abastecimento Entrada da segunda safra pressiona cotações, enquanto consumo interno, dólar e cenário externo ajudam a limitar as quedas O post Milho: oferta elevada limita preços, mas demanda e exportações dão su",
-   "data": "2026-08-17T20:09:42.000Z"
-  },
-  {
-   "titulo": "Produtividade da soja avança e Cesb mira ganhos para além das lavouras campeãs",
-   "link": "https://www.canalrural.com.br/projetos/conteudo-patrocinado/produtividade-da-soja-avanca-e-cesb-mira-ganhos-para-alem-das-lavouras-campeas/",
-   "fonte": "Canal Rural",
-   "resumo": "Desafio Nacional de Máxima Produtividade de Soja safra 2025/26 registrou 921 áreas auditadas, média de 97,25 sacas por hectare e recorde de 156,13 sacas O post Produtividade da soja avança e Cesb mira ganhos para além das lavouras campeãs apareceu primeiro em ",
-   "data": "2026-08-17T19:47:22.000Z"
-  },
-  {
-   "titulo": "Brent volta a superar US$ 90 com tensão renovada no Oriente Médio",
-   "link": "https://www.canalrural.com.br/economia/brent-volta-a-superar-us-90-com-tensao-renovada-no-oriente-medio/",
-   "fonte": "Canal Rural",
-   "resumo": "Escalada geopolítica, declarações de autoridades e mudanças no tráfego marítimo em rotas estratégicas sustentaram a alta das cotações nesta segunda-feira. O post Brent volta a superar US$ 90 com tensão renovada no Oriente Médio apareceu primeiro em Canal Rural",
-   "data": "2026-08-17T19:41:47.000Z"
-  },
-  {
-   "titulo": "Frente fria provoca chuva, ventos e queda de granizo; acumulados chegam a 100 mm",
-   "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/frente-fria-provoca-chuva-ventos-e-queda-de-granizo-acumulados-chegam-a-100-mm/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Inmet/Reprodução Entre os dias 18 e 22 de agosto, os maiores volumes de chuva devem se concentrar no extremo sul do Rio Grande do Sul O post Frente fria provoca chuva, ventos e queda de granizo; acumulados chegam a 100 mm apareceu primeiro em Canal Rural",
-   "data": "2026-08-17T19:39:13.000Z"
-  },
-  {
-   "titulo": "Semana terá chuva de 150 mm e frente fria se espalhando; veja a previsão",
-   "link": "https://www.canalrural.com.br/previsao-do-tempo/semana-tera-chuva-de-150-mm-e-frente-fria-se-espalhando-veja-a-previsao/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Wikimedia Commons Boletim do Inmet mostra volume expressivo de precipitações no Rio Grande do Sul até o próximo domingo O post Semana terá chuva de 150 mm e frente fria se espalhando; veja a previsão apareceu primeiro em Canal Rural .",
-   "data": "2026-08-17T19:32:40.000Z"
   },
   {
    "titulo": "Mosca-de-estábulo avança no inverno e causa prejuízo a pecuaristas no interior de SP",
@@ -168,13 +175,6 @@
    "fonte": "G1 Agro",
    "resumo": "Com fenômeno El Niño, tempo seco e quente amplia alerta para doenças de pele O sistema alimentar global está mais preparado para enfrentar os efeitos de um forte episódio de El Niño do que em eventos semelhantes no passado. Estoques de produtos agrícolas próxi",
    "data": "2026-08-12T08:03:51.000Z"
-  },
-  {
-   "titulo": "Senado aprova linha de crédito para indústria de fertilizantes, mas sem estipular valores",
-   "link": "https://g1.globo.com/politica/noticia/2026/08/11/senado-aprova-linha-de-credito-para-industria-de-fertilizantes-mas-sem-estipular-valores.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "O Senado aprovou nesta terça-feira (11) um projeto que cria um programa, com oferta de financiamentos, para fomentar a indústria de fertilizantes em meio à guerra no Oriente Médio. O texto segue para sanção do presidente Luiz Inácio Lula Silva (PT). Fertilizan",
-   "data": "2026-08-11T21:21:24.000Z"
   },
   {
    "titulo": "Bovinocultura projeta boas perspectivas no segundo semestre",
