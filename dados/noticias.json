@@ -1,19 +1,103 @@
 {
- "atualizado_em": "2026-08-21T09:25:20.747Z",
+ "atualizado_em": "2026-08-21T22:11:30.407Z",
  "noticias": [
   {
-   "titulo": "Juros longos devolvem queda e mercado fica na defensiva: ouça o Diário Econômico",
-   "link": "https://www.canalrural.com.br/economia/juros-longos-devolvem-queda-e-mercado-fica-na-defensiva-ouca-o-diario-economico/",
+   "titulo": "ANP aprova reestruturação interna com implementação entre setembro e novembro",
+   "link": "https://www.canalrural.com.br/politica/anp-aprova-reestruturacao-interna-com-implementacao-entre-setembro-e-novembro/",
    "fonte": "Canal Rural",
-   "resumo": "Parceria do PicPay com o Canal Rural, o podcast Diário Econômico traz tudo o que você precisa saber sobre economia para começar bem o dia O post Juros longos devolvem queda e mercado fica na defensiva: ouça o Diário Econômico apareceu primeiro em Canal Rural .",
-   "data": "2026-08-21T08:45:00.000Z"
+   "resumo": "Mudanças envolvem gás natural, segurança operacional e licitações de exploração e produção, com execução em três etapas. O post ANP aprova reestruturação interna com implementação entre setembro e novembro apareceu primeiro em Canal Rural .",
+   "data": "2026-08-21T22:02:44.000Z"
   },
   {
-   "titulo": "Ar polar e ventania de 70 km/h devem marcar o dia; confira a previsão",
-   "link": "https://www.canalrural.com.br/previsao-do-tempo/ar-polar-e-ventania-de-70-km-h-devem-marcar-o-dia-confira-a-previsao/",
+   "titulo": "Da semente à mente, com o agro não se mente",
+   "link": "https://www.canalrural.com.br/opiniao-noticias/da-semente-a-mente-com-o-agro-nao-se-mente/",
    "fonte": "Canal Rural",
-   "resumo": "Foto: Pixabay Fenômenos atingem áreas de três regiões brasileiras nesta sexta-feira O post Ar polar e ventania de 70 km/h devem marcar o dia; confira a previsão apareceu primeiro em Canal Rural .",
-   "data": "2026-08-21T08:02:00.000Z"
+   "resumo": "Responsabilidade social será estampada nas marcas e produtos e serão analisadas, consumidas ou rejeitadas pelo novo cidadão do planeta O post Da semente à mente, com o agro não se mente apareceu primeiro em Canal Rural .",
+   "data": "2026-08-21T21:40:47.000Z"
+  },
+  {
+   "titulo": "Preço do suíno cai para o 3º menor patamar da história em SP: 'sobreoferta e baixa demanda', analisa USP",
+   "link": "https://g1.globo.com/sp/piracicaba-regiao/noticia/2026/08/21/preco-do-suino-cai-para-o-3o-menor-patamar-da-historia-em-sp-sobreoferta-e-baixa-demanda-analisa-usp.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Carne suína Reprodução/TV TEM A combinação de sobreoferta de animais e demanda enfraquecida, registrada na segunda quinzena de julho de 2026, ameaça o mercado paulista independente de suínos. O cenário fez o preço do porco pronto para o abate na capital e inte",
+   "data": "2026-08-21T21:37:35.000Z"
+  },
+  {
+   "titulo": "Mercado da soja encerra semana com preços firmes e demanda chinesa em destaque",
+   "link": "https://www.canalrural.com.br/agricultura/soja/mercado-da-soja-encerra-semana-com-precos-firmes-e-demanda-chinesa-em-destaque/",
+   "fonte": "Canal Rural",
+   "resumo": "Divulgação Embrapa Soja Soja mantém cotações firmes no Brasil, enquanto vendas dos Estados Unidos à China dão suporte aos preços em Chicago O post Mercado da soja encerra semana com preços firmes e demanda chinesa em destaque apareceu primeiro em Canal Rural .",
+   "data": "2026-08-21T21:30:12.000Z"
+  },
+  {
+   "titulo": "O que diferencia os profissionais mais preparados no mercado de commodities agrícolas",
+   "link": "https://www.canalrural.com.br/cotacao/o-que-diferencia-os-profissionais-mais-preparados-no-mercado-de-commodities-agricolas/",
+   "fonte": "Canal Rural",
+   "resumo": "Fonte: Safras & Mercado Dados, análise e experiência ajudam profissionais do agro a interpretar cenários, gerenciar riscos e tomar decisões em mercados cada vez mais complexos O post O que diferencia os profissionais mais preparados no mercado de commodities a",
+   "data": "2026-08-21T20:47:22.000Z"
+  },
+  {
+   "titulo": "Início da semana terá chance de geada e mínima de 0°C; confira a previsão",
+   "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/inicio-da-semana-tera-chance-de-geada-e-minima-de-0c-confira-a-previsao/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Inmet Massa de ar polar avança pelo país e derruba as temperaturas no Centro-Sul, com risco de geada e possíveis impactos em lavouras de trigo O post Início da semana terá chance de geada e mínima de 0°C; confira a previsão apareceu primeiro em Canal Rur",
+   "data": "2026-08-21T20:40:54.000Z"
+  },
+  {
+   "titulo": "Setor do alho em Minas Gerais enfrenta crise devido a clima e custos altos",
+   "link": "https://www.canalrural.com.br/videos/setor-do-alho-em-minas-gerais-enfrenta-crise-devido-a-clima-e-custos-altos/",
+   "fonte": "Canal Rural",
+   "resumo": "Produtores de alho em Minas Gerais enfrentam crise financeira com clima desfavorável e aumento de custos de produção, levando a decretos de emergência O post Setor do alho em Minas Gerais enfrenta crise devido a clima e custos altos apareceu primeiro em Canal ",
+   "data": "2026-08-21T20:15:08.000Z"
+  },
+  {
+   "titulo": "Abertura de novos mercados internacionais aumenta rentabilidade para produtores rurais",
+   "link": "https://www.canalrural.com.br/videos/abertura-de-novos-mercados-internacionais-aumenta-rentabilidade-para-produtores-rurais/",
+   "fonte": "Canal Rural",
+   "resumo": "A diplomacia sanitária e a abertura de mercados internacionais são essenciais para a rentabilidade dos produtores rurais brasileiros O post Abertura de novos mercados internacionais aumenta rentabilidade para produtores rurais apareceu primeiro em Canal Rural ",
+   "data": "2026-08-21T20:05:59.000Z"
+  },
+  {
+   "titulo": "Frio, chuva e risco de geada devem marcar o fim de semana no Brasil",
+   "link": "https://www.canalrural.com.br/videos/frio-chuva-e-risco-de-geada-devem-marcar-o-fim-de-semana-no-brasil/",
+   "fonte": "Canal Rural",
+   "resumo": "Previsão indica frio intenso e possibilidade de geada no Sul, além de chuvas no Norte do país. Confira os detalhes. O post Frio, chuva e risco de geada devem marcar o fim de semana no Brasil apareceu primeiro em Canal Rural .",
+   "data": "2026-08-21T20:05:48.000Z"
+  },
+  {
+   "titulo": "Clima desafiador exige atenção redobrada no manejo de cana-de-açúcar",
+   "link": "https://www.canalrural.com.br/videos/clima-desafiador-exige-atencao-redobrada-no-manejo-de-cana-de-acucar/",
+   "fonte": "Canal Rural",
+   "resumo": "O clima irregular traz desafios significativos para o manejo de plantas daninhas na cana-de-açúcar, exigindo planejamento e flexibilidade. O post Clima desafiador exige atenção redobrada no manejo de cana-de-açúcar apareceu primeiro em Canal Rural .",
+   "data": "2026-08-21T20:05:37.000Z"
+  },
+  {
+   "titulo": "Produtores de Mato Grosso entregam carta com reivindicações aos candidatos ao governo",
+   "link": "https://www.canalrural.com.br/videos/produtores-de-mato-grosso-entregam-carta-com-reivindicacoes-aos-candidatos-ao-governo/",
+   "fonte": "Canal Rural",
+   "resumo": "Produtores de soja e milho de Mato Grosso apresentam demandas aos candidatos ao governo, incluindo o fim da cobrança do FETAB 2 O post Produtores de Mato Grosso entregam carta com reivindicações aos candidatos ao governo apareceu primeiro em Canal Rural .",
+   "data": "2026-08-21T20:05:26.000Z"
+  },
+  {
+   "titulo": "J&F, de Wesley e Joesley Batista, compra fabricante de armas de guerra Avibras",
+   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/08/21/jandf-de-wesley-e-joesley-batista-compra-fabricante-de-armas-de-guerra-avibras.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Joesley Batista foi à Venezuela pedir a renúncia de Maduro, diz agência A J&F, holding dos irmãos Joesley e Wesley Batista, comprou 100% da Avibras, uma das principais empresas da indústria de defesa brasileira. A aquisição será realizada por meio da Globe Inv",
+   "data": "2026-08-21T18:20:50.000Z"
+  },
+  {
+   "titulo": "Aprenda a montar uma horta em casa",
+   "link": "https://g1.globo.com/economia/agronegocios/globo-rural/noticia/2026/08/21/aprenda-a-montar-uma-horta-em-casa.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Oficina de Horta Vertical, em junho, no Parque Cultural Casa do Governador. Espírito Santo. Marcos Salles Já pensou em ter uma horta em casa? A Escola Superior de Agricultura Luiz de Queiros (Esalq), da Universidade de São Paulo (USP), tem uma cartilha gratuit",
+   "data": "2026-08-21T15:27:36.000Z"
+  },
+  {
+   "titulo": "‘Operação salva-hambúrguer’: Trump determina cota extra de importação de carne e tenta baixar preços nos EUA",
+   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/08/21/trump-hamburguer-eua.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Hamburguer; lanche Jean-claude Attipoe/Unplash O presidente dos Estados Unidos, Donald Trump, anunciou nesta sexta-feira (21) ampliar por 90 dias a cota de importação de carne bovina. A medida busca aumentar a oferta do produto no mercado norte-americano e aju",
+   "data": "2026-08-21T12:04:25.000Z"
   },
   {
    "titulo": "Alimentos editados geneticamente: o que são e o que dizem críticos e defensores",
@@ -21,62 +105,6 @@
    "fonte": "G1 Agro",
    "resumo": "Prato do Futuro: pesquisa cria milho mais resistente ao calor Dois meses após a aprovação pelo Parlamento Europeu, as novas regras para plantas obtidas por novas técnicas genômicas (NGTs) continuam gerando debate sobre o futuro da agricultura no bloco. A legis",
    "data": "2026-08-21T05:00:18.000Z"
-  },
-  {
-   "titulo": "Clima ajuda na colheita do café, mas expectativa é de produção menor",
-   "link": "https://www.canalrural.com.br/agricultura/clima-ajuda-na-colheita-do-cafe-mas-trabalhos-seguem-atrasados-ante-a-safra-passada/",
-   "fonte": "Canal Rural",
-   "resumo": "Perspectiva negativa se deve, principalmente, pelo desempenho das lavouras capixabas, conforme levantamento de Safras & Mercado O post Clima ajuda na colheita do café, mas expectativa é de produção menor apareceu primeiro em Canal Rural .",
-   "data": "2026-08-20T23:55:17.000Z"
-  },
-  {
-   "titulo": "Rio entra em Estágio 2 com previsão de ventos de até 90 km/h",
-   "link": "https://www.canalrural.com.br/diversos/rio-entra-em-estagio-2-com-previsao-de-ventos-de-ate-90-km-h/",
-   "fonte": "Canal Rural",
-   "resumo": "Frente fria continental deve elevar a intensidade das rajadas nesta sexta-feira (21), com aviso de vendaval também para áreas de São Paulo. O post Rio entra em Estágio 2 com previsão de ventos de até 90 km/h apareceu primeiro em Canal Rural .",
-   "data": "2026-08-20T23:17:58.000Z"
-  },
-  {
-   "titulo": "BNDES aprova R$ 42,8 milhões para Coasul ampliar armazenagem de grãos",
-   "link": "https://www.canalrural.com.br/videos/bndes-aprova-r-428-milhoes-para-coasul-ampliar-armazenagem-de-graos/",
-   "fonte": "Canal Rural",
-   "resumo": "Financiamento do BNDES visa aumentar capacidade de armazenagem em 24 mil toneladas e beneficiar 16,7 mil cooperados no Paraná O post BNDES aprova R$ 42,8 milhões para Coasul ampliar armazenagem de grãos apareceu primeiro em Canal Rural .",
-   "data": "2026-08-20T23:15:19.000Z"
-  },
-  {
-   "titulo": "Ministro do MDIC critica tarifas dos EUA como ilegais e abusivas",
-   "link": "https://www.canalrural.com.br/videos/ministro-do-mdic-critica-tarifas-dos-eua-como-ilegais-e-abusivas/",
-   "fonte": "Canal Rural",
-   "resumo": "Márcio Elias Rosa afirma que novas tarifas dos EUA são ilegais e que o Brasil busca novos mercados para aumentar exportações O post Ministro do MDIC critica tarifas dos EUA como ilegais e abusivas apareceu primeiro em Canal Rural .",
-   "data": "2026-08-20T23:15:10.000Z"
-  },
-  {
-   "titulo": "Entidades do agronegócio definem prioridades para o próximo presidente",
-   "link": "https://www.canalrural.com.br/videos/entidades-do-agronegocio-definem-prioridades-para-o-proximo-presidente/",
-   "fonte": "Canal Rural",
-   "resumo": "Setor aponta necessidades em crédito rural, seguro e regulação fundiária para fortalecer a produção agrícola no Brasil O post Entidades do agronegócio definem prioridades para o próximo presidente apareceu primeiro em Canal Rural .",
-   "data": "2026-08-20T23:05:50.000Z"
-  },
-  {
-   "titulo": "Barra Agroshow cresce 30% e destaca inovação no agronegócio",
-   "link": "https://www.canalrural.com.br/videos/barra-agroshow-cresce-30-e-destaca-inovacao-no-agronegocio/",
-   "fonte": "Canal Rural",
-   "resumo": "Evento no Médio São Francisco reúne tecnologia e negócios, com entrada gratuita e ações sociais para a comunidade O post Barra Agroshow cresce 30% e destaca inovação no agronegócio apareceu primeiro em Canal Rural .",
-   "data": "2026-08-20T23:05:39.000Z"
-  },
-  {
-   "titulo": "Frente fria e ciclone provocam queda de temperaturas e chuvas no Brasil",
-   "link": "https://www.canalrural.com.br/videos/frente-fria-e-ciclone-provocam-queda-de-temperaturas-e-chuvas-no-brasil/",
-   "fonte": "Canal Rural",
-   "resumo": "Frente fria e ciclone extra tropical trazem chuvas e queda de temperaturas em diversas regiões do Brasil, aliviando o calor intenso. O post Frente fria e ciclone provocam queda de temperaturas e chuvas no Brasil apareceu primeiro em Canal Rural .",
-   "data": "2026-08-20T23:05:30.000Z"
-  },
-  {
-   "titulo": "Leilões da ExpoGenética 2026 já movimentam mais de R$ 80 milhões em Uberaba",
-   "link": "https://www.canalrural.com.br/videos/leiloes-da-expogenetica-2026-ja-movimentam-mais-de-r-80-milhoes-em-uberaba/",
-   "fonte": "Canal Rural",
-   "resumo": "A ExpoGenética 2026 em Uberaba movimenta mais de R$ 80 milhões com leilões e eventos até 23 de agosto. Confira os detalhes. O post Leilões da ExpoGenética 2026 já movimentam mais de R$ 80 milhões em Uberaba apareceu primeiro em Canal Rural .",
-   "data": "2026-08-20T23:05:18.000Z"
   },
   {
    "titulo": "Exportações de carne bovina caem 26% em agosto com temor de tarifa maior na China",
@@ -147,34 +175,6 @@
    "fonte": "G1 Agro",
    "resumo": "Plantação de soja pronta para colheita em Roraima Raquel Maia/Amazônia Agro A América Latina se prepara para o que especialistas avaliam poder ser o El Niño mais forte já registrado, o que levanta dúvidas sobre os impactos do fenômeno na maior região exportado",
    "data": "2026-08-14T06:00:13.000Z"
-  },
-  {
-   "titulo": "Internacional oferece trator à Justiça como garantia por dívida com empresário; entenda",
-   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/08/13/internacional-oferece-trator-a-justica-como-garantia-por-divida-com-empresario-entenda.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Vitória e Internacional avançam às quartas da Copa do Brasil Um trator agrícola avaliado em R$ 80.488 foi oferecido pelo Internacional, time de futebol do Rio Grande do Sul, como garantia em uma disputa judicial por uma dívida de R$ 30.621,56. O equipamento, f",
-   "data": "2026-08-13T16:50:29.000Z"
-  },
-  {
-   "titulo": "Onda de calor na Espanha pode levar ao aumento do preço do azeite?",
-   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/08/13/onda-de-calor-na-espanha-preco-do-azeite.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Azeite Freepik Os incêndios que atingem o sul da Europa neste verão reacenderam o alerta sobre a crise climática na região e voltaram os olhares para a Espanha, maior produtora mundial de azeite de oliva e um dos países afetados. A preocupação é com uma nova c",
-   "data": "2026-08-13T14:49:10.000Z"
-  },
-  {
-   "titulo": "Veja como salvar uma orquídea com folhas e raízes secas ou murchas",
-   "link": "https://g1.globo.com/economia/agronegocios/globo-rural/noticia/2026/08/13/veja-como-salvar-uma-orquidea-com-folhas-e-raizes-secas-ou-murchas.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Veja como salvar uma orquídea com folhas e raízes secas ou murchas Quem tem orquídea em casa pode já ter se perguntado por que as folhas e as raízes da planta começaram a murchar. É o caso da Fátima, de Mogi Guaçu (SP), que pediu ajuda ao Globo Rural. A produt",
-   "data": "2026-08-13T05:00:10.000Z"
-  },
-  {
-   "titulo": "Terremoto afeta exportações de café da Colômbia e ameaça embarques internacionais",
-   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/08/12/terremoto-afeta-exportacoes-de-cafe-da-colombia-e-ameaca-embarques-internacionais.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Mortos em terremoto na Colômbia passam de 250; milhares continuam feridos e desabrigados O terremoto de magnitude 7,4 que atingiu a Colômbia na segunda-feira (10) interrompeu parte da logística de exportação de café do país e trouxe novas preocupações para o m",
-   "data": "2026-08-12T16:19:19.000Z"
   },
   {
    "titulo": "Bovinocultura projeta boas perspectivas no segundo semestre",
