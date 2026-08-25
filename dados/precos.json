@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-08-25T21:16:07.283Z",
+ "atualizado_em": "2026-08-25T22:14:04.661Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -34,8 +34,8 @@
     "variacao_fonte": -0.24
    },
    "pa": {
-    "preco": 343.2,
-    "data": "2026-08-24",
+    "preco": 343.35,
+    "data": "2026-08-25",
     "praca": "Indicador CEPEA/B3 — Brasil",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -43,15 +43,15 @@
   },
   "soja": {
    "mt": {
-    "preco": 153.86,
-    "data": "2026-08-24",
+    "preco": 153.7,
+    "data": "2026-08-25",
     "praca": "Soja Paranaguá (porto) — CEPEA",
     "escopo": "porto",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
-    "preco": 153.86,
-    "data": "2026-08-24",
+    "preco": 153.7,
+    "data": "2026-08-25",
     "praca": "Soja Paranaguá (porto) — CEPEA",
     "escopo": "porto",
     "fonte": "CEPEA/ESALQ-USP"
@@ -59,15 +59,15 @@
   },
   "milho": {
    "mt": {
-    "preco": 68.19,
-    "data": "2026-08-24",
+    "preco": 68.43,
+    "data": "2026-08-25",
     "praca": "Indicador CEPEA/B3 — Campinas/SP",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
-    "preco": 68.19,
-    "data": "2026-08-24",
+    "preco": 68.43,
+    "data": "2026-08-25",
     "praca": "Indicador CEPEA/B3 — Campinas/SP",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -75,8 +75,8 @@
   },
   "algodao": {
    "mt": {
-    "preco": 141.702,
-    "data": "2026-08-24",
+    "preco": 141.5664,
+    "data": "2026-08-25",
     "praca": "Indicador CEPEA/ESALQ — Brasil",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -84,8 +84,8 @@
   },
   "bezerro": {
    "mt": {
-    "preco": 3393.49,
-    "data": "2026-08-24",
+    "preco": 3389.51,
+    "data": "2026-08-25",
     "praca": "Mato Grosso do Sul — CEPEA",
     "escopo": "vizinho",
     "fonte": "CEPEA/ESALQ-USP"
@@ -93,8 +93,8 @@
   },
   "suino": {
    "mt": {
-    "preco": 7.27,
-    "data": "2026-08-24",
+    "preco": 7.38,
+    "data": "2026-08-25",
     "praca": "Carcaça especial — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -103,14 +103,14 @@
   "frango": {
    "mt": {
     "preco": 7.26,
-    "data": "2026-08-24",
+    "data": "2026-08-25",
     "praca": "Frango resfriado — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
     "preco": 7.26,
-    "data": "2026-08-24",
+    "data": "2026-08-25",
     "praca": "Frango resfriado — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -118,8 +118,8 @@
   },
   "cafe-conilon": {
    "pa": {
-    "preco": 1058.71,
-    "data": "2026-08-24",
+    "preco": 1048.71,
+    "data": "2026-08-25",
     "praca": "Robusta — Indicador CEPEA/ESALQ",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
