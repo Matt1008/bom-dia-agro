@@ -1,82 +1,89 @@
 {
- "atualizado_em": "2026-09-01T13:46:55.764Z",
+ "atualizado_em": "2026-09-01T23:38:27.946Z",
  "noticias": [
   {
-   "titulo": "PIB mostra 'desaceleração importante' da economia e acende alerta sobre consumo das famílias, apontam economistas",
+   "titulo": "União Europeia suspende importações de carne brasileira a partir de setembro",
+   "link": "https://www.canalrural.com.br/videos/uniao-europeia-suspende-importacoes-de-carne-brasileira-a-partir-de-setembro/",
+   "fonte": "Canal Rural",
+   "resumo": "A partir de 3 de setembro, a União Europeia suspenderá as importações de carne do Brasil devido a questões de controle sanitário O post União Europeia suspende importações de carne brasileira a partir de setembro apareceu primeiro em Canal Rural .",
+   "data": "2026-09-01T23:15:10.000Z"
+  },
+  {
+   "titulo": "Uso de milho para etanol nos EUA sobe 4% em julho",
+   "link": "https://www.canalrural.com.br/economia/uso-de-milho-para-etanol-nos-eua-sobe-4-em-julho/",
+   "fonte": "Canal Rural",
+   "resumo": "Departamento de Agricultura dos Estados Unidos registrou consumo de 475 milhões de bushels para a produção de etanol no mês. O post Uso de milho para etanol nos EUA sobe 4% em julho apareceu primeiro em Canal Rural .",
+   "data": "2026-09-01T22:58:33.000Z"
+  },
+  {
+   "titulo": "Cade julga compra de 60% da CRDC pela B3 nesta quarta-feira",
+   "link": "https://www.canalrural.com.br/economia/cade-julga-compra-de-60-da-crdc-pela-b3-nesta-quarta-feira/",
+   "fonte": "Canal Rural",
+   "resumo": "Operação envolve acordo de parceria para soluções de crédito e proposta de restrições após recomendação técnica pela rejeição. O post Cade julga compra de 60% da CRDC pela B3 nesta quarta-feira apareceu primeiro em Canal Rural .",
+   "data": "2026-09-01T22:42:42.000Z"
+  },
+  {
+   "titulo": "Arroba do boi gordo tem alta após dias de preços estáveis; veja as cotações",
+   "link": "https://www.canalrural.com.br/pecuaria/arroba-do-boi-gordo-tem-alta-apos-dias-de-precos-estaveis-veja-as-cotacoes/",
+   "fonte": "Canal Rural",
+   "resumo": "Imagem gerada por IA Mesmo assim, no geral, escalas de abate dos frigoríficos de maior porte seguem confortáveis O post Arroba do boi gordo tem alta após dias de preços estáveis; veja as cotações apareceu primeiro em Canal Rural .",
+   "data": "2026-09-01T22:40:56.000Z"
+  },
+  {
+   "titulo": "Mapa recebe da Embrapa 163 medidas para gestão de riscos climáticos no campo",
+   "link": "https://www.canalrural.com.br/politica/mapa-recebe-da-embrapa-163-medidas-para-gestao-de-riscos-climaticos-no-campo/",
+   "fonte": "Canal Rural",
+   "resumo": "Recomendações consideram os efeitos do El Niño na safra 2026/2027 e incluem ações transversais, setoriais e de apoio a políticas públicas. O post Mapa recebe da Embrapa 163 medidas para gestão de riscos climáticos no campo apareceu primeiro em Canal Rural .",
+   "data": "2026-09-01T22:11:17.000Z"
+  },
+  {
+   "titulo": "Fortes altas são registradas no mercado de soja; confira as cotações",
+   "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/fortes-altas-sao-registradas-no-mercado-de-soja-confira-as-cotacoes/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Daniel Popov Preços avançam nas principais praças brasileiras com valorização da soja em Chicago, enquanto produtor aumenta a comercialização da nova safra O post Fortes altas são registradas no mercado de soja; confira as cotações apareceu primeiro em C",
+   "data": "2026-09-01T22:06:16.000Z"
+  },
+  {
+   "titulo": "96% da área de cacau no Brasil está apta a exportar para a UE, diz Abicab",
+   "link": "https://www.canalrural.com.br/agricultura/96-da-area-de-cacau-no-brasil-esta-apta-a-exportar-para-a-ue-diz-abicab/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Divulgação/Aiba Crescente demanda por comprovação de origem sustentável da amêndoa deve beneficiar produção nacional no mundo, considera entidade O post 96% da área de cacau no Brasil está apta a exportar para a UE, diz Abicab apareceu primeiro em Canal ",
+   "data": "2026-09-01T22:00:26.000Z"
+  },
+  {
+   "titulo": "Exportações de carne angus certificada crescem 32% nos primeiros sete meses de 2026",
+   "link": "https://www.canalrural.com.br/pecuaria/exportacoes-de-carne-angus-certificada-crescem-32-nos-primeiros-sete-meses-de-2026/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Divulgação Foram mais de 5,5 mil toneladas destinadas a quase 30 países no período O post Exportações de carne angus certificada crescem 32% nos primeiros sete meses de 2026 apareceu primeiro em Canal Rural .",
+   "data": "2026-09-01T21:40:15.000Z"
+  },
+  {
+   "titulo": "Juros futuros caem com cenário eleitoral equilibrado e leitura fraca do PIB",
+   "link": "https://www.canalrural.com.br/economia/juros-futuros-caem-com-cenario-eleitoral-equilibrado-e-leitura-fraca-do-pib/",
+   "fonte": "Canal Rural",
+   "resumo": "Mercado reduziu prêmios ao longo da curva, mesmo com tensão externa e alta do petróleo; agropecuária ajudou a sustentar o resultado do segundo trimestre O post Juros futuros caem com cenário eleitoral equilibrado e leitura fraca do PIB apareceu primeiro em Can",
+   "data": "2026-09-01T21:22:52.000Z"
+  },
+  {
+   "titulo": "Conab publica resultado final de credenciamento para venda de farelo de soja",
+   "link": "https://www.canalrural.com.br/economia/conab-publica-resultado-final-de-credenciamento-para-venda-de-farelo-de-soja/",
+   "fonte": "Canal Rural",
+   "resumo": "Empresas selecionadas poderão usar unidades armazenadoras da estatal para atender clientes do ProVB e outros compradores. O post Conab publica resultado final de credenciamento para venda de farelo de soja apareceu primeiro em Canal Rural .",
+   "data": "2026-09-01T21:09:12.000Z"
+  },
+  {
+   "titulo": "PIB tem 'desaceleração importante' e consumo das famílias liga novo alerta, dizem economistas",
    "link": "https://g1.globo.com/economia/noticia/2026/09/01/pib-mostra-desaceleracao-importante-da-economia-e-acende-alerta-sobre-consumo-das-familias-apontam-economistas.ghtml",
    "fonte": "G1 Agro",
-   "resumo": "PIB do Brasil cresce 0,5% no 2º trimestre de 2026 A economia brasileira continua crescendo, mas perdeu força no segundo trimestre. Para economistas ouvidos pelo g1, o resultado mostra sinais de enfraquecimento do consumo das famílias e de setores ligados ao me",
+   "resumo": "PIB mostra 'desaceleração importante' e acende alerta sobre consumo das famílias, dizem economistas A economia brasileira continua crescendo, mas perdeu força no segundo trimestre. Para especialistas ouvidos pelo g1, o resultado mostra sinais de enfraqueciment",
    "data": "2026-09-01T13:27:46.000Z"
   },
   {
-   "titulo": "O agro sustenta o PIB. Quem sustenta o produtor?",
-   "link": "https://www.canalrural.com.br/opiniao-noticias/o-agro-sustenta-o-pib-quem-sustenta-o-produtor/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Pixabay Agropecuária cresce 6,8% em um ano, porém, no campo avançam as dívidas, a inadimplência e as recuperações judiciais O post O agro sustenta o PIB. Quem sustenta o produtor? apareceu primeiro em Canal Rural .",
-   "data": "2026-09-01T13:13:27.000Z"
-  },
-  {
-   "titulo": "PIB da agropecuária cresce 2,8% no segundo trimestre de 2026",
-   "link": "https://www.canalrural.com.br/economia/pib-da-agropecuaria-cresce-28-no-segundo-trimestre-de-2026/",
-   "fonte": "Canal Rural",
-   "resumo": "Resultado divulgado pelo IBGE mostra avanço do setor no trimestre e alta de 6,8% na comparação anual, acima do desempenho da economia brasileira. O post PIB da agropecuária cresce 2,8% no segundo trimestre de 2026 apareceu primeiro em Canal Rural .",
-   "data": "2026-09-01T12:42:01.000Z"
-  },
-  {
-   "titulo": "USDA lança programa para recompor rebanho bovino nos EUA",
-   "link": "https://www.canalrural.com.br/pecuaria/usda-lanca-programa-para-recompor-rebanho-bovino-nos-eua/",
-   "fonte": "Canal Rural",
-   "resumo": "Pacote inclui suporte a pecuaristas, estímulos à retenção de fêmeas, crédito para abatedouros regionais e compras públicas de carne local. O post USDA lança programa para recompor rebanho bovino nos EUA apareceu primeiro em Canal Rural .",
-   "data": "2026-09-01T12:29:08.000Z"
-  },
-  {
-   "titulo": "Agropecuária cresce 2,8% e impulsiona PIB, que avança 0,5% no 2º trimestre de 2026",
-   "link": "https://www.canalrural.com.br/agricultura/agronegocio/agropecuaria-cresce-28-e-impulsiona-pib-que-avanca-05-no-2o-trimestre-de-2026/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Embrapa Setor teve alta de 6,8% na comparação com o mesmo período de 2025, enquanto economia brasileira cresceu 2% nessa base de comparação O post Agropecuária cresce 2,8% e impulsiona PIB, que avança 0,5% no 2º trimestre de 2026 apareceu primeiro em Can",
-   "data": "2026-09-01T12:27:27.000Z"
-  },
-  {
-   "titulo": "Governo prevê superávit primário de R$ 18,6 bilhões no Orçamento de 2027",
-   "link": "https://www.canalrural.com.br/economia/governo-preve-superavit-primario-de-r-186-bilhoes-no-orcamento-de-2027/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Agência Brasil PLOA enviado ao Congresso estima resultado de R$ 83,4 bilhões após descontos previstos no Regime Fiscal Sustentável O post Governo prevê superávit primário de R$ 18,6 bilhões no Orçamento de 2027 apareceu primeiro em Canal Rural .",
-   "data": "2026-09-01T12:10:39.000Z"
-  },
-  {
-   "titulo": "Avanço de frente fria causa chuva forte e ventos de 90 km/h em alguns estados do país",
-   "link": "https://www.canalrural.com.br/previsao-do-tempo/avanco-de-frente-fria-causa-chuva-forte-e-ventos-de-90-km-h-em-alguns-estados-do-pais/",
-   "fonte": "Canal Rural",
-   "resumo": "Sistema provoca mudanças nas condições do tempo no Brasil nesta terça e quarta-feira, segundo a Climatempo O post Avanço de frente fria causa chuva forte e ventos de 90 km/h em alguns estados do país apareceu primeiro em Canal Rural .",
-   "data": "2026-09-01T11:31:25.000Z"
-  },
-  {
-   "titulo": "Mortes de três touros e um cavalo na Expointer são investigadas",
-   "link": "https://www.canalrural.com.br/nacional/rio-grande-do-sul/mortes-de-tres-touros-e-um-cavalo-na-expointer-sao-investigadas/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Divulgação Associação Brasileira de Angus Animais são provenientes do sul gaúcho; laudo preliminar de um dos bovinos aponta doença causada por parasita como causa provável do óbito O post Mortes de três touros e um cavalo na Expointer são investigadas ap",
-   "data": "2026-09-01T11:16:39.000Z"
-  },
-  {
-   "titulo": "Inmet prevê ciclone extratropical e chuvas em setembro no Sul, Sudeste e Centro-Oeste",
-   "link": "https://www.canalrural.com.br/previsao-do-tempo/inmet-preve-ciclone-extratropical-e-chuvas-em-setembro-no-sul-sudeste-e-centro-oeste/",
-   "fonte": "Canal Rural",
-   "resumo": "Massa de ar frio derruba as temperaturas no Sul, enquanto Norte e Nordeste seguem com calor elevado no início do mês. O post Inmet prevê ciclone extratropical e chuvas em setembro no Sul, Sudeste e Centro-Oeste apareceu primeiro em Canal Rural .",
-   "data": "2026-09-01T11:15:31.000Z"
-  },
-  {
-   "titulo": "Alta do petróleo impulsiona ações de Petrobras e faz Ibovespa para subir",
-   "link": "https://www.canalrural.com.br/economia/alta-do-petroleo-impulsiona-acoes-de-petrobras-e-faz-ibovespa-para-subir/",
-   "fonte": "Canal Rural",
-   "resumo": "Parceria do PicPay com o Canal Rural, o podcast Diário Econômico traz tudo o que você precisa saber sobre economia para começar bem o dia O post Alta do petróleo impulsiona ações de Petrobras e faz Ibovespa para subir apareceu primeiro em Canal Rural .",
-   "data": "2026-09-01T11:01:49.000Z"
-  },
-  {
-   "titulo": "Sistema majoritário x proporcional: por que o mais votado pode não se eleger?",
-   "link": "https://www.canalrural.com.br/politica/eleicoes/sistema-majoritario-x-proporcional-por-que-o-mais-votado-pode-nao-se-eleger/",
-   "fonte": "Canal Rural",
-   "resumo": "No sistema proporcional, voto não vai direto para o candidato, mas para a legenda à qual ele pertence Entenda o coeficiente eleitoral, por que o candidato mais votado pode não entrar e a força da FPA no Congresso Nacional O post Sistema majoritário x proporcio",
-   "data": "2026-09-01T10:30:00.000Z"
+   "titulo": "PIB do Brasil cresce 0,5% no 2º trimestre de 2026, puxado pela agropecuária, diz IBGE",
+   "link": "https://g1.globo.com/economia/noticia/2026/09/01/pib-do-brasil-cresce-05percent-no-2o-trimestre-de-2026-diz-ibge.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "PIB do Brasil cresce 0,5% no 2º trimestre de 2026 O Produto Interno Bruto (PIB) do Brasil cresceu 0,5% no segundo trimestre de 2026, informou o Instituto Brasileiro de Geografia e Estatística (IBGE) nesta terça-feira (1º). Em valores correntes, a economia bras",
+   "data": "2026-09-01T12:00:23.000Z"
   },
   {
    "titulo": "Joesley Batista se reuniu com Trump e articulou redução de tarifa sobre carne do Brasil, diz jornal",
@@ -168,13 +175,6 @@
    "fonte": "G1 Agro",
    "resumo": "Ivan Müller Botelho, ex-presidente da Energisa, em julho de 2015, em Palmas (TO). Divulgação/Assessoria do Governo de Tocantins Os empresários João Jacob Vontobel e Daniel Miguel Klabin, ambos com 97 anos, lideram o ranking dos bilionários mais velhos do Brasi",
    "data": "2026-08-28T13:00:00.000Z"
-  },
-  {
-   "titulo": "'Rei do Ovo', irmãos Batista e mais: veja quem são os bilionários do agro brasileiro em 2026",
-   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/08/28/veja-quem-sao-os-bilionarios-do-agro-brasileiro.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Empresário Ricardo Castellar de Faria, presidente da Associação Catarinense de Avicultura (ACAV). Adilvan Nogueira/Governo do Tocantins/Divulgação O agronegócio mantém forte presença entre as maiores fortunas do país, segundo o ranking de bilionários brasileir",
-   "data": "2026-08-28T11:47:10.000Z"
   },
   {
    "titulo": "Bovinocultura projeta boas perspectivas no segundo semestre",
