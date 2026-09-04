@@ -1,40 +1,103 @@
 {
- "atualizado_em": "2026-09-04T12:59:53.565Z",
+ "atualizado_em": "2026-09-04T23:30:54.532Z",
  "noticias": [
+  {
+   "titulo": "Frente fria traz chuva e massa de ar polar para 3 regiões do país",
+   "link": "https://www.canalrural.com.br/previsao-do-tempo/frente-fria-traz-chuva-e-massa-de-ar-polar-para-3-regioes-do-pais/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Pixabay Fenômeno começa a impactar o Sul do país e sobe para o Sudeste e Centro-Oeste entre esta sexta e o início da semana que vem O post Frente fria traz chuva e massa de ar polar para 3 regiões do país apareceu primeiro em Canal Rural .",
+   "data": "2026-09-04T22:38:50.000Z"
+  },
+  {
+   "titulo": "Portaria amplia para 260 mil toneladas compra de milho para o ProVB",
+   "link": "https://www.canalrural.com.br/politica/portaria-amplia-para-260-mil-toneladas-compra-de-milho-para-o-provb/",
+   "fonte": "Canal Rural",
+   "resumo": "Medida publicada nesta quinta-feira (3) autoriza a Conab a elevar aquisições do cereal em 2026 no âmbito do Programa de Venda em Balcão. O post Portaria amplia para 260 mil toneladas compra de milho para o ProVB apareceu primeiro em Canal Rural .",
+   "data": "2026-09-04T22:30:51.000Z"
+  },
+  {
+   "titulo": "Preços do boi gordo finalizam a semana em nova alta: acompanhe as cotações",
+   "link": "https://www.canalrural.com.br/pecuaria/precos-do-boi-gordo-finalizam-a-semana-em-nova-alta-acompanhe-as-cotacoes/",
+   "fonte": "Canal Rural",
+   "resumo": "Imagem gerada por IA para o Canal Rural Escalas de abate encurtadas de frigoríficos de menor porte elevam a média do valor praticado O post Preços do boi gordo finalizam a semana em nova alta: acompanhe as cotações apareceu primeiro em Canal Rural .",
+   "data": "2026-09-04T22:00:05.000Z"
+  },
+  {
+   "titulo": "ECA Ambiental avança no Senado e segue para sanção presidencial",
+   "link": "https://www.canalrural.com.br/politica/eca-ambiental-avanca-no-senado-e-segue-para-sancao-presidencial/",
+   "fonte": "Canal Rural",
+   "resumo": "Projeto inclui o direito prioritário de crianças e adolescentes ao meio ambiente saudável e prevê atenção especial a públicos rurais e comunidades tradicionais. O post ECA Ambiental avança no Senado e segue para sanção presidencial apareceu primeiro em Canal R",
+   "data": "2026-09-04T21:59:15.000Z"
+  },
+  {
+   "titulo": "Gás de cozinha volta a R$ 114 na primeira semana de setembro, diz ANP",
+   "link": "https://www.canalrural.com.br/economia/gas-de-cozinha-volta-a-r-114-na-primeira-semana-de-setembro-diz-anp/",
+   "fonte": "Canal Rural",
+   "resumo": "Levantamento mostra alta de 0,2% no botijão de 13 quilos, diesel S-10 estável e recuo de 0,3% na gasolina. O post Gás de cozinha volta a R$ 114 na primeira semana de setembro, diz ANP apareceu primeiro em Canal Rural .",
+   "data": "2026-09-04T21:32:42.000Z"
+  },
+  {
+   "titulo": "Portaria destina até R$ 500 milhões para compra de arroz pela Conab",
+   "link": "https://www.canalrural.com.br/politica/portaria-destina-ate-r-500-milhoes-para-compra-de-arroz-pela-conab/",
+   "fonte": "Canal Rural",
+   "resumo": "Medida autoriza leilões públicos para aquisição de arroz longo fino em casca da safra 2025/2026 e formação de estoques públicos. O post Portaria destina até R$ 500 milhões para compra de arroz pela Conab apareceu primeiro em Canal Rural .",
+   "data": "2026-09-04T21:17:57.000Z"
+  },
+  {
+   "titulo": "Preços apresentam positividade, mas negócios desaceleram para a soja; confira as cotações",
+   "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/precos-apresentam-positividade-mas-negocios-desaceleram-para-a-soja-confira-as-cotacoes/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Pixabay Mercado físico brasileiro tem poucas alterações nas cotações, enquanto portos seguem aquecidos e prêmios permanecem firmes O post Preços apresentam positividade, mas negócios desaceleram para a soja; confira as cotações apareceu primeiro em Canal",
+   "data": "2026-09-04T21:16:46.000Z"
+  },
+  {
+   "titulo": "Dólar fecha a R$ 5,1308 após payroll forte nos Estados Unidos",
+   "link": "https://www.canalrural.com.br/economia/dolar-fecha-a-r-51308-apos-payroll-forte-nos-estados-unidos/",
+   "fonte": "Canal Rural",
+   "resumo": "Moeda subiu nesta sexta-feira (4), acompanhando o exterior, mas encerrou a semana com queda de 1,26% em meio ao cenário eleitoral doméstico. O post Dólar fecha a R$ 5,1308 após payroll forte nos Estados Unidos apareceu primeiro em Canal Rural .",
+   "data": "2026-09-04T20:56:59.000Z"
+  },
+  {
+   "titulo": "Exportações brasileiras para a China caem 10,9% em agosto",
+   "link": "https://www.canalrural.com.br/economia/exportacoes-brasileiras-para-a-china-caem-109-em-agosto/",
+   "fonte": "Canal Rural",
+   "resumo": "Importações avançaram 21,3% no mês, enquanto a balança comercial com o país asiático registrou superávit de US$ 1,731 bilhão. O post Exportações brasileiras para a China caem 10,9% em agosto apareceu primeiro em Canal Rural .",
+   "data": "2026-09-04T20:02:10.000Z"
+  },
+  {
+   "titulo": "Exportações do Brasil aos EUA sobem 12,1% em agosto",
+   "link": "https://www.canalrural.com.br/economia/exportacoes-do-brasil-aos-eua-sobem-121-em-agosto/",
+   "fonte": "Canal Rural",
+   "resumo": "Avanço mensal foi puxado pela alta de preços e incluiu crescimento de carne bovina, celulose e café nas vendas ao mercado norte-americano. O post Exportações do Brasil aos EUA sobem 12,1% em agosto apareceu primeiro em Canal Rural .",
+   "data": "2026-09-04T19:52:55.000Z"
+  },
+  {
+   "titulo": "União Europeia deve voltar a comprar mel e carne de aves do Brasil, diz governo",
+   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/09/04/uniao-europeia-deve-voltar-a-comprar-mel-e-carne-de-aves-do-brasil-diz-governo.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Frango cru JK Sloan O Brasil deve retornar à lista de fornecedores de mel e carne de aves da União Europeia em breve, afirmou o Ministério da Agricultura, nesta sexta-feira (4). O bloco concluiu auditorias nas duas cadeias produtivas e considerou que os contro",
+   "data": "2026-09-04T18:50:21.000Z"
+  },
+  {
+   "titulo": "Aprenda a cultivar pitaia",
+   "link": "https://g1.globo.com/economia/agronegocios/globo-rural/noticia/2026/09/04/aprenda-a-cultivar-pitaia.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Imagem de uma pitaia produzida no Paraná. RPC Tem curiosidade sobre como cultivar a pitaia? A Emater-MG tem uma cartilha com orientações sobre o plantio das mudas, a adubação e as podas, além de explicar como combater as principais pragas e doenças que atingem",
+   "data": "2026-09-04T14:01:24.000Z"
+  },
   {
    "titulo": "Preços globais dos alimentos atingem maior nível desde 2022, em meio a clima extremo e guerras, diz FAO",
    "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/09/04/precos-mundiais-dos-alimentos-atingem-maior-nivel-desde-2022-em-meio-a-riscos-de-oferta-diz-fao.ghtml",
    "fonte": "G1 Agro",
-   "resumo": "Conta de luz e alimentos puxam recuo da inflação em agosto; El Niño é risco nos próximos meses Os preços mundiais dos alimentos subiram em agosto para o nível mais alto desde o final de 2022, à medida que condições climáticas adversas e perturbações causadas p",
+   "resumo": "Conta de luz e alimentos puxam recuo da inflação em agosto; El Niño é risco nos próximos meses Os preços globais dos alimentos subiram em agosto para o nível mais alto desde o fim de 2022, à medida que condições climáticas adversas e perturbações provocadas pe",
    "data": "2026-09-04T12:50:34.000Z"
-  },
-  {
-   "titulo": "Senado aprova projeto que atualiza marco legal do seguro rural",
-   "link": "https://www.canalrural.com.br/politica/senado-aprova-projeto-que-atualiza-marco-legal-do-seguro-rural/",
-   "fonte": "Canal Rural",
-   "resumo": "Texto torna obrigatória a despesa com subvenção ao prêmio do seguro rural e segue para sanção presidencial. O post Senado aprova projeto que atualiza marco legal do seguro rural apareceu primeiro em Canal Rural .",
-   "data": "2026-09-04T12:01:30.000Z"
   },
   {
    "titulo": "Trump posta mensagem de senador dos EUA que diz que agricultores brasileiros pagam menos por sementes de milho",
    "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/09/04/trump-publica-mensagem-de-senador-que-pede-insumos-agricolas-mais-baratos-nos-eua-e-diz-que-produtores-brasileiros-pagam-menos-por-sementes.ghtml",
    "fonte": "G1 Agro",
-   "resumo": "Publicação do presidente dos EUA, Donald Trump, em 3 de setembro de 2026, às 22:02. Reprodução O presidente dos Estados Unidos, Donald Trump, compartilhou, na noite de quinta-feira (3), uma publicação em que o senador Chuck Grassley pede medidas para reduzir o",
+   "resumo": "Publicação do presidente dos EUA, Donald Trump, em 3 de setembro de 2026, às 22:02. Reprodução O presidente dos Estados Unidos, Donald Trump, compartilhou, na noite de quinta-feira (3), uma publicação em que o senador republicano Chuck Grassley pede medidas pa",
    "data": "2026-09-04T11:53:41.000Z"
-  },
-  {
-   "titulo": "Inmet mantém alerta de tempestades no Sudeste e no Sul nesta sexta-feira",
-   "link": "https://www.canalrural.com.br/diversos/inmet-mantem-alerta-de-tempestades-no-sudeste-e-no-sul-nesta-sexta-feira/",
-   "fonte": "Canal Rural",
-   "resumo": "Aviso amarelo atinge faixa do centro-sul de São Paulo ao extremo norte do Rio Grande do Sul; Centro-Oeste também tem alerta para baixa umidade do ar. O post Inmet mantém alerta de tempestades no Sudeste e no Sul nesta sexta-feira apareceu primeiro em Canal Rur",
-   "data": "2026-09-04T11:52:50.000Z"
-  },
-  {
-   "titulo": "Índice de alimentos da FAO sobe 1,9% em agosto com clima e oferta no foco",
-   "link": "https://www.canalrural.com.br/economia/indice-de-alimentos-da-fao-sobe-19-em-agosto-com-clima-e-oferta-no-foco/",
-   "fonte": "Canal Rural",
-   "resumo": "Açúcar liderou a alta no mês, enquanto relatório da FAO também apontou recuo de 2% na produção global de cereais em 2026. O post Índice de alimentos da FAO sobe 1,9% em agosto com clima e oferta no foco apareceu primeiro em Canal Rural .",
-   "data": "2026-09-04T11:48:03.000Z"
   },
   {
    "titulo": "China, grande compradora de frango brasileiro, agora avança nas exportações e pode virar concorrente do Brasil",
@@ -42,55 +105,6 @@
    "fonte": "G1 Agro",
    "resumo": "China segue como principal destino do agro brasileiro, mas mercado dá sinais de mudança A China está produzindo cada vez mais carne de frango e o excedente começa a ser vendido para outros países. O movimento pode transformar um dos grandes compradores do fran",
    "data": "2026-09-04T11:43:38.000Z"
-  },
-  {
-   "titulo": "Lei cria o Profert com meta de ampliar uso de fertilizantes nacionais",
-   "link": "https://www.canalrural.com.br/politica/lei-cria-o-profert-com-meta-de-ampliar-uso-de-fertilizantes-nacionais/",
-   "fonte": "Canal Rural",
-   "resumo": "Programa sancionado por Lula prevê estímulo à produção interna e fixa porcentual mínimo de mistura no mercado brasileiro a partir de 2027. O post Lei cria o Profert com meta de ampliar uso de fertilizantes nacionais apareceu primeiro em Canal Rural .",
-   "data": "2026-09-04T11:18:09.000Z"
-  },
-  {
-   "titulo": "Estudo mostra alta exposição de áreas habitadas da Amazônia à seca no último El Niño",
-   "link": "https://www.canalrural.com.br/diversos/estudo-mostra-alta-exposicao-de-areas-habitadas-da-amazonia-a-seca-no-ultimo-el-nino/",
-   "fonte": "Canal Rural",
-   "resumo": "Levantamento do MapBiomas cruzou dados de chuva e superfície de água e identificou efeitos intensos em 2.172 localidades da região. O post Estudo mostra alta exposição de áreas habitadas da Amazônia à seca no último El Niño apareceu primeiro em Canal Rural .",
-   "data": "2026-09-04T11:01:18.000Z"
-  },
-  {
-   "titulo": "Indonésia habilita mais 21 plantas brasileiras para exportação de carne bovina",
-   "link": "https://www.canalrural.com.br/pecuaria/indonesia-habilita-mais-21-plantas-brasileiras-para-exportacao-de-carne-bovina/",
-   "fonte": "Canal Rural",
-   "resumo": "Com a nova rodada de aprovações, Brasil soma 73 estabelecimentos autorizados a atender o mercado indonésio, ligados a 26 empresas. O post Indonésia habilita mais 21 plantas brasileiras para exportação de carne bovina apareceu primeiro em Canal Rural .",
-   "data": "2026-09-04T10:42:23.000Z"
-  },
-  {
-   "titulo": "Feriadão de 7 de setembro terá frio intenso, temporais e até geada; veja a previsão",
-   "link": "https://www.canalrural.com.br/previsao-do-tempo/feriadao-de-7-de-setembro-tera-frio-intenso-temporais-e-ate-geada-veja-a-previsao/",
-   "fonte": "Canal Rural",
-   "resumo": "Imagem gerado por IA para o Canal Rural Passagem de frente fria e avanço de massa de ar polar provocam chuva forte e queda acentuada das temperaturas no feriado O post Feriadão de 7 de setembro terá frio intenso, temporais e até geada; veja a previsão apareceu",
-   "data": "2026-09-04T10:27:30.000Z"
-  },
-  {
-   "titulo": "Eleições 2026: o que Romeu Zema e Ronaldo Caiado propõem para o agro",
-   "link": "https://www.canalrural.com.br/politica/eleicoes/eleicoes-2026-o-que-romeu-zema-e-ronaldo-caiado-propoem-para-o-agro/",
-   "fonte": "Canal Rural",
-   "resumo": "Fotos: TSE Candidatos defendem medidas para crédito, seguro rural, infraestrutura e abertura de mercados; propostas também abordam fertilizantes, tecnologia e segurança jurídica O post Eleições 2026: o que Romeu Zema e Ronaldo Caiado propõem para o agro aparec",
-   "data": "2026-09-04T10:00:00.000Z"
-  },
-  {
-   "titulo": "Juros, pesquisa eleitoral e política fiscal: ouça o Diário Econômico de hoje",
-   "link": "https://www.canalrural.com.br/economia/juros-pesquisa-eleitoral-e-politica-fiscal-ouca-o-diario-economico-de-hoje/",
-   "fonte": "Canal Rural",
-   "resumo": "Parceria do PicPay com o Canal Rural, o podcast Diário Econômico traz tudo o que você precisa saber sobre economia para começar bem o dia O post Juros, pesquisa eleitoral e política fiscal: ouça o Diário Econômico de hoje apareceu primeiro em Canal Rural .",
-   "data": "2026-09-04T08:45:00.000Z"
-  },
-  {
-   "titulo": "Exportação de melão brasileiro enfrenta desafios e oportunidades em 2023",
-   "link": "https://www.canalrural.com.br/videos/exportacao-de-melao-brasileiro-enfrenta-desafios-e-oportunidades-em-2023/",
-   "fonte": "Canal Rural",
-   "resumo": "As exportações de melão do Brasil enfrentam queda, mas a produção continua em crescimento, destacando-se no mercado internacional O post Exportação de melão brasileiro enfrenta desafios e oportunidades em 2023 apareceu primeiro em Canal Rural .",
-   "data": "2026-09-04T01:15:40.000Z"
   },
   {
    "titulo": "Governo critica início do veto à venda de carne brasileira para União Europeia e cita possibilidade de 'medidas de reciprocidade'",
@@ -161,20 +175,6 @@
    "fonte": "G1 Agro",
    "resumo": "Divulgação O agronegócio brasileiro segue inserido em um cenário que exige planejamento e capacidade de adaptação. Fatores como mudanças climáticas, oscilações de mercado e o atual ambiente de juros reforçam a importância de decisões financeiras bem estruturad",
    "data": "2026-08-31T15:29:22.000Z"
-  },
-  {
-   "titulo": "Itapetininga recebe 2ª edição do Dia de Campo",
-   "link": "https://g1.globo.com/sp/sorocaba-jundiai/nosso-campo/noticia/2026/08/31/itapetininga-recebe-2a-edicao-do-dia-de-campo.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Mais de 500 pessoas, entre produtores, empresários e visitantes, participaram da segunda edição do Dia de Campo, em Itapetininga Reprodução / TV TEM Mais de 500 pessoas, entre produtores, empresários e visitantes, participaram da segunda edição do Dia de Campo",
-   "data": "2026-08-31T15:01:00.000Z"
-  },
-  {
-   "titulo": "Leite passa por testes para garantir qualidade e segurança",
-   "link": "https://g1.globo.com/sp/sorocaba-jundiai/nosso-campo/noticia/2026/08/30/leite-passa-por-testes-para-garantir-qualidade-e-seguranca.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Alunos de engenharia de alimentos e farmácia estudam a qualidade do leite e possíveis fraudes Reprodução / TV TEM Do campo à indústria, o leite é analisado em diferentes etapas para assegurar que chegue ao consumidor com qualidade e sem riscos. A atenção começ",
-   "data": "2026-08-30T10:30:24.000Z"
   },
   {
    "titulo": "Bovinocultura projeta boas perspectivas no segundo semestre",
