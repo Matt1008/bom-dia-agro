@@ -1,82 +1,89 @@
 {
- "atualizado_em": "2026-09-10T13:11:58.193Z",
+ "atualizado_em": "2026-09-10T23:31:09.194Z",
  "noticias": [
+  {
+   "titulo": "Crédito rural encolhe 26% em um ano e acende alerta para os preços dos alimentos",
+   "link": "https://www.canalrural.com.br/economia/credito-rural-encolhe-26-em-um-ano-e-acende-alerta-para-os-precos-dos-alimentos/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Daniel Popov/ Canal Rural Retração ainda não aparece nos indicadores econômicos mais observados por conta da defasagem no calendário agrícola, aponta Farsul O post Crédito rural encolhe 26% em um ano e acende alerta para os preços dos alimentos apareceu ",
+   "data": "2026-09-10T22:50:02.000Z"
+  },
+  {
+   "titulo": "Farsul relata atraso na entrega de diesel no RS no início do plantio de verão",
+   "link": "https://www.canalrural.com.br/agricultura/farsul-relata-atraso-na-entrega-de-diesel-no-rs-no-inicio-do-plantio-de-verao/",
+   "fonte": "Canal Rural",
+   "resumo": "Entidade afirma que restrições no abastecimento afetam a operação nas propriedades e elevam o custo do combustível para parte dos produtores. O post Farsul relata atraso na entrega de diesel no RS no início do plantio de verão apareceu primeiro em Canal Rural ",
+   "data": "2026-09-10T22:41:49.000Z"
+  },
+  {
+   "titulo": "É hora de vender? Soja sobe forte, mas produtor segura negócios da safra 26/27",
+   "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/e-hora-de-vender-soja-sobe-forte-mas-produtor-segura-negocios-da-safra-26-27/",
+   "fonte": "Canal Rural",
+   "resumo": "Reprodução Canal Rural Preços estão entre os maiores do ano, mas incertezas sobre o clima fazem o sojicultor avançar com cautela nas vendas antecipadas da nova safra O post É hora de vender? Soja sobe forte, mas produtor segura negócios da safra 26/27 apareceu",
+   "data": "2026-09-10T22:10:00.000Z"
+  },
+  {
+   "titulo": "Arroba do boi segue em alta mesmo com frigoríficos operando com escalas confortáveis",
+   "link": "https://www.canalrural.com.br/pecuaria/arroba-do-boi-segue-em-alta-mesmo-com-frigorificos-operando-com-escalas-confortaveis/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto gerada por IA Mercado segue atento ao comportamento dos preços da carne no atacado e ao ritmo diário de exportação O post Arroba do boi segue em alta mesmo com frigoríficos operando com escalas confortáveis apareceu primeiro em Canal Rural .",
+   "data": "2026-09-10T22:07:24.000Z"
+  },
+  {
+   "titulo": "Conab e MDS visitam rede de abastecimento de Curitiba",
+   "link": "https://www.canalrural.com.br/politica/conab-e-mds-visitam-rede-de-abastecimento-de-curitiba/",
+   "fonte": "Canal Rural",
+   "resumo": "Agenda técnica incluiu Armazéns da Família, centro de distribuição e iniciativas municipais ligadas à segurança alimentar e nutricional. O post Conab e MDS visitam rede de abastecimento de Curitiba apareceu primeiro em Canal Rural .",
+   "data": "2026-09-10T21:43:19.000Z"
+  },
+  {
+   "titulo": "Ibovespa fecha em alta de 1,42% e dólar comercial cai a R$ 5,1027",
+   "link": "https://www.canalrural.com.br/economia/ibovespa-fecha-em-alta-de-142-e-dolar-comercial-cai-a-r-51027/",
+   "fonte": "Canal Rural",
+   "resumo": "Índice encerrou aos 188.268,59 pontos, enquanto os principais indicadores de câmbio e juros terminaram o dia em direções mistas. O post Ibovespa fecha em alta de 1,42% e dólar comercial cai a R$ 5,1027 apareceu primeiro em Canal Rural .",
+   "data": "2026-09-10T21:42:14.000Z"
+  },
+  {
+   "titulo": "Soja sobe no Brasil com oferta restrita e avanço dos preços em Chicago; confira",
+   "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/soja-sobe-no-brasil-com-oferta-restrita-e-avanco-dos-precos-em-chicago-confira/",
+   "fonte": "Canal Rural",
+   "resumo": "Cotação da soja Produtores seguem reclusos, enquanto negócios se concentram nos portos; demanda chinesa e expectativa pelo relatório do USDA impulsionam cotações O post Soja sobe no Brasil com oferta restrita e avanço dos preços em Chicago; confira apareceu pr",
+   "data": "2026-09-10T21:03:32.000Z"
+  },
+  {
+   "titulo": "Governo federal anuncia pacote de medidas para conter alta dos combustíveis",
+   "link": "https://www.canalrural.com.br/videos/governo-federal-anuncia-pacote-de-medidas-para-conter-alta-dos-combustiveis/",
+   "fonte": "Canal Rural",
+   "resumo": "Medidas incluem redução de tributos e subvenções para estabilizar preços de gasolina, etanol e diesel O post Governo federal anuncia pacote de medidas para conter alta dos combustíveis apareceu primeiro em Canal Rural .",
+   "data": "2026-09-10T20:15:18.000Z"
+  },
+  {
+   "titulo": "Corte de tributos pode alterar produção de açúcar e etanol",
+   "link": "https://www.canalrural.com.br/videos/corte-de-tributos-pode-alterar-producao-de-acucar-e-etanol/",
+   "fonte": "Canal Rural",
+   "resumo": "Medidas do governo federal visam conter alta dos combustíveis e podem impactar a produção de açúcar e etanol pelas usinas O post Corte de tributos pode alterar produção de açúcar e etanol apareceu primeiro em Canal Rural .",
+   "data": "2026-09-10T20:15:09.000Z"
+  },
+  {
+   "titulo": "El Niño se fortalece e provoca preocupações climáticas no Brasil",
+   "link": "https://www.canalrural.com.br/videos/el-nino-se-fortalece-e-provoca-preocupacoes-climaticas-no-brasil/",
+   "fonte": "Canal Rural",
+   "resumo": "Fenômeno El Niño deve impactar clima e agronegócio nos próximos meses, com riscos de secas e chuvas intensas em várias regiões do Brasil O post El Niño se fortalece e provoca preocupações climáticas no Brasil apareceu primeiro em Canal Rural .",
+   "data": "2026-09-10T20:05:45.000Z"
+  },
+  {
+   "titulo": "Justiça suspende registro de novos agrotóxicos à base de glifosato por 90 dias em todo o país",
+   "link": "https://g1.globo.com/df/distrito-federal/noticia/2026/09/10/justica-suspende-registro-de-novos-agrotoxicos-a-base-de-glifosato-por-90-dias-em-todo-o-pais.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Glifosato sendo aplicado em lavoura, em imagem de arquivo Getty Images A Justiça do Trabalho determinou a suspensão, por 90 dias, do registro e da autorização de novos agrotóxicos à base de glifosato e derivados -- o tipo de agrotóxico mais vendido em todo o m",
+   "data": "2026-09-10T19:13:29.000Z"
+  },
   {
    "titulo": "Conflito no Oriente Médio pode encarecer produtos e pressionar inflação, diz CEO da Nestlé",
    "link": "https://g1.globo.com/economia/noticia/2026/09/10/ceo-da-nestle-diz-que-conflito-no-oriente-medio-provoca-inflacao-e-eleva-custos-de-fornecedores.ghtml",
    "fonte": "G1 Agro",
    "resumo": "Guerra no Oriente Médio completa seis meses A Nestlé está aumentando preços, reformulando produtos e retirando itens pelos quais os consumidores não estão dispostos a pagar mais, diante da alta dos custos de energia, frete e matérias-primas provocada pelos efe",
    "data": "2026-09-10T12:27:36.000Z"
-  },
-  {
-   "titulo": "USDA projeta queda de 2,6% no lucro da agropecuária dos EUA em 2026",
-   "link": "https://www.canalrural.com.br/economia/usda-projeta-queda-de-26-no-lucro-da-agropecuaria-dos-eua-em-2026/",
-   "fonte": "Canal Rural",
-   "resumo": "Resultado líquido estimado em US$ 158,4 bilhões combina alta de custos de produção, avanço das receitas agrícolas e recuo no faturamento da pecuária. O post USDA projeta queda de 2,6% no lucro da agropecuária dos EUA em 2026 apareceu primeiro em Canal Rural .",
-   "data": "2026-09-10T12:27:27.000Z"
-  },
-  {
-   "titulo": "Anec projeta alta de 11% nos embarques de soja em setembro e queda de 25,5% no milho",
-   "link": "https://www.canalrural.com.br/economia/anec-projeta-alta-de-11-nos-embarques-de-soja-em-setembro-e-queda-de-255-no-milho/",
-   "fonte": "Canal Rural",
-   "resumo": "Estimativas da entidade indicam 7,74 milhões de toneladas de soja e 5,2 milhões de toneladas de milho no mês, com avanço do farelo de soja. O post Anec projeta alta de 11% nos embarques de soja em setembro e queda de 25,5% no milho apareceu primeiro em Canal R",
-   "data": "2026-09-10T12:23:01.000Z"
-  },
-  {
-   "titulo": "China confirma surto de febre aftosa em suínos",
-   "link": "https://www.canalrural.com.br/aves-e-suinos/china-confirma-surto-de-febre-aftosa-em-suinos/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Ari Dias/AEN Foco do sorotipo O foi identificado em estabelecimento de abate no sudoeste do país; 37 animais apresentaram sintomas O post China confirma surto de febre aftosa em suínos apareceu primeiro em Canal Rural .",
-   "data": "2026-09-10T12:06:46.000Z"
-  },
-  {
-   "titulo": "IGP-M sobe 0,93% na 1ª prévia de setembro, informa FGV",
-   "link": "https://www.canalrural.com.br/economia/igp-m-sobe-093-na-1a-previa-de-setembro-informa-fgv/",
-   "fonte": "Canal Rural",
-   "resumo": "Alta foi maior que a registrada na mesma leitura de agosto e teve apoio do avanço dos preços ao produtor e ao consumidor. O post IGP-M sobe 0,93% na 1ª prévia de setembro, informa FGV apareceu primeiro em Canal Rural .",
-   "data": "2026-09-10T11:46:48.000Z"
-  },
-  {
-   "titulo": "Frente fria turbinada por ciclone traz risco de tornados; veja estados em alerta",
-   "link": "https://www.canalrural.com.br/previsao-do-tempo/frente-fria-turbinada-por-ciclone-traz-risco-de-tornados-veja-estados-em-alerta/",
-   "fonte": "Canal Rural",
-   "resumo": "Imagem gerada por IA para o Canal Rural Formação de ciclone extratropical reforça avanço do sistema, com previsão de temporais, granizo e rajadas de até 90 km/h O post Frente fria turbinada por ciclone traz risco de tornados; veja estados em alerta apareceu pr",
-   "data": "2026-09-10T11:23:02.000Z"
-  },
-  {
-   "titulo": "Petróleo acima de US$ 100 pressiona juros global",
-   "link": "https://www.canalrural.com.br/economia/petroleo-acima-de-us-100-pressiona-juros-global/",
-   "fonte": "Canal Rural",
-   "resumo": "Parceria do PicPay com o Canal Rural, o podcast Diário Econômico traz tudo o que você precisa saber sobre economia para começar bem o dia O post Petróleo acima de US$ 100 pressiona juros global apareceu primeiro em Canal Rural .",
-   "data": "2026-09-10T11:08:19.000Z"
-  },
-  {
-   "titulo": "Syngenta e Amoéba fecham acordo para distribuir biofungicida na Europa",
-   "link": "https://www.canalrural.com.br/agricultura/syngenta-e-amoeba-fecham-acordo-para-distribuir-biofungicida-na-europa/",
-   "fonte": "Canal Rural",
-   "resumo": "Parceria exclusiva abrange União Europeia, Reino Unido, Ucrânia e Suíça para produto voltado ao controle de doenças em cereais. O post Syngenta e Amoéba fecham acordo para distribuir biofungicida na Europa apareceu primeiro em Canal Rural .",
-   "data": "2026-09-10T10:23:00.000Z"
-  },
-  {
-   "titulo": "Agropecuária integrada: rebanho, floresta e sustentabilidade no campo",
-   "link": "https://www.canalrural.com.br/gaffff-2026/agropecuaria-integrada-rebanho-floresta-e-sustentabilidade-no-campo/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Datagro Painel do primeiro dia do Global Agribusiness Festival debate novos modelos de produção, que unem diferentes cadeias do agronegócio O post Agropecuária integrada: rebanho, floresta e sustentabilidade no campo apareceu primeiro em Canal Rural .",
-   "data": "2026-09-10T10:01:00.000Z"
-  },
-  {
-   "titulo": "Petrobras corrige informação sobre preço da gasolina A para distribuidoras",
-   "link": "https://www.canalrural.com.br/economia/petrobras-corrige-informacao-sobre-preco-da-gasolina-a-para-distribuidoras/",
-   "fonte": "Canal Rural",
-   "resumo": "Companhia informou que o fim do desconto de R$ 0,44 por litro será compensado pela redução de tributos, com efeito líquido de queda de R$ 0,19 por litro no preço percebido pelas distribuidoras. O post Petrobras corrige informação sobre preço da gasolina A para",
-   "data": "2026-09-10T03:48:32.000Z"
-  },
-  {
-   "titulo": "Entidades pedem solução imediata para crise no STF e fortalecimento da democracia",
-   "link": "https://www.canalrural.com.br/videos/entidades-pedem-solucao-imediata-para-crise-no-stf-e-fortalecimento-da-democracia/",
-   "fonte": "Canal Rural",
-   "resumo": "Manifesto destaca a importância da segurança jurídica e a separação dos poderes no Brasil O post Entidades pedem solução imediata para crise no STF e fortalecimento da democracia apareceu primeiro em Canal Rural .",
-   "data": "2026-09-10T00:05:46.000Z"
   },
   {
    "titulo": "Biocombustível: chuvas atípicas impulsionam preços do etanol mesmo com estoque robusto no mercado paulista, analisa USP",
@@ -168,13 +175,6 @@
    "fonte": "G1 Agro",
    "resumo": "Os ministérios das Relações Exteriores e da Agricultura divulgaram uma nota conjunta nesta quinta-feira (3) na qual criticaram a entrada em vigor do veto à venda de carne brasileira para a União Europeia e afirmaram que o país \"reserva-se o direito de recorrer",
    "data": "2026-09-03T20:38:35.000Z"
-  },
-  {
-   "titulo": "UE compra pouca carne do Brasil, mas paga mais e funciona como ‘vitrine’; saiba por que o veto preocupa",
-   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/09/03/ue-compra-pouca-carne-do-brasil-mas-paga-mais-e-funciona-como-vitrine-saiba-por-que-o-veto-preocupa.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "União Europeia suspende importações de produtos de origem animal do Brasil A partir desta quinta-feira (3), a União Europeia interrompe as compras de produtos de origem animal do Brasil. No caso da carne bovina, a suspensão preocupa menos pelo volume exportado",
-   "data": "2026-09-03T03:01:04.000Z"
   },
   {
    "titulo": "Bovinocultura projeta boas perspectivas no segundo semestre",
