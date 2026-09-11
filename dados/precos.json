@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-11T22:03:56.920Z",
+ "atualizado_em": "2026-09-11T23:38:44.314Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -59,15 +59,15 @@
   },
   "milho": {
    "mt": {
-    "preco": 70.52,
-    "data": "2026-09-09",
+    "preco": 69.77,
+    "data": "2026-09-11",
     "praca": "Indicador CEPEA/B3 — Campinas/SP",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
-    "preco": 70.52,
-    "data": "2026-09-09",
+    "preco": 69.77,
+    "data": "2026-09-11",
     "praca": "Indicador CEPEA/B3 — Campinas/SP",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -118,8 +118,8 @@
   },
   "cafe-conilon": {
    "pa": {
-    "preco": 996.9,
-    "data": "2026-09-09",
+    "preco": 992.96,
+    "data": "2026-09-11",
     "praca": "Robusta — Indicador CEPEA/ESALQ",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
