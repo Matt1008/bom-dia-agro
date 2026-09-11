@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-11T19:20:46.236Z",
+ "atualizado_em": "2026-09-11T22:03:56.920Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -35,7 +35,7 @@
    },
    "pa": {
     "preco": 349.5,
-    "data": "2026-09-09",
+    "data": "2026-09-11",
     "praca": "Indicador CEPEA/B3 — Brasil",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -43,15 +43,15 @@
   },
   "soja": {
    "mt": {
-    "preco": 160.12,
-    "data": "2026-09-09",
+    "preco": 160.55,
+    "data": "2026-09-11",
     "praca": "Soja Paranaguá (porto) — CEPEA",
     "escopo": "porto",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
-    "preco": 160.12,
-    "data": "2026-09-09",
+    "preco": 160.55,
+    "data": "2026-09-11",
     "praca": "Soja Paranaguá (porto) — CEPEA",
     "escopo": "porto",
     "fonte": "CEPEA/ESALQ-USP"
@@ -75,8 +75,8 @@
   },
   "algodao": {
    "mt": {
-    "preco": 143.0611,
-    "data": "2026-09-09",
+    "preco": 144.7013,
+    "data": "2026-09-11",
     "praca": "Indicador CEPEA/ESALQ — Brasil",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -84,8 +84,8 @@
   },
   "bezerro": {
    "mt": {
-    "preco": 3393.35,
-    "data": "2026-09-09",
+    "preco": 3393.91,
+    "data": "2026-09-11",
     "praca": "Mato Grosso do Sul — CEPEA",
     "escopo": "vizinho",
     "fonte": "CEPEA/ESALQ-USP"
@@ -94,7 +94,7 @@
   "suino": {
    "mt": {
     "preco": 7.27,
-    "data": "2026-09-09",
+    "data": "2026-09-11",
     "praca": "Carcaça especial — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -102,15 +102,15 @@
   },
   "frango": {
    "mt": {
-    "preco": 7.69,
-    "data": "2026-09-09",
+    "preco": 7.76,
+    "data": "2026-09-11",
     "praca": "Frango resfriado — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
-    "preco": 7.69,
-    "data": "2026-09-09",
+    "preco": 7.76,
+    "data": "2026-09-11",
     "praca": "Frango resfriado — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -127,12 +127,12 @@
   },
   "novilha": {
    "mt": {
-    "preco": 314.62,
-    "data": "2026-09-10",
+    "preco": 315.42,
+    "data": "2026-09-11",
     "praca": "Indicador da Novilha — Mato Grosso",
     "escopo": "estado",
     "fonte": "Datagro (via Notícias Agrícolas)",
-    "variacao_fonte": 0.99
+    "variacao_fonte": 0.25
    }
   }
  },
