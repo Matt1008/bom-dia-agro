@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-11T23:38:44.314Z",
+ "atualizado_em": "2026-09-14T20:39:46.486Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -26,12 +26,12 @@
  "produtos": {
   "boi-gordo": {
    "mt": {
-    "preco": 320.7,
-    "data": "2026-09-11",
+    "preco": 320.65,
+    "data": "2026-09-14",
     "praca": "Média de 8 praças de MT — IMEA",
     "escopo": "estado",
     "fonte": "IMEA (via Notícias Agrícolas)",
-    "variacao_fonte": 0.09
+    "variacao_fonte": -0.02
    },
    "pa": {
     "preco": 349.5,
@@ -141,51 +141,51 @@
    "mt": {
     "araputanga": {
      "nome": "Araputanga",
-     "preco": 322,
-     "data": "2026-09-11",
-     "variacao_fonte": 0.12
+     "preco": 321.85,
+     "data": "2026-09-14",
+     "variacao_fonte": -0.05
     },
     "barra-do-garcas": {
      "nome": "Barra do Garças",
      "preco": 319,
-     "data": "2026-09-11",
+     "data": "2026-09-14",
      "variacao_fonte": 0
     },
     "cuiaba": {
      "nome": "Cuiabá",
-     "preco": 322,
-     "data": "2026-09-11",
-     "variacao_fonte": 0.12
+     "preco": 321.85,
+     "data": "2026-09-14",
+     "variacao_fonte": -0.05
     },
     "juara": {
      "nome": "Juara",
      "preco": 321.15,
-     "data": "2026-09-11",
-     "variacao_fonte": 0.12
+     "data": "2026-09-14",
+     "variacao_fonte": 0
     },
     "matupa": {
      "nome": "Matupá",
      "preco": 321.15,
-     "data": "2026-09-11",
-     "variacao_fonte": 0.12
+     "data": "2026-09-14",
+     "variacao_fonte": 0
     },
     "rondonopolis": {
      "nome": "Rondonópolis",
-     "preco": 321.1,
-     "data": "2026-09-11",
-     "variacao_fonte": 0.16
+     "preco": 321,
+     "data": "2026-09-14",
+     "variacao_fonte": -0.03
     },
     "sinop": {
      "nome": "Sinop",
-     "preco": 320.08,
-     "data": "2026-09-11",
-     "variacao_fonte": 0.01
+     "preco": 320.04,
+     "data": "2026-09-14",
+     "variacao_fonte": -0.01
     },
     "vila-rica": {
      "nome": "Vila Rica",
      "preco": 319.15,
-     "data": "2026-09-11",
-     "variacao_fonte": 0.05
+     "data": "2026-09-14",
+     "variacao_fonte": 0
     }
    }
   }
