@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-16T19:47:33.651Z",
+ "atualizado_em": "2026-09-16T22:26:54.760Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -127,12 +127,12 @@
   },
   "novilha": {
    "mt": {
-    "preco": 315.7,
-    "data": "2026-09-15",
+    "preco": 315.94,
+    "data": "2026-09-16",
     "praca": "Indicador da Novilha — Mato Grosso",
     "escopo": "estado",
     "fonte": "Datagro (via Notícias Agrícolas)",
-    "variacao_fonte": -0.07
+    "variacao_fonte": 0.08
    }
   }
  },
