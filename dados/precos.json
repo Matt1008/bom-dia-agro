@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-29T01:20:04.972Z",
+ "atualizado_em": "2026-09-29T21:07:04.860Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -26,12 +26,12 @@
  "produtos": {
   "boi-gordo": {
    "mt": {
-    "preco": 326.14,
-    "data": "2026-09-28",
+    "preco": 327.05,
+    "data": "2026-09-29",
     "praca": "Média de 8 praças de MT — IMEA",
     "escopo": "estado",
     "fonte": "IMEA (via Notícias Agrícolas)",
-    "variacao_fonte": 0.19
+    "variacao_fonte": 0.28
    },
    "pa": {
     "preco": 359.95,
@@ -141,51 +141,51 @@
    "mt": {
     "araputanga": {
      "nome": "Araputanga",
-     "preco": 327.35,
-     "data": "2026-09-28",
-     "variacao_fonte": 0.2
+     "preco": 328.3,
+     "data": "2026-09-29",
+     "variacao_fonte": 0.29
     },
     "barra-do-garcas": {
      "nome": "Barra do Garças",
-     "preco": 324.42,
-     "data": "2026-09-28",
-     "variacao_fonte": 0.18
+     "preco": 325.3,
+     "data": "2026-09-29",
+     "variacao_fonte": 0.27
     },
     "cuiaba": {
      "nome": "Cuiabá",
-     "preco": 327.35,
-     "data": "2026-09-28",
-     "variacao_fonte": 0.2
+     "preco": 328.3,
+     "data": "2026-09-29",
+     "variacao_fonte": 0.29
     },
     "juara": {
      "nome": "Juara",
-     "preco": 326.52,
-     "data": "2026-09-28",
-     "variacao_fonte": 0.2
+     "preco": 327.5,
+     "data": "2026-09-29",
+     "variacao_fonte": 0.3
     },
     "matupa": {
      "nome": "Matupá",
-     "preco": 326.52,
-     "data": "2026-09-28",
-     "variacao_fonte": 0.2
+     "preco": 327.5,
+     "data": "2026-09-29",
+     "variacao_fonte": 0.3
     },
     "rondonopolis": {
      "nome": "Rondonópolis",
-     "preco": 326.85,
-     "data": "2026-09-28",
-     "variacao_fonte": 0.2
+     "preco": 327.8,
+     "data": "2026-09-29",
+     "variacao_fonte": 0.29
     },
     "sinop": {
      "nome": "Sinop",
-     "preco": 325.48,
-     "data": "2026-09-28",
-     "variacao_fonte": 0.19
+     "preco": 326.4,
+     "data": "2026-09-29",
+     "variacao_fonte": 0.28
     },
     "vila-rica": {
      "nome": "Vila Rica",
-     "preco": 324.6,
-     "data": "2026-09-28",
-     "variacao_fonte": 0.19
+     "preco": 325.3,
+     "data": "2026-09-29",
+     "variacao_fonte": 0.22
     }
    }
   }
