@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-20T23:30:54.245Z",
+ "atualizado_em": "2026-10-21T00:13:07.550Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -84,8 +84,8 @@
   },
   "bezerro": {
    "mt": {
-    "preco": 3498.89,
-    "data": "2026-10-19",
+    "preco": 3501.39,
+    "data": "2026-10-20",
     "praca": "Mato Grosso do Sul — CEPEA",
     "escopo": "vizinho",
     "fonte": "CEPEA/ESALQ-USP"
