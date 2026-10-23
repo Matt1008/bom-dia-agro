@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-22T23:44:03.821Z",
+ "atualizado_em": "2026-10-23T20:08:14.291Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -26,16 +26,16 @@
  "produtos": {
   "boi-gordo": {
    "mt": {
-    "preco": 349.93,
-    "data": "2026-10-22",
+    "preco": 350.17,
+    "data": "2026-10-23",
     "praca": "Média de 8 praças de MT — IMEA",
     "escopo": "estado",
     "fonte": "IMEA (via Notícias Agrícolas)",
-    "variacao_fonte": 0.19
+    "variacao_fonte": 0.07
    },
    "pa": {
-    "preco": 380.4,
-    "data": "2026-10-21",
+    "preco": 380.55,
+    "data": "2026-10-22",
     "praca": "Indicador CEPEA/B3 — Brasil",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -43,15 +43,15 @@
   },
   "soja": {
    "mt": {
-    "preco": 152.13,
-    "data": "2026-10-21",
+    "preco": 151.92,
+    "data": "2026-10-22",
     "praca": "Soja Paranaguá (porto) — CEPEA",
     "escopo": "porto",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
-    "preco": 152.13,
-    "data": "2026-10-21",
+    "preco": 151.92,
+    "data": "2026-10-22",
     "praca": "Soja Paranaguá (porto) — CEPEA",
     "escopo": "porto",
     "fonte": "CEPEA/ESALQ-USP"
@@ -59,15 +59,15 @@
   },
   "milho": {
    "mt": {
-    "preco": 64.3,
-    "data": "2026-10-21",
+    "preco": 64.24,
+    "data": "2026-10-22",
     "praca": "Indicador CEPEA/B3 — Campinas/SP",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
-    "preco": 64.3,
-    "data": "2026-10-21",
+    "preco": 64.24,
+    "data": "2026-10-22",
     "praca": "Indicador CEPEA/B3 — Campinas/SP",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -75,8 +75,8 @@
   },
   "algodao": {
    "mt": {
-    "preco": 134.6383,
-    "data": "2026-10-21",
+    "preco": 133.7058,
+    "data": "2026-10-22",
     "praca": "Indicador CEPEA/ESALQ — Brasil",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -84,8 +84,8 @@
   },
   "bezerro": {
    "mt": {
-    "preco": 3507.45,
-    "data": "2026-10-21",
+    "preco": 3512.3,
+    "data": "2026-10-22",
     "praca": "Mato Grosso do Sul — CEPEA",
     "escopo": "vizinho",
     "fonte": "CEPEA/ESALQ-USP"
@@ -93,8 +93,8 @@
   },
   "suino": {
    "mt": {
-    "preco": 10.38,
-    "data": "2026-10-21",
+    "preco": 10.39,
+    "data": "2026-10-22",
     "praca": "Carcaça especial — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -103,14 +103,14 @@
   "frango": {
    "mt": {
     "preco": 8.5,
-    "data": "2026-10-21",
+    "data": "2026-10-22",
     "praca": "Frango resfriado — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
     "preco": 8.5,
-    "data": "2026-10-21",
+    "data": "2026-10-22",
     "praca": "Frango resfriado — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -118,8 +118,8 @@
   },
   "cafe-conilon": {
    "pa": {
-    "preco": 968.87,
-    "data": "2026-10-21",
+    "preco": 942.15,
+    "data": "2026-10-22",
     "praca": "Robusta — Indicador CEPEA/ESALQ",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -142,50 +142,50 @@
     "araputanga": {
      "nome": "Araputanga",
      "preco": 351.3,
-     "data": "2026-10-22",
-     "variacao_fonte": 0.09
+     "data": "2026-10-23",
+     "variacao_fonte": 0
     },
     "barra-do-garcas": {
      "nome": "Barra do Garças",
-     "preco": 348.65,
-     "data": "2026-10-22",
-     "variacao_fonte": 0.19
+     "preco": 348.85,
+     "data": "2026-10-23",
+     "variacao_fonte": 0.06
     },
     "cuiaba": {
      "nome": "Cuiabá",
      "preco": 351.3,
-     "data": "2026-10-22",
-     "variacao_fonte": 0.09
+     "data": "2026-10-23",
+     "variacao_fonte": 0
     },
     "juara": {
      "nome": "Juara",
-     "preco": 348.93,
-     "data": "2026-10-22",
-     "variacao_fonte": 0.4
+     "preco": 349,
+     "data": "2026-10-23",
+     "variacao_fonte": 0.02
     },
     "matupa": {
      "nome": "Matupá",
-     "preco": 350.75,
-     "data": "2026-10-22",
-     "variacao_fonte": 0.17
+     "preco": 350.85,
+     "data": "2026-10-23",
+     "variacao_fonte": 0.03
     },
     "rondonopolis": {
      "nome": "Rondonópolis",
      "preco": 350.8,
-     "data": "2026-10-22",
-     "variacao_fonte": 0.09
+     "data": "2026-10-23",
+     "variacao_fonte": 0
     },
     "sinop": {
      "nome": "Sinop",
-     "preco": 349.7,
-     "data": "2026-10-22",
-     "variacao_fonte": 0.3
+     "preco": 349.85,
+     "data": "2026-10-23",
+     "variacao_fonte": 0.04
     },
     "vila-rica": {
      "nome": "Vila Rica",
-     "preco": 348,
-     "data": "2026-10-22",
-     "variacao_fonte": 0.19
+     "preco": 349.4,
+     "data": "2026-10-23",
+     "variacao_fonte": 0.4
     }
    }
   }
