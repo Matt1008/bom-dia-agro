@@ -1,82 +1,89 @@
 {
- "atualizado_em": "2026-10-23T13:55:14.512Z",
+ "atualizado_em": "2026-10-24T00:07:21.209Z",
  "noticias": [
+  {
+   "titulo": "Baixo nível dos rios na Amazônia afeta transporte de cargas",
+   "link": "https://www.canalrural.com.br/videos/baixo-nivel-dos-rios-na-amazonia-afeta-transporte-de-cargas/",
+   "fonte": "Canal Rural",
+   "resumo": "A estiagem e o fenômeno El Niño impactam a navegação e o agronegócio na região norte do Brasil O post Baixo nível dos rios na Amazônia afeta transporte de cargas apareceu primeiro em Canal Rural .",
+   "data": "2026-10-23T23:15:49.000Z"
+  },
+  {
+   "titulo": "Doença de Newcastle e alta do petróleo marcam a semana no agro",
+   "link": "https://www.canalrural.com.br/videos/doenca-de-newcastle-e-alta-do-petroleo-marcam-a-semana-no-agro/",
+   "fonte": "Canal Rural",
+   "resumo": "Doença de Newcastle impacta avicultura e alta do petróleo afeta mercado. Confira os principais destaques da semana no agronegócio O post Doença de Newcastle e alta do petróleo marcam a semana no agro apareceu primeiro em Canal Rural .",
+   "data": "2026-10-23T23:15:36.000Z"
+  },
+  {
+   "titulo": "Itaú BBA alerta sobre impacto de Newcastle nos preços do frango em 2027",
+   "link": "https://www.canalrural.com.br/videos/itau-bba-alerta-sobre-impacto-de-newcastle-nos-precos-do-frango-em-2027/",
+   "fonte": "Canal Rural",
+   "resumo": "Avaliação do Itaú BBA indica que restrições comerciais podem pressionar preços da carne de frango no Brasil em 2027 O post Itaú BBA alerta sobre impacto de Newcastle nos preços do frango em 2027 apareceu primeiro em Canal Rural .",
+   "data": "2026-10-23T23:15:23.000Z"
+  },
+  {
+   "titulo": "Nordeste realiza primeiro embarque de carne bovina para a China",
+   "link": "https://www.canalrural.com.br/videos/nordeste-realiza-primeiro-embarque-de-carne-bovina-para-a-china-2/",
+   "fonte": "Canal Rural",
+   "resumo": "Primeiro embarque de carne bovina do Nordeste para a China marca nova fase na exportação de produtos agropecuários O post Nordeste realiza primeiro embarque de carne bovina para a China apareceu primeiro em Canal Rural .",
+   "data": "2026-10-23T23:15:11.000Z"
+  },
+  {
+   "titulo": "Miguel Daoud analisa desafios do presidente eleito em 2027",
+   "link": "https://www.canalrural.com.br/videos/miguel-daoud-analisa-desafios-do-presidente-eleito-em-2027/",
+   "fonte": "Canal Rural",
+   "resumo": "Análise de Miguel Daoud sobre os desafios econômicos e políticos do próximo presidente do Brasil em 2027 O post Miguel Daoud analisa desafios do presidente eleito em 2027 apareceu primeiro em Canal Rural .",
+   "data": "2026-10-23T23:05:56.000Z"
+  },
+  {
+   "titulo": "Reforma tributária pode aumentar preço do salmão no Brasil",
+   "link": "https://www.canalrural.com.br/videos/reforma-tributaria-pode-aumentar-preco-do-salmao-no-brasil/",
+   "fonte": "Canal Rural",
+   "resumo": "Setor chileno teme que reforma tributária eleve a alíquota do salmão de 1% para 26,5%, impactando o consumo no Brasil O post Reforma tributária pode aumentar preço do salmão no Brasil apareceu primeiro em Canal Rural .",
+   "data": "2026-10-23T23:05:44.000Z"
+  },
+  {
+   "titulo": "Reforma tributária exclui salmão da lista de alimentos com imposto zero",
+   "link": "https://www.canalrural.com.br/videos/reforma-tributaria-exclui-salmao-da-lista-de-alimentos-com-imposto-zero/",
+   "fonte": "Canal Rural",
+   "resumo": "Salmão chileno não terá isenção tributária, impactando preços e consumo no Brasil. Setor pede revisão da decisão. O post Reforma tributária exclui salmão da lista de alimentos com imposto zero apareceu primeiro em Canal Rural .",
+   "data": "2026-10-23T23:05:34.000Z"
+  },
+  {
+   "titulo": "Nordeste realiza primeiro embarque de carne bovina congelada para a China",
+   "link": "https://www.canalrural.com.br/videos/nordeste-realiza-primeiro-embarque-de-carne-bovina-congelada-para-a-china/",
+   "fonte": "Canal Rural",
+   "resumo": "Frigorífico de Canhotinho, Pernambuco, inicia exportações para o maior mercado consumidor do mundo, fortalecendo a pecuária nordestina. O post Nordeste realiza primeiro embarque de carne bovina congelada para a China apareceu primeiro em Canal Rural .",
+   "data": "2026-10-23T23:05:21.000Z"
+  },
+  {
+   "titulo": "Crédito rural: diferenças entre custeio, investimento e comercialização",
+   "link": "https://www.canalrural.com.br/videos/credito-rural-diferencas-entre-custeio-investimento-e-comercializacao/",
+   "fonte": "Canal Rural",
+   "resumo": "Entenda as modalidades de crédito rural e suas finalidades específicas para a produção agrícola O post Crédito rural: diferenças entre custeio, investimento e comercialização apareceu primeiro em Canal Rural .",
+   "data": "2026-10-23T23:05:09.000Z"
+  },
+  {
+   "titulo": "Arroba do boi gordo encerra a semana em leve alta; confira as cotações",
+   "link": "https://www.canalrural.com.br/pecuaria/arroba-do-boi-gordo-encerra-a-semana-em-leve-alta-confira-as-cotacoes/",
+   "fonte": "Canal Rural",
+   "resumo": "Foto: Giro do Boi/ Reprodução Oferta restrita e escalas de abate concentradas entre cinco e seis dias úteis mantêm os frigoríficos ativos nas compras O post Arroba do boi gordo encerra a semana em leve alta; confira as cotações apareceu primeiro em Canal Rural",
+   "data": "2026-10-23T22:29:00.000Z"
+  },
+  {
+   "titulo": "Frango pode ficar mais barato, principalmente no Sul, após caso de Newcastle em SC, diz Itaú",
+   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/10/23/frango-pode-ficar-mais-barato-principalmente-no-sul-apos-caso-de-newcastle-em-sc-diz-itau.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Frango pode ficar mais barato, principalmente no Sul, após caso de Newcastle em SC, diz Itaú Claudio Schwarz/Unplash O frango pode ficar mais barato nos próximos meses, principalmente na Região Sul do Brasil, após a confirmação de um foco da doença de Newcastl",
+   "data": "2026-10-23T14:46:35.000Z"
+  },
   {
    "titulo": "Conheça duas variedades de mirtilo indicadas para o Cerrado",
    "link": "https://g1.globo.com/economia/agronegocios/globo-rural/noticia/2026/10/23/conheca-duas-variedades-de-mirtilo-indicadas-para-o-cerrado.ghtml",
    "fonte": "G1 Agro",
    "resumo": "Variedades de mirtilo Biloxi e Emerald. Reprodução/Embrapa Produtores interessados no cultivo de mirtilo no Cerrado podem conhecer melhor duas variedades indicadas para a região: Biloxi e Emerald. Uma publicação sugerida pelo agrônomo Luís Eduardo Antunes deta",
    "data": "2026-10-23T13:25:09.000Z"
-  },
-  {
-   "titulo": "Queimadas na Amazônia: o Estado também tem uma dívida",
-   "link": "https://www.canalrural.com.br/opiniao-noticias/queimadas-na-amazonia-o-estado-tambem-tem-uma-divida/",
-   "fonte": "Canal Rural",
-   "resumo": "Regularização da terra, crédito e assistência técnica precisam fazer parte da prevenção do fogo na Amazônia O post Queimadas na Amazônia: o Estado também tem uma dívida apareceu primeiro em Canal Rural .",
-   "data": "2026-10-23T13:04:49.000Z"
-  },
-  {
-   "titulo": "Dólar sobe com cautela eleitoral e avanço do petróleo",
-   "link": "https://www.canalrural.com.br/economia/dolar-sobe-com-cautela-eleitoral-e-avanco-do-petroleo/",
-   "fonte": "Canal Rural",
-   "resumo": "Moeda atingiu máxima de R$ 5,0557 e os negócios acompanham pesquisas eleitorais, petróleo em alta e movimento dos Treasuries. O post Dólar sobe com cautela eleitoral e avanço do petróleo apareceu primeiro em Canal Rural .",
-   "data": "2026-10-23T12:58:30.000Z"
-  },
-  {
-   "titulo": "CNA discute exportações, capacitação e sanidade da fruticultura em Juazeiro",
-   "link": "https://www.canalrural.com.br/agricultura/cna-discute-exportacoes-capacitacao-e-sanidade-da-fruticultura-em-juazeiro/",
-   "fonte": "Canal Rural",
-   "resumo": "Comissão da entidade reuniu representantes do setor e do Senar para debater gargalos logísticos, formação profissional e prioridades da cadeia produtiva. O post CNA discute exportações, capacitação e sanidade da fruticultura em Juazeiro apareceu primeiro em Ca",
-   "data": "2026-10-23T12:49:30.000Z"
-  },
-  {
-   "titulo": "Juros longos sobem com pesquisas eleitorais e cenário externo",
-   "link": "https://www.canalrural.com.br/economia/juros-longos-sobem-com-pesquisas-eleitorais-e-cenario-externo/",
-   "fonte": "Canal Rural",
-   "resumo": "Contratos curtos operaram estáveis na manhã desta sexta-feira (23), mesmo após IPCA-15 de outubro abaixo das estimativas O post Juros longos sobem com pesquisas eleitorais e cenário externo apareceu primeiro em Canal Rural .",
-   "data": "2026-10-23T12:42:16.000Z"
-  },
-  {
-   "titulo": "IPCA-15 sobe 0,32% em outubro, informa IBGE",
-   "link": "https://www.canalrural.com.br/economia/ipca-15-sobe-032-em-outubro-informa-ibge/",
-   "fonte": "Canal Rural",
-   "resumo": "Resultado desacelerou em relação a setembro e ficou abaixo das estimativas do mercado financeiro consultadas pelo Projeções Broadcast. O post IPCA-15 sobe 0,32% em outubro, informa IBGE apareceu primeiro em Canal Rural .",
-   "data": "2026-10-23T12:33:25.000Z"
-  },
-  {
-   "titulo": "Preço do café recua e deve fechar semana em queda no Brasil",
-   "link": "https://www.canalrural.com.br/agricultura/cafe/preco-do-cafe-recua-e-deve-fechar-semana-em-queda-no-brasil/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: Afrah/Unsplash Queda das cotações em Nova York pressiona os preços do café no mercado brasileiro, enquanto produtores reduzem as negociações diante da desvalorização O post Preço do café recua e deve fechar semana em queda no Brasil apareceu primeiro em ",
-   "data": "2026-10-23T12:33:23.000Z"
-  },
-  {
-   "titulo": "Frente fria provoca tempestades e possibilidade de granizo no centro-sul do país",
-   "link": "https://www.canalrural.com.br/diversos/frente-fria-provoca-tempestades-e-possibilidade-de-granizo-no-centro-sul-do-pais/",
-   "fonte": "Canal Rural",
-   "resumo": "Área de baixa pressão avança em direção ao Sudeste e mantém alerta para chuvas fortes em estados do Sul, Sudeste e Centro-Oeste. O post Frente fria provoca tempestades e possibilidade de granizo no centro-sul do país apareceu primeiro em Canal Rural .",
-   "data": "2026-10-23T12:26:47.000Z"
-  },
-  {
-   "titulo": "Boi gordo sobe R$ 10 por arroba em duas regiões; confira as cotações pelo país",
-   "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-sobe-r-10-por-arroba-em-duas-regioes-confira-as-cotacoes-pelo-pais/",
-   "fonte": "Canal Rural",
-   "resumo": "Foto: divulgação Mercado segue firme, com estabilidade em outras regiões; oferta restrita de animais e escalas de abate curtas marcam as negociações O post Boi gordo sobe R$ 10 por arroba em duas regiões; confira as cotações pelo país apareceu primeiro em Cana",
-   "data": "2026-10-23T12:26:04.000Z"
-  },
-  {
-   "titulo": "Mínimas devem cair até 13 °C em Mato Grosso do Sul",
-   "link": "https://www.canalrural.com.br/previsao-do-tempo/sp/minimas-devem-cair-ate-13-c-em-mato-grosso-do-sul/",
-   "fonte": "Canal Rural",
-   "resumo": "Previsão abrange 97 municípios de seis estados entre segunda-feira (26) e terça-feira (27). O post Mínimas devem cair até 13 °C em Mato Grosso do Sul apareceu primeiro em Canal Rural .",
-   "data": "2026-10-23T12:20:07.000Z"
-  },
-  {
-   "titulo": "Chuva pode chegar a 112 mm em 24 horas em Santa Catarina",
-   "link": "https://www.canalrural.com.br/previsao-do-tempo/sp/chuva-pode-chegar-a-112-mm-em-24-horas-em-santa-catarina/",
-   "fonte": "Canal Rural",
-   "resumo": "Previsão abrange 29 municípios de quatro estados entre sexta-feira (23) e domingo (25), com acumulados elevados também no Rio Grande do Sul. O post Chuva pode chegar a 112 mm em 24 horas em Santa Catarina apareceu primeiro em Canal Rural .",
-   "data": "2026-10-23T12:19:18.000Z"
   },
   {
    "titulo": "Preço dos alimentos: o que ficou mais caro e o que barateou na prévia da inflação de outubro",
@@ -168,13 +175,6 @@
    "fonte": "G1 Agro",
    "resumo": "O México suspendeu nesta segunda-feira (19) a importação de carne de frango e de outros produtos avícolas brasileiros após a confirmação de um foco da doença de Newcastle em uma granja comercial de perus em Santa Catarina. 🗒️ Tem alguma sugestão de reportagem",
    "data": "2026-10-20T02:57:17.000Z"
-  },
-  {
-   "titulo": "Doença em granja de SC pode afetar exportações de frango do Brasil para a China; entenda o risco",
-   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/10/19/doenca-em-granja-de-sc-pode-afetar-exportacoes-de-frango-do-brasil-para-a-china-entenda-o-risco.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Entenda o comércio cruzado de frango Brasil x China Um acordo comercial com a China prevê a suspensão temporária das exportações brasileiras de carne de frango em caso de ocorrência de Doença de Newcastle, como a confirmada no domingo (18) em uma granja de per",
-   "data": "2026-10-19T19:10:04.000Z"
   },
   {
    "titulo": "Bovinocultura projeta boas perspectivas no segundo semestre",
