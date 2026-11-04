@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-03T22:07:35.349Z",
+ "atualizado_em": "2026-11-04T16:39:52.858Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -26,12 +26,12 @@
  "produtos": {
   "boi-gordo": {
    "mt": {
-    "preco": 356.44,
-    "data": "2026-11-03",
+    "preco": 357.65,
+    "data": "2026-11-04",
     "praca": "Média de 8 praças de MT — IMEA",
     "escopo": "estado",
     "fonte": "IMEA (via Notícias Agrícolas)",
-    "variacao_fonte": 0.39
+    "variacao_fonte": 0.34
    },
    "pa": {
     "preco": 390,
@@ -93,8 +93,8 @@
   },
   "suino": {
    "mt": {
-    "preco": 10.23,
-    "data": "2026-10-30",
+    "preco": 9.64,
+    "data": "2026-11-03",
     "praca": "Carcaça especial — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -102,15 +102,15 @@
   },
   "frango": {
    "mt": {
-    "preco": 8.24,
-    "data": "2026-10-30",
+    "preco": 8.23,
+    "data": "2026-11-03",
     "praca": "Frango resfriado — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
    },
    "pa": {
-    "preco": 8.24,
-    "data": "2026-10-30",
+    "preco": 8.23,
+    "data": "2026-11-03",
     "praca": "Frango resfriado — CEPEA",
     "escopo": "nacional",
     "fonte": "CEPEA/ESALQ-USP"
@@ -127,12 +127,12 @@
   },
   "novilha": {
    "mt": {
-    "preco": 347.21,
-    "data": "2026-10-30",
+    "preco": 347.79,
+    "data": "2026-11-03",
     "praca": "Indicador da Novilha — Mato Grosso",
     "escopo": "estado",
     "fonte": "Datagro (via Notícias Agrícolas)",
-    "variacao_fonte": -0.33
+    "variacao_fonte": 0.17
    }
   }
  },
@@ -141,51 +141,51 @@
    "mt": {
     "araputanga": {
      "nome": "Araputanga",
-     "preco": 357.6,
-     "data": "2026-11-03",
-     "variacao_fonte": 0.45
+     "preco": 359,
+     "data": "2026-11-04",
+     "variacao_fonte": 0.39
     },
     "barra-do-garcas": {
      "nome": "Barra do Garças",
-     "preco": 355.11,
-     "data": "2026-11-03",
-     "variacao_fonte": 0.29
+     "preco": 356.5,
+     "data": "2026-11-04",
+     "variacao_fonte": 0.39
     },
     "cuiaba": {
      "nome": "Cuiabá",
-     "preco": 358.6,
-     "data": "2026-11-03",
-     "variacao_fonte": 0.45
+     "preco": 360,
+     "data": "2026-11-04",
+     "variacao_fonte": 0.39
     },
     "juara": {
      "nome": "Juara",
-     "preco": 353.83,
-     "data": "2026-11-03",
-     "variacao_fonte": 0.45
+     "preco": 355.02,
+     "data": "2026-11-04",
+     "variacao_fonte": 0.34
     },
     "matupa": {
      "nome": "Matupá",
-     "preco": 357.3,
-     "data": "2026-11-03",
-     "variacao_fonte": 0.43
+     "preco": 358.05,
+     "data": "2026-11-04",
+     "variacao_fonte": 0.21
     },
     "rondonopolis": {
      "nome": "Rondonópolis",
-     "preco": 357.6,
-     "data": "2026-11-03",
-     "variacao_fonte": 0.45
+     "preco": 359,
+     "data": "2026-11-04",
+     "variacao_fonte": 0.39
     },
     "sinop": {
      "nome": "Sinop",
-     "preco": 356.46,
-     "data": "2026-11-03",
-     "variacao_fonte": 0.34
+     "preco": 357.52,
+     "data": "2026-11-04",
+     "variacao_fonte": 0.3
     },
     "vila-rica": {
      "nome": "Vila Rica",
-     "preco": 354.98,
-     "data": "2026-11-03",
-     "variacao_fonte": 0.22
+     "preco": 356.15,
+     "data": "2026-11-04",
+     "variacao_fonte": 0.33
     }
    }
   }
