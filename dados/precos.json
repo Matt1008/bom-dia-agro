@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-10T00:28:30.783Z",
+ "atualizado_em": "2026-11-10T16:39:33.813Z",
  "origem": "real",
  "fontes": [
   "CEPEA/ESALQ-USP",
@@ -26,12 +26,12 @@
  "produtos": {
   "boi-gordo": {
    "mt": {
-    "preco": 364.08,
-    "data": "2026-11-09",
+    "preco": 364.91,
+    "data": "2026-11-10",
     "praca": "Média de 8 praças de MT — IMEA",
     "escopo": "estado",
     "fonte": "IMEA (via Notícias Agrícolas)",
-    "variacao_fonte": 0.42
+    "variacao_fonte": 0.23
    },
    "pa": {
     "preco": 393.3,
@@ -141,51 +141,51 @@
    "mt": {
     "araputanga": {
      "nome": "Araputanga",
-     "preco": 365,
-     "data": "2026-11-09",
+     "preco": 366,
+     "data": "2026-11-10",
      "variacao_fonte": 0.27
     },
     "barra-do-garcas": {
      "nome": "Barra do Garças",
-     "preco": 362.75,
-     "data": "2026-11-09",
-     "variacao_fonte": 0.47
+     "preco": 363.5,
+     "data": "2026-11-10",
+     "variacao_fonte": 0.21
     },
     "cuiaba": {
      "nome": "Cuiabá",
-     "preco": 366,
-     "data": "2026-11-09",
+     "preco": 367,
+     "data": "2026-11-10",
      "variacao_fonte": 0.27
     },
     "juara": {
      "nome": "Juara",
-     "preco": 361.25,
-     "data": "2026-11-09",
-     "variacao_fonte": 0.3
+     "preco": 362.25,
+     "data": "2026-11-10",
+     "variacao_fonte": 0.28
     },
     "matupa": {
      "nome": "Matupá",
-     "preco": 364.75,
-     "data": "2026-11-09",
-     "variacao_fonte": 0.34
+     "preco": 365.75,
+     "data": "2026-11-10",
+     "variacao_fonte": 0.27
     },
     "rondonopolis": {
      "nome": "Rondonópolis",
-     "preco": 365.5,
-     "data": "2026-11-09",
-     "variacao_fonte": 0.41
+     "preco": 366.5,
+     "data": "2026-11-10",
+     "variacao_fonte": 0.27
     },
     "sinop": {
      "nome": "Sinop",
-     "preco": 363.42,
-     "data": "2026-11-09",
-     "variacao_fonte": 0.33
+     "preco": 364.25,
+     "data": "2026-11-10",
+     "variacao_fonte": 0.23
     },
     "vila-rica": {
      "nome": "Vila Rica",
      "preco": 364,
-     "data": "2026-11-09",
-     "variacao_fonte": 0.93
+     "data": "2026-11-10",
+     "variacao_fonte": 0
     }
    }
   }
