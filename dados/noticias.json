@@ -1,82 +1,89 @@
 {
- "atualizado_em": "2026-11-13T16:50:32.295Z",
+ "atualizado_em": "2026-11-14T01:53:31.776Z",
  "noticias": [
+  {
+   "titulo": "Cosan lucra R$ 190 milhões no 3º trimestre de 2026",
+   "link": "https://www.canalrural.com.br/economia/cosan-lucra-r-190-milhoes-no-3o-trimestre-de-2026/",
+   "fonte": "Canal Rural",
+   "resumo": "Resultado reverte prejuízo de um ano antes, com melhora financeira e maior contribuição de investidas no período O post Cosan lucra R$ 190 milhões no 3º trimestre de 2026 apareceu primeiro em Canal Rural .",
+   "data": "2026-11-14T01:24:18.000Z"
+  },
+  {
+   "titulo": "Chuva pode chegar a 66 mm em 24 horas no Rio Grande do Sul",
+   "link": "https://www.canalrural.com.br/previsao-do-tempo/rs/chuva-pode-chegar-a-66-mm-em-24-horas-no-rio-grande-do-sul/",
+   "fonte": "Canal Rural",
+   "resumo": "Previsão para sexta-feira (20) abrange Giruá, Rosário do Sul e São Gabriel. O post Chuva pode chegar a 66 mm em 24 horas no Rio Grande do Sul apareceu primeiro em Canal Rural .",
+   "data": "2026-11-14T01:02:46.000Z"
+  },
+  {
+   "titulo": "Máximas devem chegar a 37 °C em Roraima",
+   "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-37-c-em-roraima-2/",
+   "fonte": "Canal Rural",
+   "resumo": "Em Caroebe, São Luiz e São João da Baliza, as máximas previstas ficam 6,5 °C acima da normal climatológica. O post Máximas devem chegar a 37 °C em Roraima apareceu primeiro em Canal Rural .",
+   "data": "2026-11-14T01:02:03.000Z"
+  },
+  {
+   "titulo": "Máximas devem chegar a 27 °C em dois municípios de Santa Catarina",
+   "link": "https://www.canalrural.com.br/previsao-do-tempo/sc/maximas-devem-chegar-a-27-c-em-dois-municipios-de-santa-catarina-3/",
+   "fonte": "Canal Rural",
+   "resumo": "Braço do Norte e Orleans têm previsão de máximas acima da normal climatológica por três dias seguidos. O post Máximas devem chegar a 27 °C em dois municípios de Santa Catarina apareceu primeiro em Canal Rural .",
+   "data": "2026-11-14T01:01:08.000Z"
+  },
+  {
+   "titulo": "Boi gordo se despede da semana em alta: veja as cotações em 10 estados",
+   "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-se-despede-da-semana-em-alta-veja-as-cotacoes-em-10-estados/",
+   "fonte": "Canal Rural",
+   "resumo": "Valorização esteve mais contida ao longo da 1ª quinzena do mês, mas tende aumentar na virada para dezembro, de acordo com analista O post Boi gordo se despede da semana em alta: veja as cotações em 10 estados apareceu primeiro em Canal Rural .",
+   "data": "2026-11-13T23:39:40.000Z"
+  },
+  {
+   "titulo": "Confinamento bovino em Mato Grosso cresce 13,7% mesmo com alta de custos",
+   "link": "https://www.canalrural.com.br/pecuaria/confinamento-bovino-em-mato-grosso-cresce-137-mesmo-com-alta-de-custos/",
+   "fonte": "Canal Rural",
+   "resumo": "Pecuaristas intensificam o uso de instrumentos de proteção de preços para reduzir a exposição ao mercado O post Confinamento bovino em Mato Grosso cresce 13,7% mesmo com alta de custos apareceu primeiro em Canal Rural .",
+   "data": "2026-11-13T22:49:48.000Z"
+  },
+  {
+   "titulo": "Sociedade Rural Brasileira lança comitê com 18 ligas universitárias para aproximar jovens do agro",
+   "link": "https://www.canalrural.com.br/agricultura/sociedade-rural-brasileira-lanca-comite-com-18-ligas-universitarias-para-aproximar-jovens-do-agro/",
+   "fonte": "Canal Rural",
+   "resumo": "Iniciativa busca aproximar estudantes do setor produtivo, incentivar a troca de conhecimentos e formar novas lideranças para o agro O post Sociedade Rural Brasileira lança comitê com 18 ligas universitárias para aproximar jovens do agro apareceu primeiro em Ca",
+   "data": "2026-11-13T22:16:53.000Z"
+  },
+  {
+   "titulo": "Preços da soja finalizam a semana em alta com elevações de Chicago e dólar",
+   "link": "https://www.canalrural.com.br/agricultura/precos-da-soja-finalizam-a-semana-em-alta-com-elevacoes-de-chicago-e-dolar/",
+   "fonte": "Canal Rural",
+   "resumo": "Com a melhora das ofertas, produtores ampliaram os volumes negociados, contribuindo para uma comercialização mais ativa O post Preços da soja finalizam a semana em alta com elevações de Chicago e dólar apareceu primeiro em Canal Rural .",
+   "data": "2026-11-13T22:03:37.000Z"
+  },
+  {
+   "titulo": "Sorgo avança no campo e no mercado internacional com exportações recordes",
+   "link": "https://www.canalrural.com.br/agricultura/sorgo-avanca-no-campo-e-no-mercado-internacional-com-exportacoes-recordes/",
+   "fonte": "Canal Rural",
+   "resumo": "Impulsionados pela demanda chinesa, embarques do cereal se aproximam de 2 milhões de toneladas; área cultivada cresceu cerca de 30% na safra 2025/26 O post Sorgo avança no campo e no mercado internacional com exportações recordes apareceu primeiro em Canal Rur",
+   "data": "2026-11-13T21:58:25.000Z"
+  },
+  {
+   "titulo": "‘O agro é bom pagador’: números do próprio Banco do Brasil contradizem teoria do calote, diz FPA",
+   "link": "https://www.canalrural.com.br/economia/o-agro-e-bom-pagador-numeros-do-proprio-banco-do-brasil-contradizem-teoria-do-calote-diz-fpa/",
+   "fonte": "Canal Rural",
+   "resumo": "Presidente da bancada diz que mesmo com juros elevados e custos de produção pressionados, setor tem honrado suas dívidas O post ‘O agro é bom pagador’: números do próprio Banco do Brasil contradizem teoria do calote, diz FPA apareceu primeiro em Canal Rural .",
+   "data": "2026-11-13T20:17:50.000Z"
+  },
+  {
+   "titulo": "Quem são os produtores inadimplentes do Banco do Brasil? Especialistas explicam a crise no agro",
+   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/13/quem-sao-os-produtores-inadimplentes-do-banco-do-brasil-especialistas-explicam-a-crise-no-agro.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Presidente do BB fala na Globo news sobre inadimplência do agro Especialistas em crédito rural ouvidos pelo g1 afirmam que o aumento da inadimplência no agronegócio foi puxado principalmente por médios e grandes produtores do Centro-Oeste, como apontou o Banco",
+   "data": "2026-11-13T18:30:00.000Z"
+  },
   {
    "titulo": "Além do agro: entenda por que o lucro do Banco do Brasil despencou 66,5% e derrubou as ações",
    "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/13/entenda-por-que-o-lucro-do-banco-do-brasil-despencou-e-derrubou-as-acoes.ghtml",
    "fonte": "G1 Agro",
    "resumo": "Presidente do BB fala sobre crise com o agro A forte queda das ações do Banco do Brasil na quinta-feira (12) refletiu a reação negativa do mercado aos resultados do terceiro trimestre de 2026, divulgados na véspera. Os papéis recuaram 8,35% no Ibovespa, princi",
    "data": "2026-11-13T16:15:00.000Z"
-  },
-  {
-   "titulo": "Banco do Brasil vê queda na pontualidade de pagamentos do agro e reforça renegociação",
-   "link": "https://www.canalrural.com.br/economia/banco-do-brasil-ve-queda-na-pontualidade-de-pagamentos-do-agro-e-reforca-renegociacao/",
-   "fonte": "Canal Rural",
-   "resumo": "Presidente da instituição afirma que recuo nos pagamentos em dia elevou a necessidade de provisão e levou o banco a ampliar cobranças e acordos com produtores O post Banco do Brasil vê queda na pontualidade de pagamentos do agro e reforça renegociação apareceu",
-   "data": "2026-11-13T16:13:07.000Z"
-  },
-  {
-   "titulo": "Galípolo diz que ciclo de juros com pausas está no conjunto de ferramentas do BC",
-   "link": "https://www.canalrural.com.br/economia/galipolo-diz-que-ciclo-de-juros-com-pausas-esta-no-conjunto-de-ferramentas-do-bc/",
-   "fonte": "Canal Rural",
-   "resumo": "Presidente do Banco Central afirmou que não há tabu sobre o uso da estratégia e destacou que cada ciclo de política monetária tem características próprias. O post Galípolo diz que ciclo de juros com pausas está no conjunto de ferramentas do BC apareceu primeir",
-   "data": "2026-11-13T16:08:22.000Z"
-  },
-  {
-   "titulo": "Granja Faria reverte prejuízo e lucra R$ 5,8 milhões no 3º trimestre",
-   "link": "https://www.canalrural.com.br/economia/granja-faria-reverte-prejuizo-e-lucra-r-58-milhoes-no-3o-trimestre/",
-   "fonte": "Canal Rural",
-   "resumo": "Companhia teve queda de receita no período e atribuiu recuo no acumulado do ano à baixa dos preços de venda em relação a 2025. O post Granja Faria reverte prejuízo e lucra R$ 5,8 milhões no 3º trimestre apareceu primeiro em Canal Rural .",
-   "data": "2026-11-13T15:57:31.000Z"
-  },
-  {
-   "titulo": "Galípolo diz que modelo de crescimento puxado pelo consumo mostra fadiga",
-   "link": "https://www.canalrural.com.br/economia/galipolo-diz-que-modelo-de-crescimento-puxado-pelo-consumo-mostra-fadiga/",
-   "fonte": "Canal Rural",
-   "resumo": "Presidente do Banco Central afirmou que a economia em pleno emprego exige avanço de produtividade e comentou a leitura do Copom sobre choques de oferta e inflação. O post Galípolo diz que modelo de crescimento puxado pelo consumo mostra fadiga apareceu primeir",
-   "data": "2026-11-13T15:23:33.000Z"
-  },
-  {
-   "titulo": "Lucro da M. Dias Branco cai 27% no terceiro trimestre de 2026",
-   "link": "https://www.canalrural.com.br/economia/lucro-da-m-dias-branco-cai-27-no-terceiro-trimestre-de-2026/",
-   "fonte": "Canal Rural",
-   "resumo": "Companhia registrou recuo no Ebitda e na receita líquida, mesmo com avanço no volume comercializado no período. O post Lucro da M. Dias Branco cai 27% no terceiro trimestre de 2026 apareceu primeiro em Canal Rural .",
-   "data": "2026-11-13T15:19:24.000Z"
-  },
-  {
-   "titulo": "Varejo cresce 1,1% no terceiro trimestre e amplia sequência de altas",
-   "link": "https://www.canalrural.com.br/economia/varejo-cresce-11-no-terceiro-trimestre-e-amplia-sequencia-de-altas/",
-   "fonte": "Canal Rural",
-   "resumo": "No varejo ampliado, que inclui veículos, material de construção e atacado de alimentos, bebidas e fumo, o avanço foi de 1,6% na comparação anual. O post Varejo cresce 1,1% no terceiro trimestre e amplia sequência de altas apareceu primeiro em Canal Rural .",
-   "data": "2026-11-13T15:14:02.000Z"
-  },
-  {
-   "titulo": "Site do Porto de Santos volta parcialmente após ataque cibernético",
-   "link": "https://www.canalrural.com.br/economia/site-do-porto-de-santos-volta-parcialmente-apos-ataque-cibernetico/",
-   "fonte": "Canal Rural",
-   "resumo": "Autoridade Portuária de Santos informou que os backups foram lidos integralmente e que as operações seguem sem risco de paralisação. O post Site do Porto de Santos volta parcialmente após ataque cibernético apareceu primeiro em Canal Rural .",
-   "data": "2026-11-13T14:57:31.000Z"
-  },
-  {
-   "titulo": "Varejo e varejo ampliado caem 0,3% no terceiro trimestre, diz IBGE",
-   "link": "https://www.canalrural.com.br/economia/varejo-e-varejo-ampliado-caem-03-no-terceiro-trimestre-diz-ibge/",
-   "fonte": "Canal Rural",
-   "resumo": "Resultado trimestral repete recuo no comércio ampliado e mantém vendas próximas do maior nível da série, segundo o instituto. O post Varejo e varejo ampliado caem 0,3% no terceiro trimestre, diz IBGE apareceu primeiro em Canal Rural .",
-   "data": "2026-11-13T14:53:44.000Z"
-  },
-  {
-   "titulo": "Copersucar vende participação na Logum e mantém acesso comercial aos dutos",
-   "link": "https://www.canalrural.com.br/economia/copersucar-vende-participacao-na-logum-e-mantem-acesso-comercial-aos-dutos/",
-   "fonte": "Canal Rural",
-   "resumo": "Companhia afirma que operação com a Petrobras busca otimizar a alocação de capital e preservar a relação de longo prazo com a infraestrutura logística de etanol. O post Copersucar vende participação na Logum e mantém acesso comercial aos dutos apareceu primeir",
-   "data": "2026-11-13T14:48:45.000Z"
-  },
-  {
-   "titulo": "Exportações de frango podem atingir recorde em 2026, indica Cepea",
-   "link": "https://www.canalrural.com.br/frango/exportacoes-de-frango-podem-atingir-recorde-em-2026-indica-cepea/",
-   "fonte": "Canal Rural",
-   "resumo": "Apesar dos casos de doença de Newcastle, embarques podem chegar a 6 milhões de toneladas até o fim deste ano O post Exportações de frango podem atingir recorde em 2026, indica Cepea apareceu primeiro em Canal Rural .",
-   "data": "2026-11-13T14:41:08.000Z"
   },
   {
    "titulo": "Presidente do BB explica quem são os produtores que não aderiram à renegociação do banco",
@@ -91,13 +98,6 @@
    "fonte": "G1 Agro",
    "resumo": "Imagem aérea mostra ruas alagadas em Canoas, uma das cidades mais afetadas pelas enchentes no Rio Grande do Sul. Série de fotos foi vencedora na categoria Histórias Amanda Perobelli/Reuters via World Press Photo/Divulgação Pessoas afetadas pelas enchentes de 2",
    "data": "2026-11-13T12:37:15.000Z"
-  },
-  {
-   "titulo": "Como implementar sistemas agroflorestais",
-   "link": "https://g1.globo.com/economia/agronegocios/globo-rural/noticia/2026/11/13/como-implementar-sistemas-agroflorestais.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "A Empresa de Assistência Técnica e Extensão Rural de Minas Gerais (Emater-MG) disponibiliza uma cartilha gratuita com orientações para quem deseja implantar sistemas agroflorestais (SAFs) em propriedades rurais. A publicação apresenta as principais classificaç",
-   "data": "2026-11-13T10:59:58.000Z"
   },
   {
    "titulo": "‘Sobreviver ou pagar ao banco’: o que levou os produtores rurais à inadimplência recorde no Brasil",
