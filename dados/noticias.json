@@ -1,47 +1,75 @@
 {
- "atualizado_em": "2026-11-19T17:49:18.887Z",
+ "atualizado_em": "2026-11-20T02:43:48.714Z",
  "noticias": [
   {
-   "titulo": "Manifestantes jogam cinzas em comissário europeu em protesto contra agrotóxicos; VÍDEO",
+   "titulo": "Boi gordo: exportações e consumo doméstico dão suporte à arroba",
+   "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-exportacoes-e-consumo-domestico-dao-suporte-a-arroba/",
+   "fonte": "Canal Rural",
+   "resumo": "No mercado atacadista, a entrada dos salários na economia fortalece as compras e a reposição entre atacado e varejo O post Boi gordo: exportações e consumo doméstico dão suporte à arroba apareceu primeiro em Canal Rural .",
+   "data": "2026-11-19T22:32:26.000Z"
+  },
+  {
+   "titulo": "Prêmio Sicredi Comunicação em Rede anuncia vencedores da primeira edição",
+   "link": "https://www.canalrural.com.br/economia/premio-sicredi-comunicacao-em-rede-anuncia-vencedores-da-primeira-edicao/",
+   "fonte": "Canal Rural",
+   "resumo": "Iniciativa reuniu quase mil inscrições, distribuiu R$ 220 mil e premiou trabalhos sobre cooperativismo de crédito, desenvolvimento local e agro. O post Prêmio Sicredi Comunicação em Rede anuncia vencedores da primeira edição apareceu primeiro em Canal Rural .",
+   "data": "2026-11-19T22:13:54.000Z"
+  },
+  {
+   "titulo": "Preços da soja têm mais um dia de alta com dólar e Chicago em direções opostas",
+   "link": "https://www.canalrural.com.br/agricultura/precos-da-soja-tem-mais-um-dia-de-alta-com-dolar-e-chicago-em-direcoes-opostas/",
+   "fonte": "Canal Rural",
+   "resumo": "Cotações seguem entre os melhores patamares de 2026, com indicações firmes tanto para o produto disponível quanto para a safra nova O post Preços da soja têm mais um dia de alta com dólar e Chicago em direções opostas apareceu primeiro em Canal Rural .",
+   "data": "2026-11-19T22:06:16.000Z"
+  },
+  {
+   "titulo": "Caramuru inaugura sistema de carregamento de navios no Porto de Santana",
+   "link": "https://www.canalrural.com.br/economia/caramuru-inaugura-sistema-de-carregamento-de-navios-no-porto-de-santana-2/",
+   "fonte": "Canal Rural",
+   "resumo": "Estrutura recebeu investimento de R$ 76 milhões e tem capacidade nominal de 1.500 toneladas por hora no terminal do Amapá. O post Caramuru inaugura sistema de carregamento de navios no Porto de Santana apareceu primeiro em Canal Rural .",
+   "data": "2026-11-19T21:32:47.000Z"
+  },
+  {
+   "titulo": "IBGE abre seleção com 27.279 vagas para recenseadores do Censo Agropecuário",
+   "link": "https://www.canalrural.com.br/agricultura/ibge-abre-selecao-com-27-279-vagas-para-recenseadores-do-censo-agropecuario/",
+   "fonte": "Canal Rural",
+   "resumo": "Inscrições para contratação temporária vão de 6 a 25 de novembro de 2026 e exigem ensino fundamental completo. O post IBGE abre seleção com 27.279 vagas para recenseadores do Censo Agropecuário apareceu primeiro em Canal Rural .",
+   "data": "2026-11-19T20:47:54.000Z"
+  },
+  {
+   "titulo": "MDA instala grupo de trabalho para proteção dos babaçuais",
+   "link": "https://www.canalrural.com.br/politica/mda-instala-grupo-de-trabalho-para-protecao-dos-babacuais/",
+   "fonte": "Canal Rural",
+   "resumo": "Colegiado vai formular medidas para preservar áreas de babaçu e apoiar comunidades agroextrativistas em quatro estados. O post MDA instala grupo de trabalho para proteção dos babaçuais apareceu primeiro em Canal Rural .",
+   "data": "2026-11-19T20:30:38.000Z"
+  },
+  {
+   "titulo": "Petróleo fecha perto da estabilidade com foco em Irã e oferta global",
+   "link": "https://www.canalrural.com.br/economia/petroleo-fecha-perto-da-estabilidade-com-foco-em-ira-e-oferta-global/",
+   "fonte": "Canal Rural",
+   "resumo": "Risco geopolítico no Golfo Pérsico deu suporte às cotações, enquanto previsão de excedente global e alta dos estoques nos EUA limitaram os preços. O post Petróleo fecha perto da estabilidade com foco em Irã e oferta global apareceu primeiro em Canal Rural .",
+   "data": "2026-11-19T20:03:13.000Z"
+  },
+  {
+   "titulo": "Georgieva diz que avanço da IA sustenta crescimento global, mas pressiona inflação e juros",
+   "link": "https://www.canalrural.com.br/economia/georgieva-diz-que-avanco-da-ia-sustenta-crescimento-global-mas-pressiona-inflacao-e-juros/",
+   "fonte": "Canal Rural",
+   "resumo": "Diretora-gerente do FMI afirmou na Apec que a tecnologia compensou parte do choque de energia em 2026, mas exigiu aperto monetário em várias economias O post Georgieva diz que avanço da IA sustenta crescimento global, mas pressiona inflação e juros apareceu pr",
+   "data": "2026-11-19T19:47:57.000Z"
+  },
+  {
+   "titulo": "VBP de outubro é estimado em R$ 1,46 trilhão",
+   "link": "https://www.canalrural.com.br/economia/vbp-de-outubro-e-estimado-em-r-146-trilhao/",
+   "fonte": "Canal Rural",
+   "resumo": "Levantamento do Mapa mostra alta de 0,62% ante o mês anterior, com avanço puxado pela pecuária bovina O post VBP de outubro é estimado em R$ 1,46 trilhão apareceu primeiro em Canal Rural .",
+   "data": "2026-11-19T19:22:10.000Z"
+  },
+  {
+   "titulo": "Pacientes com câncer jogam cinzas em comissário europeu em protesto contra agrotóxicos; VÍDEO",
    "link": "https://g1.globo.com/saude/noticia/2026/11/19/manifestantes-jogam-cinzas-em-comissario-europeu-em-protesto-contra-agrotoxicos-video.ghtml",
    "fonte": "G1 Agro",
    "resumo": "Pacientes de câncer jogam cinzas em autoridade em protesto contra pesticidas na Europa Dois manifestantes jogaram um pó cinza contra o comissário europeu da Saúde, Olivér Várhelyi, durante a Cúpula Europeia do Câncer, em Bruxelas, nesta quinta-feira (19). O pr",
    "data": "2026-11-19T17:11:29.000Z"
-  },
-  {
-   "titulo": "Mapa entrega 327 máquinas agrícolas a 255 municípios do Rio Grande do Sul",
-   "link": "https://www.canalrural.com.br/agricultura/mapa-entrega-327-maquinas-agricolas-a-255-municipios-do-rio-grande-do-sul/",
-   "fonte": "Canal Rural",
-   "resumo": "Equipamentos do Promaq incluem tratores e máquinas da linha amarela para manutenção de estradas vicinais e apoio à produção agropecuária. O post Mapa entrega 327 máquinas agrícolas a 255 municípios do Rio Grande do Sul apareceu primeiro em Canal Rural .",
-   "data": "2026-11-19T16:27:20.000Z"
-  },
-  {
-   "titulo": "China amplia compras de milho e trigo em outubro",
-   "link": "https://www.canalrural.com.br/economia/china-amplia-compras-de-milho-e-trigo-em-outubro/",
-   "fonte": "Canal Rural",
-   "resumo": "Dados do GACC mostram alta nas importações dos dois cereais, enquanto soja, carnes e açúcar registraram recuo no mês. O post China amplia compras de milho e trigo em outubro apareceu primeiro em Canal Rural .",
-   "data": "2026-11-19T15:58:12.000Z"
-  },
-  {
-   "titulo": "Decreto regulamenta fim da escala 6×1 e inclui empregados rurais",
-   "link": "https://www.canalrural.com.br/diversos/decreto-regulamenta-fim-da-escala-6x1-e-inclui-empregados-rurais/",
-   "fonte": "Canal Rural",
-   "resumo": "Texto publicado em edição extra do Diário Oficial da União define cálculo do salário-hora e regras para turnos ininterruptos e jornadas de 12 por 36. O post Decreto regulamenta fim da escala 6×1 e inclui empregados rurais apareceu primeiro em Canal Rural .",
-   "data": "2026-11-19T15:46:46.000Z"
-  },
-  {
-   "titulo": "BNDES registra lucro de R$ 20,3 bilhões até setembro e amplia crédito à agropecuária",
-   "link": "https://www.canalrural.com.br/economia/bndes-registra-lucro-de-r-203-bilhoes-ate-setembro-e-amplia-credito-a-agropecuaria/",
-   "fonte": "Canal Rural",
-   "resumo": "Banco informa alta nas aprovações, desembolsos e consultas em 2026; crédito ao setor agropecuário somou R$ 42,9 bilhões no período. O post BNDES registra lucro de R$ 20,3 bilhões até setembro e amplia crédito à agropecuária apareceu primeiro em Canal Rural .",
-   "data": "2026-11-19T15:25:21.000Z"
-  },
-  {
-   "titulo": "Dólar opera em alta nesta quinta-feira com pressão do fiscal e dos juros nos EUA",
-   "link": "https://www.canalrural.com.br/economia/dolar-opera-em-alta-nesta-quinta-feira-com-pressao-do-fiscal-e-dos-juros-nos-eua/",
-   "fonte": "Canal Rural",
-   "resumo": "Moeda chegou a R$ 5,9149 no início do pregão e, às 12h05, era cotada a R$ 5,8776, com avanço de 0,19%. O post Dólar opera em alta nesta quinta-feira com pressão do fiscal e dos juros nos EUA apareceu primeiro em Canal Rural .",
-   "data": "2026-11-19T15:23:55.000Z"
   },
   {
    "titulo": "É #FAKE que vídeo de descarte de tomates no Rio tenha a ver com alta de preços em 2026; cena ocorreu em dezembro do ano passado",
@@ -49,41 +77,6 @@
    "fonte": "G1 Agro",
    "resumo": "Vídeo de descarte de tomates no Rio não é recente g1 Circulam nas redes sociais publicações exibindo um vídeo em que um comerciante joga 50 caixas de tomate fora devido à recente alta de preços do produto. É #FAKE. ✅ Siga o canal de Fato ou Fake no WhatsApp Se",
    "data": "2026-11-19T15:19:45.000Z"
-  },
-  {
-   "titulo": "Alfama Foods investirá 13,57 milhões de euros em fábrica de proteínas em Portugal",
-   "link": "https://www.canalrural.com.br/economia/alfama-foods-investira-1357-milhoes-de-euros-em-fabrica-de-proteinas-em-portugal/",
-   "fonte": "Canal Rural",
-   "resumo": "Unidade será a primeira da companhia fora do Brasil, com operação prevista para 2028 e capacidade de 550 toneladas por mês. O post Alfama Foods investirá 13,57 milhões de euros em fábrica de proteínas em Portugal apareceu primeiro em Canal Rural .",
-   "data": "2026-11-19T15:04:01.000Z"
-  },
-  {
-   "titulo": "ABPA marca 50 anos da ABEF e destaca avanço das exportações de frango",
-   "link": "https://www.canalrural.com.br/aves-e-suinos/abpa-marca-50-anos-da-abef-e-destaca-avanco-das-exportacoes-de-frango/",
-   "fonte": "Canal Rural",
-   "resumo": "Setor estima mais de 100 milhões de toneladas exportadas entre 1975 e 2025, com receitas próximas de US$ 170 bilhões. O post ABPA marca 50 anos da ABEF e destaca avanço das exportações de frango apareceu primeiro em Canal Rural .",
-   "data": "2026-11-19T14:31:39.000Z"
-  },
-  {
-   "titulo": "CNPJ para produtor rural é adiado até 2028; veja quem está dispensado",
-   "link": "https://www.canalrural.com.br/agricultura/cnpj-para-produtor-rural-e-adiado-ate-2028-veja-quem-esta-dispensado/",
-   "fonte": "Canal Rural",
-   "resumo": "A dispensa temporária foi estabelecida pela Receita Federal e pelo Comitê Gestor do Imposto sobre Bens e Serviços O post CNPJ para produtor rural é adiado até 2028; veja quem está dispensado apareceu primeiro em Canal Rural .",
-   "data": "2026-11-19T14:23:35.000Z"
-  },
-  {
-   "titulo": "Moção contra presidente do BB e audiência sobre crédito rural avançam na Câmara",
-   "link": "https://www.canalrural.com.br/politica/mocao-contra-presidente-do-bb-e-audiencia-sobre-credito-rural-avancam-na-camara/",
-   "fonte": "Canal Rural",
-   "resumo": "Comissão de Agricultura aprovou repúdio às declarações de Tarciana Medeiros e convite para que a executiva preste esclarecimentos ao colegiado. O post Moção contra presidente do BB e audiência sobre crédito rural avançam na Câmara apareceu primeiro em Canal Ru",
-   "data": "2026-11-19T14:17:43.000Z"
-  },
-  {
-   "titulo": "Captação de leite e recebimento de couro caem no 3º trimestre, diz IBGE",
-   "link": "https://www.canalrural.com.br/pecuaria/captacao-de-leite-e-recebimento-de-couro-caem-no-3o-trimestre-diz-ibge/",
-   "fonte": "Canal Rural",
-   "resumo": "Produção de ovos de galinha avançou na comparação anual e também frente ao segundo trimestre de 2026. O post Captação de leite e recebimento de couro caem no 3º trimestre, diz IBGE apareceu primeiro em Canal Rural .",
-   "data": "2026-11-19T13:53:02.000Z"
   },
   {
    "titulo": "Como implementar sistemas agroflorestais",
