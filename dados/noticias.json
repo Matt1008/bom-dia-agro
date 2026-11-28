@@ -1,12 +1,89 @@
 {
- "atualizado_em": "2026-11-27T18:33:16.409Z",
+ "atualizado_em": "2026-11-28T03:37:14.438Z",
  "noticias": [
   {
-   "titulo": "Conab programa manutenção no centro de processamento de dados neste sábado",
-   "link": "https://www.canalrural.com.br/diversos/conab-programa-manutencao-no-centro-de-processamento-de-dados-neste-sabado/",
+   "titulo": "Peso de grupo que inclui arroz e feijão nos gastos com alimentação cai quase pela metade em duas décadas",
+   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/28/ibge-gastos-com-alimentacao.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Segundo o IBGE, o grupo que inclui arroz e feijão perdeu espaço nos gastos com comida em casa, enquanto a parcela dos alimentos preparados quase dobrou em duas décadas. Reprodução O grupo de alimentos que inclui arroz e feijão perdeu quase metade de sua partic",
+   "data": "2026-11-28T03:00:00.000Z"
+  },
+  {
+   "titulo": "Saúde pesa mais no consumo das famílias do Sudeste; educação tem maior fatia no Nordeste",
+   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/28/saude-educacao-gastos-familias-sudeste-nordeste-ibge.ghtml",
+   "fonte": "G1 Agro",
+   "resumo": "Contas para pagar. Reprodução/TV Globo A saúde ocupava uma fatia maior do consumo das famílias no Sudeste do que em qualquer outra região do país em 2024 e 2025, segundo dados da Pesquisa de Orçamentos Familiares (POF). De cada R$ 100 destinados a bens e servi",
+   "data": "2026-11-28T03:00:00.000Z"
+  },
+  {
+   "titulo": "Chuva pode chegar a 76 mm em 24 horas em Mato Grosso do Sul",
+   "link": "https://www.canalrural.com.br/previsao-do-tempo/ms/chuva-pode-chegar-a-76-mm-em-24-horas-em-mato-grosso-do-sul/",
    "fonte": "Canal Rural",
-   "resumo": "Atualização deve ocorrer entre 14h e 16h e pode provocar instabilidade ou indisponibilidade nos sistemas institucionais. O post Conab programa manutenção no centro de processamento de dados neste sábado apareceu primeiro em Canal Rural .",
-   "data": "2026-11-27T18:17:42.000Z"
+   "resumo": "Previsão para sexta-feira (4) abrange Amambai, Aral Moreira, Laguna Carapã e Ponta Porã. O post Chuva pode chegar a 76 mm em 24 horas em Mato Grosso do Sul apareceu primeiro em Canal Rural .",
+   "data": "2026-11-28T02:48:15.000Z"
+  },
+  {
+   "titulo": "Chuva pode chegar a 86 mm em 24 horas no Paraná",
+   "link": "https://www.canalrural.com.br/previsao-do-tempo/pr/chuva-pode-chegar-a-86-mm-em-24-horas-no-parana/",
+   "fonte": "Canal Rural",
+   "resumo": "Dois Vizinhos tem o maior volume previsto em um dia; em Pitanga, o acumulado deve alcançar 101 mm em 48 horas. O post Chuva pode chegar a 86 mm em 24 horas no Paraná apareceu primeiro em Canal Rural .",
+   "data": "2026-11-28T02:47:42.000Z"
+  },
+  {
+   "titulo": "Chuva pode chegar a 88 mm em 24 horas em Rondônia",
+   "link": "https://www.canalrural.com.br/previsao-do-tempo/ro/chuva-pode-chegar-a-88-mm-em-24-horas-em-rondonia/",
+   "fonte": "Canal Rural",
+   "resumo": "Previsão para sexta-feira (4) abrange Cabixi, Pimenteiras do Oeste, Rolim de Moura e Presidente Médici. O post Chuva pode chegar a 88 mm em 24 horas em Rondônia apareceu primeiro em Canal Rural .",
+   "data": "2026-11-28T02:47:06.000Z"
+  },
+  {
+   "titulo": "2º Fórum de Irrigação reúne setor para discutir expansão da atividade na Bahia",
+   "link": "https://www.canalrural.com.br/agricultura/2o-forum-de-irrigacao-reune-setor-para-discutir-expansao-da-atividade-na-bahia/",
+   "fonte": "Canal Rural",
+   "resumo": "Oeste baiano ultrapassou 332 mil hectares irrigados por pivôs centrais, com crescimento de 43% entre 2022 e 2024; evento debate infraestrutura e uso sustentável da água O post 2º Fórum de Irrigação reúne setor para discutir expansão da atividade na Bahia apare",
+   "data": "2026-11-27T23:57:15.000Z"
+  },
+  {
+   "titulo": "Diesel S-10 recua 0,8% em novembro, mostra ANP",
+   "link": "https://www.canalrural.com.br/economia/diesel-s-10-recua-08-em-novembro-mostra-anp/",
+   "fonte": "Canal Rural",
+   "resumo": "Gasolina caiu 0,15% no mês, enquanto o botijão de GLP de 13 quilos subiu 0,39%, segundo levantamento da agência. O post Diesel S-10 recua 0,8% em novembro, mostra ANP apareceu primeiro em Canal Rural .",
+   "data": "2026-11-27T23:23:15.000Z"
+  },
+  {
+   "titulo": "André de Paula é homenageado em prêmio do setor canavieiro na Paraíba",
+   "link": "https://www.canalrural.com.br/politica/andre-de-paula-e-homenageado-em-premio-do-setor-canavieiro-na-paraiba/",
+   "fonte": "Canal Rural",
+   "resumo": "Reconhecimento ocorreu durante a 3ª edição do Prêmio Canasplan 2026 e destacou a atuação do ministro na subvenção aos produtores de cana do Nordeste. O post André de Paula é homenageado em prêmio do setor canavieiro na Paraíba apareceu primeiro em Canal Rural ",
+   "data": "2026-11-27T23:08:44.000Z"
+  },
+  {
+   "titulo": "Regularização fundiária para quilombolas avança com títulos, decretos e projeto produtivo",
+   "link": "https://www.canalrural.com.br/politica/regularizacao-fundiaria-para-quilombolas-avanca-com-titulos-decretos-e-projeto-produtivo/",
+   "fonte": "Canal Rural",
+   "resumo": "Ato previsto para segunda-feira (30), no Palácio do Planalto, reúne medidas para titulação de territórios, garantia de direitos e apoio à produção quilombola. O post Regularização fundiária para quilombolas avança com títulos, decretos e projeto produtivo apar",
+   "data": "2026-11-27T22:57:20.000Z"
+  },
+  {
+   "titulo": "Lula apresenta ações para igualdade racial e direitos quilombolas no dia 30",
+   "link": "https://www.canalrural.com.br/politica/lula-apresenta-acoes-para-igualdade-racial-e-direitos-quilombolas-no-dia-30/",
+   "fonte": "Canal Rural",
+   "resumo": "Ato no Palácio do Planalto reúne medidas de diferentes ministérios, com foco em gestão territorial, habitação, saúde e desenvolvimento produtivo. O post Lula apresenta ações para igualdade racial e direitos quilombolas no dia 30 apareceu primeiro em Canal Rura",
+   "data": "2026-11-27T22:47:31.000Z"
+  },
+  {
+   "titulo": "Justiça nega prisão de CEO da Fictor em investigação sobre fraude bilionária",
+   "link": "https://www.canalrural.com.br/economia/justica-nega-prisao-de-ceo-da-fictor-em-investigacao-sobre-fraude-bilionaria/",
+   "fonte": "Canal Rural",
+   "resumo": "Polícia Civil e Ministério Público de São Paulo apuram captação de recursos sob a aparência de investimentos no agronegócio O post Justiça nega prisão de CEO da Fictor em investigação sobre fraude bilionária apareceu primeiro em Canal Rural .",
+   "data": "2026-11-27T22:37:57.000Z"
+  },
+  {
+   "titulo": "Boi gordo: negócios ficam travados, mas preços seguem firmes no Brasil",
+   "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-negocios-ficam-travados-mas-precos-seguem-firmes-no-brasil/",
+   "fonte": "Canal Rural",
+   "resumo": "Mercado físico registra estabilidade na maioria das praças, enquanto expectativa para dezembro é de melhora do consumo com o pagamento do 13º salário O post Boi gordo: negócios ficam travados, mas preços seguem firmes no Brasil apareceu primeiro em Canal Rural",
+   "data": "2026-11-27T22:24:27.000Z"
   },
   {
    "titulo": "Veja como criar e introduzir abelhas-rainhas nas colmeias",
@@ -14,69 +91,6 @@
    "fonte": "G1 Agro",
    "resumo": "Imagem ilustrativa de uma abelha. Adobe Stock O apicultor Gustavo Palermo, de Espírito Santo do Pinhal (SP), procurou o Globo Rural em busca de orientações para introduzir novas abelhas-rainhas nos enxames. Para auxiliar o produtor, a recomendação é consultar ",
    "data": "2026-11-27T16:31:53.000Z"
-  },
-  {
-   "titulo": "Etanol sobe em novembro, enquanto gasolina e diesel recuam, aponta IPTL",
-   "link": "https://www.canalrural.com.br/economia/etanol-sobe-em-novembro-enquanto-gasolina-e-diesel-recuam-aponta-iptl/",
-   "fonte": "Canal Rural",
-   "resumo": "Alta do biocombustível foi associada a restrições de oferta no Centro-Sul; diesel teve alívio com subvenção federal O post Etanol sobe em novembro, enquanto gasolina e diesel recuam, aponta IPTL apareceu primeiro em Canal Rural .",
-   "data": "2026-11-27T16:28:36.000Z"
-  },
-  {
-   "titulo": "Encontro do Agro e dos Adidos Agrícolas será realizado de 1º a 4 de dezembro em Brasília",
-   "link": "https://www.canalrural.com.br/economia/encontro-do-agro-e-dos-adidos-agricolas-sera-realizado-de-1o-a-4-de-dezembro-em-brasilia/",
-   "fonte": "Canal Rural",
-   "resumo": "Evento promovido por Mapa e ApexBrasil prevê convênios de R$ 26,81 milhões e acordos voltados à internacionalização de cadeias produtivas O post Encontro do Agro e dos Adidos Agrícolas será realizado de 1º a 4 de dezembro em Brasília apareceu primeiro em Canal",
-   "data": "2026-11-27T16:17:20.000Z"
-  },
-  {
-   "titulo": "Canal Rural e Ihara lançam Memórias do Brasil Rural com acervo recuperado sobre a história e a cultura do campo brasileiro",
-   "link": "https://www.canalrural.com.br/agricultura/canal-rural-e-ihara-lancam-memorias-do-brasil-rural-com-acervo-recuperado-sobre-a-historia-e-a-cultura-do-campo-brasileiro/",
-   "fonte": "Canal Rural",
-   "resumo": "Viabilizado pela Lei Rouanet, por meio do Ministério da Cultura, o projeto disponibilizará no YouTube programas, entrevistas e reportagens exibidos pelo Canal Rural ao longo dos últimos 30 anos O post Canal Rural e Ihara lançam Memórias do Brasil Rural com ace",
-   "data": "2026-11-27T15:57:04.000Z"
-  },
-  {
-   "titulo": "‘Dor é grande’, diz criador que perdeu 52 bois atingidos por raio em SC",
-   "link": "https://www.canalrural.com.br/previsao-do-tempo/sc/dor-e-grande-diz-criador-que-perdeu-52-bois-atingidos-por-raio-em-sc/",
-   "fonte": "Canal Rural",
-   "resumo": "Segundo o produtor Fernando Zeni, a morte dos animais causou um prejuízo de R$ 500 mil O post ‘Dor é grande’, diz criador que perdeu 52 bois atingidos por raio em SC apareceu primeiro em Canal Rural .",
-   "data": "2026-11-27T15:53:16.000Z"
-  },
-  {
-   "titulo": "Inadimplência de produtores no crédito rural sobe para 9,6% em outubro",
-   "link": "https://www.canalrural.com.br/economia/inadimplencia-de-produtores-no-credito-rural-sobe-para-96-em-outubro/",
-   "fonte": "Canal Rural",
-   "resumo": "Indicador de pessoas físicas com recursos direcionados avançou ante setembro e ficou próximo do recorde da série, segundo o Banco Central. O post Inadimplência de produtores no crédito rural sobe para 9,6% em outubro apareceu primeiro em Canal Rural .",
-   "data": "2026-11-27T15:48:03.000Z"
-  },
-  {
-   "titulo": "JBS mira expansão na Ásia e aposta em proteínas voltadas à longevidade",
-   "link": "https://www.canalrural.com.br/economia/jbs-mira-expansao-na-asia-e-aposta-em-proteinas-voltadas-a-longevidade/",
-   "fonte": "Canal Rural",
-   "resumo": "Wesley Batista Júnior, que assume o comando da companhia em janeiro de 2027, aponta novos mercados e produtos de maior valor agregado como oportunidades de crescimento O post JBS mira expansão na Ásia e aposta em proteínas voltadas à longevidade apareceu prime",
-   "data": "2026-11-27T15:17:39.000Z"
-  },
-  {
-   "titulo": "Produção de milho deve chegar a 149,2 milhões de toneladas em 2026/27, diz Agroconsult",
-   "link": "https://www.canalrural.com.br/agricultura/producao-de-milho-deve-chegar-a-1492-milhoes-de-toneladas-em-2026-27-diz-agroconsult/",
-   "fonte": "Canal Rural",
-   "resumo": "Consultoria projeta aumento de 1,9% na safra brasileira e avanço de 2,5% na área plantada, com destaque para a segunda safra. O post Produção de milho deve chegar a 149,2 milhões de toneladas em 2026/27, diz Agroconsult apareceu primeiro em Canal Rural .",
-   "data": "2026-11-27T15:01:35.000Z"
-  },
-  {
-   "titulo": "São Cristóvão e Névis abre mercado para carne suína do Brasil",
-   "link": "https://www.canalrural.com.br/aves-e-suinos/sao-cristovao-e-nevis-abre-mercado-para-carne-suina-do-brasil/",
-   "fonte": "Canal Rural",
-   "resumo": "Autorização para carnes e miúdos suínos amplia espaço para exportações brasileiras em um destino com demanda ligada ao turismo e ao food service. O post São Cristóvão e Névis abre mercado para carne suína do Brasil apareceu primeiro em Canal Rural .",
-   "data": "2026-11-27T14:58:30.000Z"
-  },
-  {
-   "titulo": "Safra 2026/27 de soja é estimada em 182,3 milhões de toneladas",
-   "link": "https://www.canalrural.com.br/agricultura/safra-2026-27-de-soja-e-estimada-em-1823-milhoes-de-toneladas/",
-   "fonte": "Canal Rural",
-   "resumo": "Projeção da Agroconsult indica recuo de 1,3% na produção, com área praticamente estável e menor produtividade esperada. O post Safra 2026/27 de soja é estimada em 182,3 milhões de toneladas apareceu primeiro em Canal Rural .",
-   "data": "2026-11-27T14:54:26.000Z"
   },
   {
    "titulo": "Carne brasileira 'dopada'? Auditoria da própria União Europeia contraria declaração de Macron",
@@ -161,20 +175,6 @@
    "fonte": "G1 Agro",
    "resumo": "Batatas cultivadas em solo que simula as condições da Lua em laboratório da Universidade Estadual do Oregon Sean Nealon/Universidade Estadual do Oregon/Divulgação via REUTERS A batata é uma das culturas mais importantes do planeta e fonte de amido, vitaminas, ",
    "data": "2026-11-23T06:00:00.000Z"
-  },
-  {
-   "titulo": "Ovelhas entre painéis solares? Entenda a tendência que une geração de energia e criação de animais",
-   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/22/ovelhas-entre-paineis-solares-entenda-a-tendencia-que-une-geracao-de-energia-e-criacao-de-animais.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Ovelhas pastam sob painéis solares na província de Guizhou, no sudoeste da China, como parte de uma prática cada vez mais comum de combinar a pecuária com a produção de energia solar Tao Liang/Xinhua/picture alliance via DW Tradicionalmente, usinas solares são",
-   "data": "2026-11-22T07:00:01.000Z"
-  },
-  {
-   "titulo": "Nova espécie de perereca é descoberta em Minas Gerais após cientista ouvir canto incomum",
-   "link": "https://g1.globo.com/economia/agronegocios/globo-rural/noticia/2026/11/22/nova-especie-de-perereca-e-descoberta-em-minas-gerais-apos-cientista-ouvir-canto-incomum.ghtml",
-   "fonte": "G1 Agro",
-   "resumo": "Nova espécie de perereca é identificada em MG Em uma área preservada de Mata Atlântica, em Cataguases, na Zona da Mata mineira, o biólogo Clodoaldo Lopes ouviu uma perereca que não soava como as outras. A desconfiança levou a mais de uma década de pesquisa e t",
-   "data": "2026-11-22T07:00:00.000Z"
   }
  ]
 }
